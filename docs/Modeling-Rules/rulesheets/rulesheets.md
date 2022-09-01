@@ -16,13 +16,13 @@ The terms `Aircraft.aircraftType` and `Aircraft.maxCargoWeight` come from the Ru
 
 Corticon evaluates all the conditions in each rule. If all the conditions in the rule are satisfied, the actions in the rule are triggered. _Note: If an action does not execute for some reason, Corticon still tries to execute the other actions in the rule._
 
-### **Rule Statements**
+### Rule Statements
 
 Each rule is documented with **Rule Statements**. Rule Statements will be sent along with the new/changed data resulting from the rules in the response from Corticon back to the calling application. Rule statements will only be sent back to the calling application if that rule was triggered as part of that decision's execution.
 
 Note that you can define multiple rule statements for a single rule. For example, one rule statement can document the rule, while another is sent as part of the output message when the rule fires
 
-### **Rule Operators**
+### Rule Operators
 
 When you use your Vocabulary to build rules, you also make use of rule operators such as =, <, and . Corticon Studio provides a rich set of predefined rule operators in the Rule Operators view. By default, this view is located at the bottom-left of the Corticon Designer perspective.
 

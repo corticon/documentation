@@ -121,7 +121,7 @@
     var standalone = false;
 
     // Set ToC to true to permanently show page Table of Contents (Sidebar must also be hidden)
-    var ToC = false;
+    var ToC = true;
 
     // Get value from GET-parameter in URL
     // @param {array} name Parameter-name
@@ -176,7 +176,7 @@
       // SIDEBAR NAVIGATION
       // -----------------------------------------------------------------
       auto2top: true,
-      maxLevel: 3,
+      maxLevel: 2,
       // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
       subMaxLevel: 3,
       hideSidebar: (getURLParameterByName(['standalone','embedded']) || standalone),
