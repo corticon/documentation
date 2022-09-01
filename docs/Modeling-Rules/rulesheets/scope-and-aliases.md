@@ -15,14 +15,12 @@ Whether you use a term from a top level or a branch level entity depends on the 
 ### Example of rule scope
 
 Let’s assume that the transportation company creates a flight plan. It assigns a cargo container and an aircraft to the flight plan and wants to model a rule that throws a Violation message if the cargo weight exceeds the maximum cargo weight of the aircraft assigned to that flight plan.
-
-![](<../../../.gitbook/assets/image (86).png>)
+![](../../assets/image%20(86).png)
 
 To achieve this, you define a rule that uses `FlightPlan`’s associations with `Cargo` and with `Aircraft`. You define a condition that compares `Cargo.weight` under `FlightPlan` in the Rule Vocabulary with `Aircraft.maxCargoWeight`, also under `FlightPlan`. When you drag and drop these terms from under `FlightPlan` in the Rule Vocabulary, the terms get represented as shown above.
 
 To test this Rulesheet, you must define input data in the Ruletest in the same hierarchical structure. You must drag and drop FlightPslan from its top level first. Then, you drag and drop Cargo and Aircraft from their branch levels to FlightPlan in the Input pane.
-
-![](<../../../.gitbook/assets/image (104).png>)
+![](../../assets/image%20(104).png)
 
 When you run the Ruletest, Corticon evaluates only those Cargo-Aircraft pairings that match the same `FlightPlan`. This means that a `Cargo.weight` will only be compared to an `Aircraft.maxCargoWeight` if both the `Cargo` and the `Aircraft` share the same `FlightPlan`.
 
@@ -35,11 +33,9 @@ When you model rules, it is important to understand what you want your rules to 
 Now that you have some understanding of Scope in rules, let’s look at how to choose the right Scope in a Rule Statement.
 
 As you know, a Rule Statement describes the purpose of a rule and can also be posted as a Rule Message. When you configure it to be posted as a Rule Message, you choose an entity to post it to in the Alias column. What this means is that when the Rule Message is sent or displayed, it is associated with an instance of that entity. For example, if you choose FlightPlan, the rule message contains the entity name (FlightPlan) along with the instance ID (FlightPlan\[1], FlightPlan\[2], etc) as shown in this example:
+![](../../assets/image%20(132).png)
 
-![](<../../../.gitbook/assets/image (132).png>)
-
-![](<../../../.gitbook/assets/image (25).png>)
-
+![](../../assets/image%20(25).png)
 This helps a client application that is invoking the rule, or a rule modeler who is testing the rule, know which entity instance is responsible for triggering which rule. In some cases, choosing the right entity in the Alias column of a Rule Statement is intuitive. In the FlightPlan.cargo.weight > FlightPlan.aircraft.maxCargoWeight example, you would choose FlightPlan in the Alias column, because you want to know which FlightPlan instance triggered the rule. However, in cases where you are comparing the attributes of two root-level entities, (for example if Cargo.weight > Aircraft.maxCargoWeight), it may be unclear which entity to use in the Alias column. In these cases, you should pick whichever entity you are more interested in from a business point-of-view.
 
 ### The Scope Pane
@@ -47,17 +43,15 @@ This helps a client application that is invoking the rule, or a rule modeler who
 So far, you have modeled simple rules with a small Vocabulary where Scope is easy to identify. However, when you model rules using a complex Vocabulary with many terms and associations, you may find that it is easier to first determine which entities (top level or branch level) and attributes you want to use in your Rulesheet and preselect them for rule modeling.
 
 To do this, you use the Scope pane. To open the Scope pane, switch the Rulesheet to an Advanced View by selecting Rulesheet > Advanced View. You can then drag and drop just those top-level and branch-level terms that you want to use in your Rulesheet from the Rule Vocabulary view. You can then drag and drop terms from the Scope pane to Rulesheet cells.
-
-![](<../../../.gitbook/assets/image (106).png>)
+![](../../assets/image%20(106).png)
 
 ### Aliases
 
 An Alias is a name you define for an entity in the Scope pane. Aliases help reduce the length of terms in Rulesheet cells and make it easier to read the rules. You can define an Alias for a top-level or branch-level entity by double-clicking the node in the Scope pane and entering the Alias name as shown in this example.
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](../../assets/image%20(65).png)
 
 For example, if you want to compare cargo weight and aircraft maxCargoWeight for a FlightPlan, you could define the Alias plane for aircraft under FlightPlan and the Alias load to cargo as shown in this example. The comparison expression in the Rulesheet cell changes from FlightPlan.cargo.weight > FlightPlan.aircraft.maxCargoWeight to load.weight > plane.maxCargoWeight. Although the length of the terms reduce, the Scope of the rule remains the same.
 
 When you define an Alias in the Scope pane, the Alias name replaces the entity name in the list of choices in the Rule Statement’s Alias column. For example, instead of FlightPlan.aircraft, the Alias column will display plane when you click on one of its cells.
 
-In some cases, such as in Collections, Aliases are mandatory. You will learn more about Collections in the next lesson in this course.
