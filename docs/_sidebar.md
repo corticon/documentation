@@ -13,3 +13,5 @@
 **PROJECT INFO**  
 * [GitHub Repository](https://github.com/corticon/documentation/)
 
+<iframe id="iframe_rentec" src="https://docs.progress.com/search?labelkey=product_corticon" style="width:100%;min-width:320px;height:400px;overflow-y:auto;"></iframe> 
+
