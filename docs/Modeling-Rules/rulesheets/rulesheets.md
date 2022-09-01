@@ -22,7 +22,7 @@ Each rule is documented with **Rule Statements**. Rule Statements will be sent a
 
 Note that you can define multiple rule statements for a single rule. For example, one rule statement can document the rule, while another is sent as part of the output message when the rule fires
 
-### Rule Operators
+### **Rule Operators**
 
 When you use your Vocabulary to build rules, you also make use of rule operators such as =, <, and . Corticon Studio provides a rich set of predefined rule operators in the Rule Operators view. By default, this view is located at the bottom-left of the Corticon Designer perspective.
 
@@ -32,7 +32,7 @@ You can learn about each rule operator in the Rule Operators view by hovering th
 
 ![](docs/../../../assets/image%20(78).png)
 
-**Logical Integrity Checks**
+### **Logical Integrity Checks**
 
 Rulesheets also provide rule modelers with multiple click-of-a-button **Logical Integrity Checks** which identify incompleteness, conflict between rules, and infinite loops. For example, the rule completeness check on the below rule sheet reveals scenarios which are plausible based upon the rules we have thus far. In a real world scenario, we might want to define actions for each of these plausible sets of conditions.
 

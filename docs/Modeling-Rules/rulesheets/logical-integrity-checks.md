@@ -1,13 +1,13 @@
 ---
 description: >-
-  Instead of having to find problems during user acceptance testing
-  orproduction, Corticon enables you to find them during the design or
-  development phase, which saves you time and money.
+
 ---
 
 # Logical Integrity Checks
 
-Rulesheets also provide rule modelers with multiple click-of-a-button **Logical Integrity Checks** which identify incompleteness, conflict between rules, and infinite loops. For example, the rule completeness check on the below rule sheet reveals scenarios which are plausible based upon the rules we have thus far.
+_Instead of having to find problems during user acceptance testing or production, Corticon enables you to find them during the design or development phase, which saves you time and money._
+
+Rulesheets  provide rule modelers with multiple click-of-a-button **Logical Integrity Checks** which identify incompleteness, conflict between rules, and infinite loops. For example, the rule completeness check on the below rule sheet reveals scenarios which are plausible based upon the rules we have thus far.
 
 ### Rule Conflicts
 
