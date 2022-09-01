@@ -166,7 +166,7 @@
       // GENERAL SETTINGS
       // -----------------------------------------------------------------
       name: 'Progress Corticon',
-      // repo           : 'https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/',
+
       homepage          : 'home.md',
       // coverpage      : 'coverpage.md',
       loadSidebar       : !(getURLParameterByName(['standalone','embedded']) || standalone || false),
@@ -178,7 +178,7 @@
       auto2top: true,
       maxLevel: 3,
       // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       hideSidebar: (getURLParameterByName(['standalone','embedded']) || standalone),
 
       // PLUGIN SETTINGS
@@ -200,7 +200,7 @@
 
       toc: {
         scope: '.markdown-section',
-        headings: 'h2,h3',
+        headings: 'h2,h3,h4',
         title: 'Table of Contents',
       },
 
