@@ -1,6 +1,6 @@
 # Rule Vocabulary
 
-### What is a Vocabulary?
+## What is a Vocabulary?
 
 The first step of the rule modeling process with Corticon is to build the 'dictionary' of business terms used throughout the rules, the Rule Vocabulary.&#x20;
 
@@ -12,7 +12,7 @@ The rule vocabulary can be created manually, or it can be auto generated based o
 
 ![](../../../.gitbook/assets/image005.png)
 
-### Building a Corticon Vocabulary
+## Building a Corticon Vocabulary
 
 Business terms are represented in the Vocabulary as either **entities** or **attributes**.
 
@@ -21,7 +21,7 @@ An attribute is like a data field that holds a value. An entity is a collection 
 
 Relationships between entities are represented as associations in a Vocabulary. For example, since a vehicle can carry multiple cargo containers, you could create a one-tomany association between the vehicle entity and the cargo entity in a Vocabulary.
 
-### The Vocabulary Tree
+## The Vocabulary Tree
 
 In Corticon Studio, the Vocabulary is represented as a hierarchical tree.
 
@@ -45,7 +45,7 @@ Finally, associations are at the same hierarchical level as attributes. The asso
 
 Note that the vocabulary includes every data point involved in the decision/calculation. Some of this data may be passed into the Decision Service when it is called by another application, some of this data may be [retrieved](https://corticon.github.io/Corticon\_Enablement/Runtime/Server/Data/) by Corticon from an external data source and some of this data may be produced as a result of the rules themselves.
 
-### Custom Data Types
+## Custom Data Types
 
 Corticon provides rule modelers with 'base' datatypes (Integer, Decimal, String, Date, Time, DateTime, and Boolean) via a dropdown when building the vocabulary.
 
@@ -54,12 +54,12 @@ You can also define a Custom Data Type based on one of these Base data types. A 
 You define Custom Data Types in the Custom Data Types tab. You access the Custom Data Types tab by opening a Vocabulary file and clicking on the Vocabulary name, as shown in the image.
 
 
-#### Enumerated Custom Data Types
+### Enumerated Custom Data Types
 
 A specific list of acceptable values. For example, in the transport company scenario, you may want to limit the acceptable values for the `Aircraft.aircraftType` attribute to 747, 777, and 787. You can achieve this by: – Defining a Custom Data Type that is based on the String data type, – with the values ‘747’, ‘777’, and ‘787’, and, – configure the `aircraftType`attribute to use this Custom Data Type.
 
 
-#### Constrained Custom Data Types
+### Constrained Custom Data Types
 
 A constrained Custom Data Type enables you to limit acceptable values through a constraint expression. The constraint expression must include the special term value.
 

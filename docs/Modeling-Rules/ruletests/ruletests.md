@@ -1,6 +1,6 @@
 # Ruletests
 
-### Ruletests Overview
+## Ruletests Overview
 
 A Ruletest simulates a business scenario where the rules are applied to input data. If the data satisfies all the conditions in a rule, the rule fires and some output containing the results of the rule execution is produced.
 
@@ -12,7 +12,7 @@ Take a close look at the images. Here is an example of a Rulesheet (`AircraftRul
 
 
 
-### The Ruletest editor
+## The Ruletest editor
 
 The Rulesheet has rules that define a value for `Aircraft.maxCargoWeight` based on the value of `Aircraft.aircraftType` received in input data.
 
@@ -24,7 +24,7 @@ The Ruletest tests the Rulesheet. The Ruletest editor has four parts:
 * **Expected**—where you can optionally define the result that you expect.
 
 
-### When you run a Ruletest
+## When you run a Ruletest
 
 1. Input data is processed by the rules in the Rulesheet.
 2. If the input data satisfies all the conditions in one or more rules, those rules fire. The Ruletest then displays output that could include the same data as the input but with changed values, and/or additional data and values.
@@ -36,7 +36,7 @@ The Ruletest reproduces how the rules will behave once deployed as a decision se
 A fully formatted sample request in each form can be exported from the ruletest. This provides visibility to the data structure that Corticon expects and can also be copied into third party testing applications such as Postman, Insomnia, or SoapUI as test message parameters.
 
 
-### How to link a rule statement to multiple rules
+## How to link a rule statement to multiple rules
 
 
 Using dynamic data, you can create a single rule statement that describes multiple rules. You can then link the rule statement to each of the rules. When any of the rules fire, attribute names will be replaced by actual values in the rule message.
