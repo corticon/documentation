@@ -1,6 +1,6 @@
 # Corticon Overview
 
-![Corticon Components](docs/assets/corticonServerVsJs.png)
+![Corticon Components](assets/corticonServerVsJs.png)
 
 Corticon has three main components:
 
