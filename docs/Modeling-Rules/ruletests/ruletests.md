@@ -42,6 +42,3 @@ A fully formatted sample request in each form can be exported from the ruletest.
 Using dynamic data, you can create a single rule statement that describes multiple rules. You can then link the rule statement to each of the rules. When any of the rules fire, attribute names will be replaced by actual values in the rule message.
 
 For example, suppose you have three rules, as shown in this image. Each of these rules specifies the maximum cargo weight for a certain type of aircraft. A single rule statement that embeds the aircraft tail number, the aircraft type, and the maximum cargo weight, can be used to cover all three rules.
-
-
-To learn more, see [Ruletests ](ruletests.md)on Corticon Information Hub.

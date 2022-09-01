@@ -6,7 +6,6 @@ A Filter is an expression that filters out data in an incoming request message. 
 
 You specify a Filter in the Advanced View of a Rulesheet. Here is an example of a simple Filter:
 
-![](<../../../.gitbook/assets/image (31).png>)
 
 The Rulesheet solves the problem that was introduced in the beginning of this lesson. The expression in the Conditions area compares the maxCargoWeight of each Aircraft with the sum of cargo weight (denoted by the Alias load) of each FlightPlan. Note the Filters section to the left of the Rulesheet (under the Scope pane). The Filter expression checks if the value of Aircraft.isAircraftReady is True for each instance of Aircraft in input data.
 
@@ -18,7 +17,6 @@ A Filter is useful in many ways:
 
 * It reduces repetition and is easier to maintain. For example, in this Rulesheet we define the expression Cargo.needsRefrigeration=T over several columns:
 
-![](<../../../.gitbook/assets/image (99).png>)
 
 If we used a Filter instead, we could define Cargo.needsRefrigeration=T as a Filter expression just once and it would apply to all the rules in this Rulesheet (since in this case the rules share the same Scope).
 
@@ -29,7 +27,6 @@ If we used a Filter instead, we could define Cargo.needsRefrigeration=T as a Fil
 
 To define a Filter, open the Rulesheet’s Advanced View and define the Filter in the Filters pane. You can drag and drop entities and attributes from the Rule Vocabulary to cells in the Filters pane or enter the expression manually. When you define a Filter, the Filter is also displayed in the Scope pane.
 
-![](<../../../.gitbook/assets/image (80).png>)
 
 You can define multiple Filters (each in a separate row) that have the same Scope. In this case, input data must survive all the Filters (sequentially top-to-bottom) for any rule with the same Scope to process it.
 
@@ -43,11 +40,9 @@ This type of behavior is called a Full Filter. A Full Filter is desirable in mos
 
 To limit the Filter, expand the Filters node under the parent entity (in this case FlightPlan) in the Scope pane, right-click the Filter and select Disable.
 
-![](<../../../.gitbook/assets/image (24).png>)
 
 This disables the Filter at the parent level (it gets greyed out as shown here) but still keeps it enabled at the child level.
 
-![](<../../../.gitbook/assets/image (61).png>)
 
 Because the Filter is enabled at the child level for the load entity, any rule that uses the load entity will only process those elements of load that survive the Filter. Any other rules that process attributes of the parent entity (FlightPlan) or other branches of the parent entity (plane, pilot) will ignore the Filter.
 
@@ -61,15 +56,10 @@ As you learned earlier, you can use Filters to partition Collections of child en
 
 For example, if there are two types of containers—STANDARD and LARGE—you can use Filters to count how many of each type of container is assigned to a FlightPlan:
 
-![](<../../../.gitbook/assets/image (100).png>)
 
 As you can see, the Cargo branch of FlightPlan has been added to FlightPlan two times. Each branch has been assigned a different Alias (stan and large) to represent the two types of sub-collections we want (STANDARD and LARGE). Finally, each Filter defines which instances of Cargo get added to which sub-collection. Cargo instances that have the value STANDARD (for the container attribute) get added to stan, as defined by the expression stan.container=‘STANDARD’. Similarly Cargo instances that have the value LARGE get added to large.
 
 Once you define Filters to create sub-collections, you can use the Aliases in rules to compare sub-collections or perform Collection-based operations. For example, you could create a rule to check which type of container is greater in number using the ->size operator as shown here:
-
-![](<../../../.gitbook/assets/image (20).png>)
-
-![](<../../../.gitbook/assets/image (40).png>)
 
 ### Preconditions
 
@@ -82,22 +72,17 @@ Let’s take an example. Suppose that we want to identify Cargo instances that h
 
 Note that if there are no containers with a priorityLevel of 1, we do not want the rule to fire. However, since this is an action-only rule, and it does not have the same Scope as the Filter, it will still fire. To get the result we want, we can make the Filter a Precondition by right-clicking the Filter and selecting Precondition:
 
-![](<../../../.gitbook/assets/image (26).png>)
 
 The Filter icon changes as shown below, indicating that the Filter is a Precondition:
 
-![](<../../../.gitbook/assets/image (123).png>)
 
 Here is the complete Rulesheet:
 
-![](<../../../.gitbook/assets/image (17).png>)
 
 Now let’s test the Rulesheet with input data containing a Cargo instance that survives the Filter. As you can see here, a new FlightPlan is created:
 
-![](<../../../.gitbook/assets/image (9).png>)
 
 Let’s test this Rulesheet again with data where no Cargo instances survive the Filter:
 
-![](<../../../.gitbook/assets/image (74).png>)
 
 As you can see, no FlightPlan is created.
