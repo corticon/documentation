@@ -34,21 +34,3 @@ To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletes
 * **Versioning**—you can assign Major and Minor Version number that the Server responds correctly to requests for the different versions.
 * **Effective Dates**—you can have identically named Ruleflows with slight variations that respond to requests only when in the specified date range.
 * **Service Call-outs**—you can access Datasources to enrich your rules, and update databases
-
-### Watch and Learn
-
-{% tabs %}
-{% tab title="Ruleflow Branching " %}
-{% embed url="https://www.youtube.com/watch?v=LEX7BJ8pI3Y&list=PLYNw760GOr2BIxRuUKMkiJEJjm2wnUtU7&index=9" %}
-
-
-{% endtab %}
-
-{% tab title="Nested Ruleflows" %}
-{% embed url="https://www.youtube.com/watch?v=4V1wlU4j85k&list=PLYNw760GOr2BIxRuUKMkiJEJjm2wnUtU7&index=10" %}
-
-
-{% endtab %}
-{% endtabs %}
-
-To learn more, see [Ruleflows ](https://docs.progress.com/bundle/corticon-quick-reference/page/Ruleflows.html)on Corticon Information Hub.

@@ -37,37 +37,3 @@ You can learn about each rule operator in the Rule Operators view by hovering th
 Rulesheets also provide rule modelers with multiple click-of-a-button **Logical Integrity Checks** which identify incompleteness, conflict between rules, and infinite loops. For example, the rule completeness check on the below rule sheet reveals scenarios which are plausible based upon the rules we have thus far. In a real world scenario, we might want to define actions for each of these plausible sets of conditions.
 
 ![](../../../.gitbook/assets/comp.png)
-
-### Video:
-
-{% tabs %}
-{% tab title=" Introduction to rule modeling" %}
-{% embed url="https://www.youtube.com/watch?v=YWoMkYPJyCc" %}
-
-
-{% endtab %}
-
-{% tab title="Creating and Testing a Rule" %}
-{% embed url="https://www.youtube.com/watch?v=ympTJ1GUHoA&list=PLYNw760GOr2BIxRuUKMkiJEJjm2wnUtU7&index=2" %}
-
-
-{% endtab %}
-
-{% tab title="Rulesheets and Logical Integrity Checks" %}
-{% embed url="https://www.youtube.com/watch?v=Lt3g-YTCIq4&list=PLC679RvCan2CoOLaYQzUEriM3WS-UFQ5N&index=11&t=34s" %}
-{% endtab %}
-
-{% tab title=" Revealing Rule Problems" %}
-{% embed url="https://www.youtube.com/watch?v=KYel_behP1U&list=PLYNw760GOr2BIxRuUKMkiJEJjm2wnUtU7&index=7" %}
-
-
-{% endtab %}
-
-{% tab title="Scope and aliases in a Rulesheet" %}
-{% embed url="https://www.youtube.com/watch?v=w3FM04jtmPs&list=PLYNw760GOr2BIxRuUKMkiJEJjm2wnUtU7&index=4" %}
-
-
-{% endtab %}
-{% endtabs %}
-
-To learn more, see [Rulesheet sections](https://docs.progress.com/bundle/corticon-quick-reference/page/Rulesheet-sections.html) on Corticon Information Hub.
