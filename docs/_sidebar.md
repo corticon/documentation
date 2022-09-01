@@ -1,8 +1,9 @@
 - [Introduction](introduction.md)
-- Rule Modeling in Corticon Studio
-  - [Corticon Studio Basics](topic-three/overview.md "Overview Chapter 3")
-  - [Subtopic One](topic-three/subtopic-one.md "Topic Three, Subtopic One")
-  - [Subtopic Two](topic-three/subtopic-two.md "Topic Three, Subtopic Two")
+- [Rule Modeling in Corticon Studio](Modeling-Rules/CorticonStudioBasics.md) 
+  - [Rule Testing](Modeling-Rules/ruletests.md)
+  - [Rule Vocabulary](Modeling-Rules/rule-vocabulary/README.md)
+  - [Ruleflows](Modeling-Rules/ruleflows/README.md)
+  - [Rulesheets](Modeling-Rules/rulesheets/rulesheets.md)
   - 
 - Corticon.js
 - Corticon.js for Dynamic Forms
