@@ -18,9 +18,9 @@ Ruleflows are the final step in the rule development process and are thus deploy
 
 ### Test Ruleflows using Ruletests
 
-You can test a Ruleflow using a Ruletest just as you use it to test a Rulesheet. When you test a Ruleflow in a Ruletest, the input data that you define is processed by the first Rulesheet in the Ruleflow’s sequence. After the first Rulesheet completes executing, its output becomes the input to the next Rulesheet in the sequence, and so on, until the last Rulesheet completes executing.&#x20;
+You can test a Ruleflow using a Ruletest just as you use it to test a Rulesheet. When you test a Ruleflow in a Ruletest, the input data that you define is processed by the first Rulesheet in the Ruleflow’s sequence. After the first Rulesheet completes executing, its output becomes the input to the next Rulesheet in the sequence, and so on, until the last Rulesheet completes executing.
 
-The Output pane then displays the final output of the Ruleflow. The Rule Messages view displays all rule messages that are created as a result of rules firing in each Rulesheet.&#x20;
+The Output pane then displays the final output of the Ruleflow. The Rule Messages view displays all rule messages that are created as a result of rules firing in each Rulesheet.
 
 To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletest’s test subject either while creating the Ruletest or by modifying the Test Subject property in the Ruletest editor.
 
@@ -28,11 +28,11 @@ To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletes
 
 ### Advanced Ruleflow features
 
-* **Nested Ruleflows**—you can reduce the complexity of large Ruleflows by breaking them into smaller, ‘child’ Ruleflows and adding them to the parent Ruleflow, referred to as “a Ruleflow in a Ruleflow.”&#x20;
-* **Conditional Branching**—you can create branches in a Ruleflow, where the value of an attribute determines which branch the data is routed to.&#x20;
-* **Subflows**—you can configure an Iteration for a Subflow to enable looping behavior.&#x20;
-* **Versioning**—you can assign Major and Minor Version number that the Server responds correctly to requests for the different versions.&#x20;
-* **Effective Dates**—you can have identically named Ruleflows with slight variations that respond to requests only when in the specified date range.&#x20;
+* **Nested Ruleflows**—you can reduce the complexity of large Ruleflows by breaking them into smaller, ‘child’ Ruleflows and adding them to the parent Ruleflow, referred to as “a Ruleflow in a Ruleflow.”
+* **Conditional Branching**—you can create branches in a Ruleflow, where the value of an attribute determines which branch the data is routed to.
+* **Subflows**—you can configure an Iteration for a Subflow to enable looping behavior.
+* **Versioning**—you can assign Major and Minor Version number that the Server responds correctly to requests for the different versions.
+* **Effective Dates**—you can have identically named Ruleflows with slight variations that respond to requests only when in the specified date range.
 * **Service Call-outs**—you can access Datasources to enrich your rules, and update databases
 
 ### Watch and Learn
