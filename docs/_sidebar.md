@@ -10,5 +10,5 @@
   
 
 **PROJECT INFO**  
-* [GitHub Repository](https://github.com/corticon/docs)
+* [GitHub Repository](https://github.com/corticon/documentation/)
 
