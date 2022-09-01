@@ -1,5 +1,7 @@
 # Corticon Overview
 
+![Corticon Components](docs/assets/corticonServerVsJs.png)
+
 Corticon has three main components:
 
 - [**Corticon Studio**](https://github.com/notedhelms/docs/blob/main/rule-authoring-and-testing/corticon-studio-basics) enables you to model, test, and automate business rules within. Progress Corticon rules can then be deployed as *decision services*, made available in nearly any architectural environment by using either:
