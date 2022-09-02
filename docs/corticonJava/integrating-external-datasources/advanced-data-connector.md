@@ -30,8 +30,3 @@ EDC: Could result in over 100,000 SQL queries, due to it’s ‘lazy loading’ 
 
 ADC: Only three SQL queries, one for each table, are needed to retrieve this data.
 {% endhint %}
-
-### Watch: Access Data with ADC
-
-{% embed url="https://www.youtube.com/watch?v=kS5s20qYcec" %}
-
