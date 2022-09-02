@@ -35,7 +35,6 @@ A level below each entity are its attributes. Each attribute has a name, a data 
 Finally, associations are at the same hierarchical level as attributes. The associated entity is displayed in parentheses. The association icon changes based on the type of association. Since the Cargo entity has a many-to-one relationship with the FlightPlan entity, the icon is multiple bars converging into a single horizontal bar. The FlightPlan to Cargo association shows a reverse of the icon (a single bar diverging into multiple bars).
 
 > There are four types of associations:
-
 > * One-to-many—for example, if a vehicle can contain many cargo containers, from the perspective of the Vehicle (source) entity, the relationship with the Cargo (target) entity is one-to-many. A one-to-many association’s icon is a single bar diverging into multiple branches.
 > * Many-to-one—for example, from the perspective of the Cargo (source) entity, the relationship with the Vehicle (target) entity is many-to-one. A many-to-one association’s icon shows multiple branches converging into a single bar.
 > * One-to-one—for example, if a vehicle can have only one driver, the relationship is one-to-one. This is true from both perspectives. A one-to-one association’s icon is a single bar.
