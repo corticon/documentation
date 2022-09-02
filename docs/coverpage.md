@@ -7,4 +7,4 @@
 
 
 [Explore](home)
-[GitHub](https://github.com/corticon/docs)
+[GitHub](https://github.com/corticon/)
