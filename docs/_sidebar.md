@@ -25,6 +25,6 @@
 - [Corticon Server Deployment ](corticonJava/README.md)
   
 
-**PROJECT INFO**  
-* [GitHub Repository](https://github.com/corticon/documentation/)
+**MORE INFO**  
+* [GitHub](https://github.com/corticon/)
 
