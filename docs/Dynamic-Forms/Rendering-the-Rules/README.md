@@ -21,7 +21,7 @@ Whether you use and adapt the template directly, or you intend to to leverage a 
 
 The decision service returns a JSON payload containing an array with 2 elements. Each of the element represents top level entities from the Corticon model.  
 
-The item at index 0 is the UI model.  
+The item at index 0 is the `UI` model.  
 
 The item at index 1 is the data for the specific use case.  We call this the **project data**.  It contains:
 
@@ -29,17 +29,15 @@ The item at index 1 is the data for the specific use case.  We call this the **p
 2.	The data from the user's responses that are accrued throughout the form.
 3.	Data created by the decision service over the course of a form based upon an 'under the covers' decision.  For example, the decision service might compute the total expenses sum,  then use that total in another step to decide to skip some questions based on whether the total is less than say $1000.
 
-> Note: In the rest of this document, when we reference an item as UI.fieldName we mean to reference the top level entity item at index 0 from the payload (that is UI.fieldName is a short hand notation for payload[0].fieldName).
+> Note: In the rest of this document, when we reference an item as `UI.fieldName` we mean to reference the top level entity item at index 0 from the payload (that is, `UI.fieldName` is a short hand notation for `payload[0].fieldName`).
 
 # Maintaining the State of a Form
 
 The CSC maintains the state of the overall flow by:
-1. Keeping a variable for the current stage to execute and setting the next stage to execute based on instructions from the decision service.  Specifically, the decision service sets the attribute UI.nextStageNumber to specify the next step in the flow.  Thus, when the CSC is ready for the next step in the flow, it invokes the decision service by setting UI.currentStageNumber to UI.nextStageNumber in the input payload of the decision service.
+1. Keeping a variable for the current stage to execute and setting the next stage to execute based on instructions from the decision service.  Specifically, the decision service sets the attribute `UI.nextStageNumber` to specify the next step in the flow.  Thus, when the CSC is ready for the next step in the flow, it invokes the decision service by setting `UI.currentStageNumber` to `UI.nextStageNumber` in the input payload of the decision service.
 2. Keeping a variable to an object literal for the set of data (answers) entered at each step.  
-   The answers are stored in specific fieldecision service
-  , again as specified by the decision service
-  . Specifically, the field is specified in each UIControl as field UIControl.fieldName.      
-3. Upon receiving a “done” instruction from the decision service (a notification of the end of the flow), it is expected the collected data will be passed to another function or process; typically an event will be raised with a pointer to the JSON data collected during the flow.  Specifically, this is specified in the UI.done attribute.
+   The answers are stored in specific field decision service, again as specified by the decision service. Specifically, the field is specified in each `UIControl` as field `UIControl.fieldName`.      
+3. Upon receiving a `done` instruction from the decision service (a notification of the end of the flow), it is expected the collected data will be passed to another function or process; typically an event will be raised with a pointer to the JSON data collected during the flow.  Specifically, this is specified in the `UI.done` attribute.
 
 It’s important to keep in mind that the decision service does not maintain any state.
 
@@ -51,21 +49,17 @@ Another way to look at that is:
 
 As the CSC can be reused across different projects, there is a need to be able to specify where to store the data within the returned JSON payload.
 
-The decision service can optionally specify a path to where the data will be stored within the answers object literal.
-This is specified with UI.pathToData
-When not specified the CSC will write the answers at the root of the object literal.
-The CSC is responsible for maintaining the state of the pathToData as it can change between stages but the decision service is not responsible for specifying the pathToData at every single step.
+- The decision service can optionally specify a path to where the data will be stored within the answers object literal. This is specified with `UI.pathToData`
+- When not specified the CSC will write the answers at the root of the object literal.
+- The CSC is responsible for maintaining the state of the `pathToData` as it can change between stages but the decision service is not responsible for specifying the `pathToData` at every single step.
 
 # Rendering UI Controls
 
-The CSC receives the list of UI controls to render from the decision service JSON payload at the “UI.containers” element.  
-This is an array of all the containers to render for this stage.
-The container can be viewed as a panel containing various labels and input fieldecision service.
-The container has various attributes, for example a title.  
-But, most importantly it has an array of UI controls to render within the container at UI.containers.uiControls.
-Each UI control element has multiple attributes.  The most important one is the type attribute as it allows the CSC 
-to know what kind of control to render and which necessary attributes to access based on the type.
-For example a UI control type “Number” can have a min and max number associated with it to provide data validation.
+- The CSC receives the list of UI controls to render from the decision service JSON payload at the `UI.containers` element. This is an array of all the containers to render for this stage. 
+- The container can be viewed as a panel containing various labels and input fiel decision service. The container has various attributes, for example a title.  
+- Importantly, it has an array of UI controls to render within the container at `UI.containers.uiControls`.
+- Each UI control element has multiple attributes.  The most important one is the `type` attribute as it allows the CSC to know what kind of control to render and which necessary attributes to access based on the type.
+- For example a UI control type `Number` can have a min and max number associated with it to provide data validation.
 
 The data the CSC receives is structured like this (pseudo json):
 ~~~
@@ -77,7 +71,7 @@ containers: [
 ]
 ~~~
 
-For examples of actual payloadecision service, run the test driver client, select the canonical sample and look at the trace panel.
+For examples of actual payload decision service, run the test driver client, select the canonical sample and look at the trace panel.
 
 Here is an example for stage 2 of the canonical sample:
 
@@ -128,71 +122,61 @@ Here is an example for stage 2 of the canonical sample:
 
 # Simple Controls
 
-These correspond to a primitive UI element in HTML or mobile platform.  For example, a Text UI type can be rendered as an HTML <input> tag.
-Another example: a MultiChoice ui type can be rendered as a dropdown using a "select" html tag.  
+These correspond to a primitive UI element in HTML or mobile platform.  For example, a Text UI type can be rendered as an HTML `<input>` tag. Another example: a MultiChoice ui type can be rendered as a dropdown using a `select` html tag.  
 
-Note: the CSC can decide to render the MultiChoice as a custom list that the user can click on.
+> Note: the CSC can decide to render the MultiChoice as a custom list that the user can click on.
 
-No matter how the UI type is rendered, a simple control has only one input (a string, some numbers, a Boolean, ect…), thus the CSC will be responsible for storing one answer for each simple controls.  The UI control specifies where to store the data in the field UIControl.fieldName
+No matter how the UI type is rendered, a simple control has only one input (a string, some numbers, a Boolean, ect…), thus the CSC will be responsible for storing one answer for each simple controls.  The UI control specifies where to store the data in the field `UIControl.fieldName`.
 
 # Multiple Instance Controls
 
 Sometimes we don’t know in advance how many inputs there will be for a specific field.  
-A good example would be asking for first name of all children.  There may be the need for 1 input or 2 inputs or 3 or more.
-In this case, the UI control is specified with the attribute multiple.
 
-We also call these kindecision service of controls ArrayTypeInputs as the answers will be stored in an array.
+A good example would be asking for first name of all children.  There may be the need for 1 input or 2 inputs or 3 or more. In this case, the UI control is specified with the attribute multiple.
 
-The array will be saved in the project data as specified by the UI control specified using the field UIControl.fieldName
+We also call these kinds of decision service controls `ArrayTypeInputs`, as the answers will be stored in an array.
 
-For more information check the reference implementation function renderMultipleChoicesInput at https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/clientSideComponent/dynForm/uiControlsRenderers.js
+The array will be saved in the project data as specified by the UI control specified using the field `UIControl.fieldName`.
+
+For more information check the [reference implementation](https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/clientSideComponent/dynForm/uiControlsRenderers.js) for the function `renderMultipleChoicesInput`
 
 # Complex Controls
 
-These controls are characterized as:
+These controls apply where:
 
-1. We need to render a more sophisticated UI control containing multiple primitive UI elements 
-   per entry.  For example, an expense claim entry may have both an expense type and an 
-   expense amount; so the complex control would contain both a selector control for the type
-   and a currency input control.
+1. We need to render a more sophisticated UI control containing multiple primitive UI elements per entry.  For example, an expense claim entry may have both an expense type and an expense amount; so the complex control would contain both a selector control for the type and a currency input control.
 
-2. There can be multiple entries and the number of entries are not known in advance.  Again, a good example is an expenses question.  The user may have 2 items to claim or may have 10.  
-For each item to claim, there is a choice input for the type of expense, a number input for the amount and a choice 
-for the currency.  The complex control would typically display a button to let the user add another entry on demand.
+2. There can be multiple entries and the number of entries are not known in advance.  Again, a good example is an expenses question.  The user may have 2 items to claim or may have 10. For each item to claim, there is a choice input for the type of expense, a number input for the amount and a choice for the currency.  The complex control would typically display a button to let the user add another entry on demand.
 
-We also call this type of controls ArrayTypeInputs as the answers will be stored in an array.
-The array will be saved in the project data as specified by the UI control specifies using the field UIControl.fieldName
+We also call this type of controls `ArrayTypeInputs` as the answers will be stored in an array. The array will be saved in the project data as specified by the UI control specifies using the field `UIControl.fieldName`
 
-For more information check the reference implementation function renderExpenseInput at https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/clientSideComponent/dynForm/uiControlsRenderers.js
+For more information, see the reference implementation function [renderExpenseInput](https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/clientSideComponent/dynForm/uiControlsRenderers.js).
 
 
 # Controls Reading Data from External Data Sources
 
 When you implement your own CSC, you may want to support UIControls that populate the control from a datasource.  
-This is particularly useful for list of items, for example a dropdown list, when the list of options already exists 
-somewhere else, and you don’t want to duplicate it in Corticon.
+This is particularly useful for list of items, for example a dropdown list, when the list of options already exists somewhere else, and you don’t want to duplicate it in Corticon.
 
-Or perhaps the list is changing so frequently that you want to make sure the user always get the list 
-from an external data source (for example a set of exchange rate).
+Or, perhaps the list is changing so frequently that you want to make sure the user always get the list from an external data source (e.g. a set of exchange rates).
 
-The decision service can specify an external data source with the property UIControl.dataSource.
+The decision service can specify an external data source with the property `UIControl.dataSource`.
 
-To see an example of what you need to implement, check the MultiChoice renderer (function renderMultipleChoicesInput in  https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/clientSideComponent/dynForm/uiControlsRenderers.js)
+To see an example of what you need to implement, [check the MultiChoice renderer](https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/clientSideComponent/dynForm/uiControlsRenderers.js).
 
 There are 2 working modes in this example:
-1. Default mode: The REST service produces JSON with the field names “value” and “displayName” for the option value and text respectively.
+1. Default mode: The REST service produces JSON with the field names `value` and `displayName` for the option value and text respectively.
 2. Mapping mode: The field names are different and the mapping are specified in these 2 properties:
-      UIControl.dataSource.dataSourceOptions.dataValueField
-      UIControl.dataSource.dataSourceOptions.dataTextField
+      `UIControl.dataSource.dataSourceOptions.dataValueField`
+      `UIControl.dataSource.dataSourceOptions.dataTextField`
 
 # Stages
 
-Stage: a unique identifier representing where the flow currently is at in the state machine.
+`Stage`: a unique identifier representing where the flow currently is at in the state machine.
 
 ## In the Request
 
-When the CSC makes a request to the decision service it asks for a specific stage to render by specifying 
-UI.currentStageNumber.
+When the CSC makes a request to the decision service it asks for a specific stage to render by specifying `UI.currentStageNumber`.
 
 On the request, the CSC tells the decision service the current stage number to execute. 
 The decision service will respond with the corresponding to the current UI to render.
@@ -200,10 +184,10 @@ The decision service will respond with the corresponding to the current UI to re
 ## In the Response
 
 There are 3 attributes in the decision service JSON results that deal with stages:
-* currentStageNumber: The decision service tell the CSC the current stage number it has executed.  
+* `currentStageNumber`: The decision service tell the CSC the current stage number it has executed.  
   The CSC shouldn't do anything special with it.  It is mostly useful for troubleshooting.
-* currentStageDescription: An optional string.  Again, the CSC shouldn't do anything special with it.  It is mostly useful for troubleshooting.  
-* nextStageNumber: This is the stage number the CSC specifies when calling the decision service for the next step. 
+* `currentStageDescription`: An optional string.  Again, the CSC shouldn't do anything special with it.  It is mostly useful for troubleshooting.  
+* `nextStageNumber`: This is the stage number the CSC specifies when calling the decision service for the next step. 
 
 
 # Additional Resources
