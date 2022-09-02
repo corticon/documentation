@@ -1,6 +1,6 @@
 # Custom JavaScript functions
 
-Corticon.js provides data access operators in a mechanism that will execute custom JavaScript functions. The custom functions are accessed as a group of built-in operators available from Studio's Rule operator tree under **General > Functions** as standalone GET and SET operators for each Corticon.js data type:\
+Corticon.js provides data access operators in a mechanism that will execute custom JavaScript functions. The custom functions are accessed as a group of built-in operators available from Studio's Rule operator tree under **General > Functions** as standalone GET and SET operators for each Corticon.js data type:
 
 
 ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/fvh1629311110121.image?\_LANG=enus)
@@ -38,7 +38,7 @@ A custom `set` function takes three parameters:
 
 For example, to call the custom decimal function `setData` with the parameter `key5` using the `setDecimal` operator, use the following action. The result is stored in the string attribute, `Ent1.decimal3`.
 
-### How to set a mock implementation for the Studio tester <a href="#d2058e191" id="d2058e191"></a>
+### How to set a mock implementation for the Studio tester 
 
 Studio tester runs the Ruleflows and Rulesheets in the context of a local Node.js process. Consequently, it is possible that:
 
@@ -47,7 +47,7 @@ Studio tester runs the Ruleflows and Rulesheets in the context of a local Node.j
 
 However, you can specify a mock implementation to run local unit tests by appending the implementation to the project. The configuration of the extensions in the sample is in `getSetData.js`:
 
-| <pre><code>const sessionData = new Map();
+<pre><code>const sessionData = new Map();
 
 function getData ( helper, name ) {
 	if ( name === 'key4' )  // example showing how to construct a DateTime
@@ -68,7 +68,6 @@ function setData ( helper, name, value ) {
 }
 
 module.exports = { getData, setData }; // export the names to be used in studio</code></pre> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 This code is appended to the project for testing in Studio.
 
@@ -78,7 +77,7 @@ This code is appended to the project for testing in Studio.
 2. Click on your project, and then select **Properties**.
 3. Select **Corticon.js Extensions**.
 4. Click **Add**, and then select your .js implementation file, as illustrated:\
-   ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/aic1629310034311.image?\_LANG=enus)\
+   ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/aic1629310034311.image?\_LANG=enus)
 
 5. Click **Apply and Close**.
 
@@ -109,8 +108,8 @@ For example:
 That can be abbreviated to `module.exports ={getSessionData};`
 
 The following code shows a more complete example with two custom functions:
-
-| <pre><code>const sessionData = new Map();
+```
+<pre><code>const sessionData = new Map();
 sessionData.set('key1', true);
 sessionData.set('key2', 'my session string');
 sessionData.set('key3', 12);
@@ -126,9 +125,8 @@ function getMoreData ( helper, name ) {
 	return name;
 }
 																	
- module.exports = { getSessionData, "from session data": getMoreData };							  </code></pre> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
+ module.exports = { getSessionData, "from session data": getMoreData };
+```
 These definitions enable you to use `getSessionData` `from session data` as custom function names in any of the simplified extended operators.
 
 For example:
@@ -152,7 +150,7 @@ The syntax of the object literal is: **{ \<name of function as used in rulesheet
 
 For example, here is the configuration for the custom function examples in previous section:
 
-| <pre><code>const sessionData = new Map();
+ ```<pre><code>const sessionData = new Map();
 sessionData.set('key1', true);
 sessionData.set('key2', 'my session string');
 sessionData.set('key3', 12);
@@ -187,8 +185,10 @@ const configuration = { logLevel: 1,
         { getSessionData: getSessionData },
         { setSessionData: setSessionData }
     ]
-};</code></pre> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+}
+```
+
+
 
 Custom functions are specified at run time in the configuration object. This allows for complete separation of the custom functions from the rulesheets and its bundle.
 
@@ -256,11 +256,11 @@ The only constraints are:
 * You return the proper object type. A `getDecimal` call needs to return a Decimal, likewise a `getDateTime` needs to return a DateTime.
 * You use the helper object to create or operate on Decimal and DateTime objects.
 
-### Custom GET functions <a href="#d2058e586" id="d2058e586"></a>
+### Custom GET functions
 
 The following code shows how to construct and return a decimal and a dateTime:
 
-| <pre><code>const sessionData = new Map();
+```
 sessionData.set('key1', true);
 sessionData.set('key2', 'my session string');
 sessionData.set('key3', 12);
@@ -286,14 +286,15 @@ function getSessionData ( helper, name ) {
 function getMoreData ( helper, name ) {
     return name;
 }	
-module.exports = { getSessionData, "from session data": getMoreData };								</code></pre> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+module.exports = { getSessionData, "from session data": getMoreData };							
+```
 
-### Custom SET functions <a href="#d2058e615" id="d2058e615"></a>
+
+### Custom SET functions
 
 Similar to `get` custom functions, notice how the functions are exposed via the configuration object:
 
-| <pre><code>const sessionData = new Map();
+```
 sessionData.set('key1', true);
 sessionData.set('key2', 'my session string');
 sessionData.set('key3', 12);
@@ -329,7 +330,7 @@ const configuration = { logLevel: 1,
         { setSessionData: setSessionData }
     ]
 };</code></pre> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
 
 ### Helper functions <a href="#d2058e649" id="d2058e649"></a>
 
