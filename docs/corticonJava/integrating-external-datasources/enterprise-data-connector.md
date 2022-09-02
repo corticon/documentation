@@ -11,8 +11,4 @@ Corticon [EDC ](https://documentation.progress.com/output/ua/Corticon/#page/cort
 | Minimize client application re-factoring when data needs change |                Require JDBC connectivity to database               |
 |    Leverages industry leading Progress DataDirect technology    | Poor performance for large datasets due to ‘chatty’ DB interaction |
 
-### Watch: Corticon Using SQL Server with EDC
-
-{% embed url="https://www.youtube.com/watch?v=qULKijbr_Qc&list=PLYNw760GOr2BIxRuUKMkiJEJjm2wnUtU7&index=12" %}
-
 #### To learn more, see [Getting Started with EDC](https://docs.progress.com/bundle/corticon-data-integration/page/Getting-Started-with-EDC.html) on Corticon Information Hub.
