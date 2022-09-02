@@ -91,30 +91,3 @@ You can customize Corticon Server's state and restart behavior by combining thes
 | `false`                     | `false`           | no ServerState.xml document exists, and Corticon Server does not attempt to read it upon restart. No old state restored.                                                                                                                                                                                   |
 
 
-
-### Watch and Learn
-
-{% tabs %}
-{% tab title="Which way to publish a Decision Service?" %}
-{% embed url="https://www.youtube.com/watch?v=EBHBwJqNC38&list=PLYNw760GOr2BIxRuUKMkiJEJjm2wnUtU7&index=13" %}
-{% endtab %}
-
-{% tab title="Thread Pooling" %}
-{% embed url="https://www.youtube.com/watch?v=3FhX-3o5cwg&list=PLYNw760GOr2AaYvpVJaP-JY4rXRNosJlD&index=2" %}
-
-
-{% endtab %}
-
-{% tab title="Recording rule executions" %}
-{% embed url="https://www.youtube.com/watch?v=S9bB5N0Emyo&list=PLYNw760GOr2AaYvpVJaP-JY4rXRNosJlD&index=3" %}
-
-
-{% endtab %}
-
-{% tab title="Logging" %}
-{% embed url="https://www.youtube.com/watch?v=Lg5MCoVTJig&list=PLYNw760GOr2AaYvpVJaP-JY4rXRNosJlD&index=4" %}
-
-
-{% endtab %}
-{% endtabs %}
-
