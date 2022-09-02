@@ -112,7 +112,7 @@
   <div id="app"></div>
   <script>
     // Enter the URL of your own GitHub Repository in between the two quotes below
-    var gitLinkRepoURL = 'https://corticon.github.io/docs/#/';
+    var gitLinkRepoURL = 'https://corticon.github.io/documentation/#/';
 
     // Customize the text for your Edit this Page on GitHub link between the two quotes below
     var editThisPageLinkText = 'Edit this Page';
@@ -121,7 +121,7 @@
     var standalone = false;
 
     // Set ToC to true to permanently show page Table of Contents (Sidebar must also be hidden)
-    var ToC = true;
+    var ToC = false;
 
     // Get value from GET-parameter in URL
     // @param {array} name Parameter-name
@@ -253,7 +253,8 @@
       document.body.appendChild(editCSS);
     }
   </script>
-
+<script src="//cdn.jsdelivr.net/npm/codeblock-iframe@latest/dist/index.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-codeblock-iframe@latest/dist/index.min.js"></script>
   <!-- Customizable Theme-->
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 
