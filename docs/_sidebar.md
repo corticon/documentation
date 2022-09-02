@@ -6,8 +6,10 @@
   - [Rule Testing](Modeling-Rules/ruletests/README.md)
 
 - Corticon.js
-- Corticon.js for Dynamic Forms
-- Corticon Server Deployment
+- [Corticon.js for Dynamic Forms](Dynamic-Forms/README.md)
+  - [Authoring Dynamic Form Rules](Dynamic-Forms/Authoring-the-Rules/README.md)
+  - [Rendering Dynamic Form Rules](Dynamic-Forms/Rendering-the-Rules/README.md)
+- Corticon Server Deployment 
   
 
 **PROJECT INFO**  
