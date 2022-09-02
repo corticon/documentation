@@ -1,9 +1,3 @@
----
-description: >-
-  You can script continuous integration and continuous delivery (CI/CD) when you
-  use the Corticon.js utilities to make changes to software rapidly and
-  iteratively
----
 
 # Scripting
 

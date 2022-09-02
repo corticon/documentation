@@ -1,12 +1,6 @@
----
-description: >-
-  From Corticon.js Studio, in one click, you can get a deployment package for
-  various JavaScript platforms.
-cover: ../../.gitbook/assets/ProgressCorticon.js_PrimaryLogo_Stacked.png
-coverY: -152.9817671809257
----
 
 # JavaScript Decision Services
+
 
 With Corticon.js, you can deploy rules to any platform that supports a compatible version of JavaScript. With this flexibility, you automate decisions where the data originates from or where the decisions have the most effect. Supported deployments of Corticon.js include:
 
