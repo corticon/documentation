@@ -34,7 +34,7 @@ who understand well the problem domain of the questionnaire.
 Here is a summary of the roles and responsibilities:
 
 <p style="text-align:center;">
-<img width="500"src="assets/architecture.png"
+<img width="500"src="../assets/RolesResponsibilities.PNG"
  title="architecture">
 </p>
 
@@ -57,15 +57,16 @@ In-process deployments provide essentially instant response time, however, there
 	- Don't to risk exposing the decision service to reverse engineering
 
 There are only minor distinctions between how the CSC and decision service interactions take place when running in-process or remotely:
-
 <p style="text-align:center;">
-<img width="500"  src="assets/LocalDS.png"
+<img width="500"  src="../assets/LocalDS.png"
+ title="Running locally">
+ 
+<br>
+<p style="text-align:center;">
+<img width="500"  src="../assets/RemoteDS.png"
  title="Running locally">
 <br>
-<br>
-<img width="500"  src="assets/RemoteDS.png"
- title="Remote decision service">
-</p>
+
 
 ## Building and integrating a rule-driven form's components
 
@@ -83,7 +84,7 @@ It may be easiest to conceptualize Corticon.js Dynamic Forms by first checking o
 ## Summary
 
 <figure>
-<img align="right" width="400"  src="assets/SameModelforDifferentRenderersSmaller.png"
+<img align="right" width="400"  src="../assets/SameModelforDifferentRenderersSmaller.png"
  title="Same Model for Different Renderers">
 </figure>
 
