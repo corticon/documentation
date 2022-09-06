@@ -62,6 +62,15 @@ See the [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/a
 
 # In-Browser Decision Services
 
+
+<p class="codepen" data-height="866.3999481201172" data-default-tab="result" data-slug-hash="WNzoOJM" data-user="SethMeldon" style="height: 866.3999481201172px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/SethMeldon/pen/WNzoOJM">
+  Decision Management Challenge July-2022 </a> by Seth Meldon (<a href="https://codepen.io/SethMeldon">@SethMeldon</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
 When packaging for browser deployment, Corticon.js generates the files:
 
 * `decisionServiceBundle.js`: Your obfuscated rules
@@ -75,13 +84,6 @@ The wrapper, `browser.sample.js`, simply invokes the rules with the payload inpu
 The html page and wrapper are pure sample code. They just demonstrate how Corticon.js rules can be embedded into a JavaScript application running in a browser.
 
 The `browser.sample.html` is ready to run a simple page in a browser.
-
-<p class="codepen" data-height="866.3999481201172" data-default-tab="result" data-slug-hash="WNzoOJM" data-user="SethMeldon" style="height: 866.3999481201172px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/SethMeldon/pen/WNzoOJM">
-  Decision Management Challenge July-2022 </a> by Seth Meldon (<a href="https://codepen.io/SethMeldon">@SethMeldon</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 Paste in the JSON you exported from Studio tester into the left panel, and then click **Run Decision Service**. The results in the right panel as shown:
 
