@@ -2,47 +2,50 @@
 
 When deployed or integrated into your application your Corticon.js decision services execute by accepting a JSON payload and returning a JSON result. The JSON payload contains the item or items your rules are to execute on—for example, a mortgage application to be evaluated or a set of sales leads to be routed. When your rules execute, they will update or add to the input payload—for example, adding a determination for a mortgage application or assigning the sales rep for each sales lead. The JSON result returned from the decision service will contain the state of the payload after rule execution.
 
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/aud1619024465470.image?\_LANG=enus)
+![](/docs/assets/corticon_js_integration-1.png)
 
 Corticon.js accepts most well-formatted JSON as the input payload. The result JSON will reflect the input payload plus any changes made by the rules. In addition, it will contain information about the rule execution, such as status indicating if rule execution was successful.
 
 As a very simple example, consider a mortgage approval application where the JSON payload to your decision service is as follows:
 
 
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/dze1618945908379.image?\_LANG=enus)
+![](/docs/assets/mortgage%20approval%20application%20JSON%20payload%20.png)
 
 The rules in the decision service look at the mortgage application information to determine if the applicant should be approved, how much they are approved for, and at what rate. The rules in the decision service set the attributes `approved`, `mortgageRate` and `mortgageAmount` on the application. The result payload would be similar to:
 
-
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/srm1618946025101.image?\_LANG=enus)
+![](/docs/assets/mortgage%20json%20response%20payload.png)
 
 The result payload has the same data as was in the input payload plus the attributes set by the rules. In this case the applicant has been approved for $350,000 at 3.5%.
 
 The result payload also contains a `corticon` object that has the `timestamp` of when the rules were run plus the status, `success`, of the execution. The `corticon` object contains additional information about the execution of your rules.
 
-### JSON to vocabulary mapping <a href="#d837e113" id="d837e113"></a>
+### JSON to Vocabulary mapping 
 
 When your decision service is invoked, Corticon maps the JSON payload to the internal data model of your Corticon vocabulary to enable the rules to execute on it. To perform this mapping, Corticon must first examine the JSON payload to identify the top-level objects in the JSON and the vocabulary entities they correspond to.
 
 In our simple mortgage application example, the vocabulary could be defined as:
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/uwq1618946105790.image?\_LANG=enus)\
+
+![](/docs/assets/mortgage%20vocab.png)
+
 This is a very simple vocabulary with a single entity, `Application`. Our JSON payload is equally simple:
 
 
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/dze1618945908379.image?\_LANG=enus)
+![](/docs/assets/mortgage%20json.png)
 
 Here the JSON payload represents a single application and Corticon would map it to the `Application` entity. In a real application your Corticon vocabulary and JSON payload are likely to be much more complex.
 
 Once the top-level objects in the JSON payload are mapped to the vocabulary model, Corticon can map any nested objects in the JSON to associations in the vocabulary. Let’s expand our mortgage sample to have a slightly more complex vocabulary:
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/lxk1618946282739.image?\_LANG=enus)
+
+![](/docs/assets/mortgage%20complex.png)
+
 Here the mortgage application was defined to have an `Application` entity with a one-to-many association to a `CreditReport` entity and a one-to-one association to a `Mortgage` entity. This is more reflective of a real Corticon vocabulary. A real vocabulary is likely to have many entities and associations. A JSON payload for this vocabulary may look like:
 
 
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/hsc1618946362098.image?\_LANG=enus)
+![](/docs/assets/complex%20mortgage%20json.png)
 
 Once Corticon has mapped the root object in the JSON to the `Application` entity, it can use the knowledge that the `Application` entity has an association to a `CreditReport` entity to map the nested `creditReport` in the JSON. Corticon will set the association on the `Application` entity to this `CreditReport` entity.
 
-### JSON Path and JSON Element Name <a href="#d837e178" id="d837e178"></a>
+### JSON Path and JSON Element Name 
 
 Corticon employs two strategies to map a JSON payload to the vocabulary. First, it will use the knowledge it has of the vocabulary to identify how to perform the mapping. When this information is insufficient, Corticon will use a "best match" strategy to perform the mapping.
 
@@ -57,11 +60,13 @@ The **JSON Element Name** property defines the attribute a field in the JSON pay
 Both **JSON Path** and **JSON Element name** can be set in the Corticon.js vocabulary editor but the easiest, and least error prone, way to set them in your vocabulary is to generate your vocabulary using the Corticon.js **Populate Vocabulary form JSON** wizard. See [Generate a Vocabulary](https://docs.progress.com/bundle/corticon-js-rule-modeling/page/Generate-a-Vocabulary.html) .
 
 Given this JSON:
+![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/ldn1618946462665.image?\_LANG=enus)
+
+
 Corticon would generate this vocabulary:
 
 
 
-![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/ldn1618946462665.image?\_LANG=enus)
 
 ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/hdd1618946519504.image?\_LANG=enus)
 
