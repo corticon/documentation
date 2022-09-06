@@ -23,13 +23,13 @@ When you build a Vocabulary, you not only define the terms, you also define rela
 
 The rule vocabulary can be created manually, or it can be auto generated based on an external data source, the schema of any relational database, or the JSON structure of a REST endpoint.
 
-![](../../assets/pop-from-json.png)
+![](../assets/pop-from-json.png)
 
 ## Building a Corticon Vocabulary
 
 Business terms are represented in the Vocabulary as either **entities** or **attributes**.
 
-![](../../assets/vocab-overview.png)
+![](../assets/vocab-overview.png)
 
 An attribute is like a data field that holds a value. An entity is a collection of attributes. For example, the term cargo may have data fields such as cargoID, weight, volume, etc. So, cargo should be defined as an entity in a Vocabulary and the terms cargo ID, weight, and volume should be defined as attributes that belong to the entity cargo.
 
@@ -68,14 +68,14 @@ You define Custom Data Types in the Custom Data Types tab. You access the Custom
 
 A specific list of acceptable values. For example, in the transport company scenario, you may want to limit the acceptable values for the `Aircraft.aircraftType` attribute to 747, 777, and 787. You can achieve this by: – Defining a Custom Data Type that is based on the String data type, – with the values ‘747’, ‘777’, and ‘787’, and, – configure the `aircraftType`attribute to use this Custom Data Type.
 
-![](../../assets/enumDataType.png)
+![](../assets/enumDataType.png)
 
 ### Constrained Custom Data Types
 A constrained Custom Data Type enables you to limit acceptable values through a constraint expression. The constraint expression must include the special term value.
 
 For example, if you want to define a Custom Data Type that constrains the value of an attribute to less than 10,000, the constraint expression would be value < 10000.
 
-![](../../assets/constraint-cdt.png)
+![](../assets/constraint-cdt.png)
 
 Bear in mind the following when you define constraint expressions:
 
@@ -95,11 +95,9 @@ Here are a few examples of constraint expressions:
 | value in \['1:00:00 PM'.. '2:00:00 PM']                                         | <p>Time values between '1:00:00 PM' [inclusive] and<br>'2:00:00 PM' [inclusive]</p>                              |
 | <p>value.size >= 6 and<br>(value.indexOf(1) > 0 or<br>value.indexOf(2) > 0)</p> | <p>String values of minimum 6 characters in length, whose<br>first or second characters are positive numbers</p> |
 
-![](<../../../.gitbook/assets/image (76).png>)
 
 After you define a Custom Data Type, you can apply the Custom Data Type to attributes.
 
-![](<../../../.gitbook/assets/image (42).png>)
 
 ---
 
@@ -107,7 +105,7 @@ After you define a Custom Data Type, you can apply the Custom Data Type to attri
 
 Corticon Studio enables you to localize Vocabulary terms. This is useful if there are multiple rule modelers who are responsible for developing or maintaining the rule model and they speak different languages.
 
-![](../../assets/local.png)
+![](../assets/local.png)
 
 To localize Vocabulary terms, you open the Localization panel (select Vocabulary > Localize), select the desired language or languages in the Locale section of the panel, and then manually enter the localized word for each term as shown in this image.
 
@@ -119,7 +117,7 @@ To localize Vocabulary terms, you open the Localization panel (select Vocabulary
 
 Here is an example of a Rulesheet with three rules. The Rulesheet editor has the following parts:
 
-![](../../assets/rulesheet-highighted.png)
+![](../assets/rulesheet-highighted.png)
 
 
 * **Conditions**—where you define the conditions for each rule. For example, `Aircraft.aircraftType` = 747. The condition value could be a single value (747), a set of values (747, 777, 787), or a range of values (weight=100000..200000).
@@ -139,7 +137,7 @@ Each rule is documented with **Rule Statements**. Rule Statements will be sent a
 
 Note that you can define multiple rule statements for a single rule. For example, one rule statement can document the rule, while another is sent as part of the output message when the rule fires
 
-![](../../assets/rule-statements.png)
+![](../assets/rule-statements.png)
 
 ## Rule Operators
 
@@ -149,7 +147,7 @@ The Rule Operators view organizes operators into folders based on their function
 
 You can learn about each rule operator in the Rule Operators view by hovering the mouse pointer over it. A tooltip appears, describing the rule operator, as shown in this image. The Rule Language Guide in the documentation set provides details of all rule operators available in Corticon Studio.
 
-![](../../assets/rule-operators.png)
+![](../assets/rule-operators.png)
 
 ---
 
@@ -184,7 +182,7 @@ A conflict occurs when two or more rules overlap in some way. They have conditio
 
 The rules in this Rulesheet conflict with each other because a person who is, for instance, 45 years old and also a skydiver, satisfies the conditions of both the rules.
 
-![](../../assets/pre-con-check.png)
+![](../assets/pre-con-check.png)
 
 To perform a conflict check, open the Rulesheet, and click on the Check for Conflicts icon or select Rulesheet > Logical Analysis > Check for Conflicts.
 
@@ -195,7 +193,7 @@ When you define a rule in a Rulesheet, Corticon Studio creates sub-rules that ad
 To do this you must double-click the column number in the main rule. The sub-rules are numbered by adding a decimal point to the main rule’s column number (if the main rule is in column 1, the sub-rules are numbered 1.1, 1.2, 1.3, etc).
 Each sub-rule addresses one scenario within the main rule. In this example, both rules are expanded. Consider the rule that verifies if a person is less than or equal to 55 years of age and assigns a low risk rating. Since, in this rule, it does not matter if the person is a skydiver, Corticon Studio identifies three scenarios1 within the rule:
 
-![](../../assets/conflict-highlight.png)
+![](../assets/conflict-highlight.png)
 
 * Where Person.age <= 55 and Person.skydiver = true (sub-rule 1.1)
 * Where Person.age <= 55 and Person.skydiver = false (sub-rule 1.2)
@@ -231,7 +229,7 @@ Based on the rules that you define, Corticon Studio detects if any scenarios are
 
 Corticon Studio has a built-in completeness checking algorithm that calculates the set of all possible mathematical combinations of all values in all conditions. The algorithm then compares this set of possible combinations to those already specified in the Rulesheet and detects missing combinations.
 
-![](../../assets/comp.png)
+![](../assets/comp.png)
 
 #### Check and resolve incomplete rules
 
@@ -302,8 +300,8 @@ To help identify inadvertent loops, Corticon Studio provides a Check for Logical
 
 Clicking the Check for Logical Loops icon displays a window that describes the mutual dependencies found on the Rulesheet. To illustrate loop detection, we will use a few of the same examples from before.
 
-![Example of an Infinite Single-Rule Loop
-](../../assets/looping.png)
+![](../assets/looping.png)
+
 
 When applied to a Rulesheet containing just the single-rule loop shown in this figure, the Check for Logical Loops tool displays the following window:
 Figure 2. Checking for Logical Loops in a Rulesheet
@@ -325,9 +323,9 @@ A Ruletest stores this information in a Ruletest file, enabling you to save use-
 
 Take a close look at the images. Here is an example of a Rulesheet (`AircraftRules.ers`) with two rules and a Ruletest (`TestingAircraftRules.ert`) that has been executed.
 
-![](../../assets/rulesheet-highighted.png)
+![](../assets/rulesheet-highighted.png)
 
-![](../../assets/ruletest-output-vs-expected.png)
+![](../assets/ruletest-output-vs-expected.png)
 
 ## The Ruletest editor
 
@@ -339,11 +337,12 @@ The Ruletest tests the Rulesheet. The Ruletest editor has four parts:
 * **Input**—where you define input data to be processed by the rules in the Rulesheet. In this example, there are two instances of the Aircraft entity with different values for `Aircraft.aircraftType`.
 * **Output**—where Corticon Studio displays the result of a Ruletest execution. As you can see, a value for `Aircraft.maxCargoWeight` has been assigned based on the rules in the AircraftRules.ers Rulesheet.
 * **Expected**—where you can optionally define the result that you expect.
+* 
+![](../assets/rule-messages.png)
 
 
 ## When you run a Ruletest
 
-![](../../assets/rule-messages.png)
 
 1. Input data is processed by the rules in the Rulesheet.
 2. If the input data satisfies all the conditions in one or more rules, those rules fire. The Ruletest then displays output that could include the same data as the input but with changed values, and/or additional data and values.
@@ -366,18 +365,17 @@ Using dynamic data, you can create a single rule statement that describes multip
 
 From here, you can continue adding more rules to the rulesheet, or more commonly, compartmentalize our rules into different rulesheets, and create a **Ruleflow** to specify the sequence from one rulesheet to another. When multiple Rulesheets are included in a Ruleflow, the Rulesheets will execute in a sequence determined by their Rulesheet order in the Ruleflow. With ruleflows, behavior like branching into separate rules for different scenarios can be defined and specify when the execution of a given Decision Service call that Corticon should retrieve additional data from external datasources.
 
-![](../../assets/ruleflowBreakdown.png)
+![](../assets/ruleflowBreakdown.png)
 
 As more rulesheets are added to our Ruleflow, Ruletests can be run against entire Ruleflows, instead of testing only the Rulesheets as they are developed. This enables you to test not only the rules as they are defined in the Rulesheet, but also how the Ruleflow works, and how the rules behave as part of the Ruleflow. This way, problems can be detected and fixed earlier in the lifecycle.
 
-![](../../assets/multi-branch.png)
-
+![](../assets/multi-branch.png)
 
 ## Ruleflow Properties
 
 Ruleflows are the final step in the rule development process and are thus deployed as Decision Services. Ruleflows can always be versioned as well, with either a major/minor version tag or effective date range for which they will execute when invoked. The invocation (request) payload must contain a version number or data parameter to consume the desired "versioned" decision service.
 
-![](../../assets/ruleflow-props.png)
+![](../assets/ruleflow-props.png)
 
 ## Test Ruleflows using Ruletests
 
@@ -396,4 +394,4 @@ To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletes
 * **Effective Dates**—you can have identically named Ruleflows with slight variations that respond to requests only when in the specified date range.
 * **Service Call-outs**—you can access Datasources to enrich your rules, and update databases
 
-[](/docs/assets/branching-node.png)
+![](../assets/branching-node.png)
