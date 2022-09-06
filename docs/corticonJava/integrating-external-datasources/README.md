@@ -7,7 +7,8 @@ In most Corticon deployments, the data is passed in. This simplifies the archite
 In some cases, the data passed in can be large. For example, all the data needed to process a loan application for a single applicant. In some deployments, Corticon needs to retrieve supporting data. This adds another connection to the architecture, yet it can be a considerable savings to not have to pass in all the data in the request. This is especially true where the data is selective – when the rules are choosing some subset of data that is needed. This can also be useful with reference data that you want to cache.
 
 In other deployments Corticon needs to retrieve the data for efficiency. An example would be a batch application where you need to process a billion records at the end of the month. In such cases, efficient moving of data is essential for performance.
-.# Simple Database Connectivity
+
+## Simple Database Connectivity
 
 Corticon [EDC ](https://documentation.progress.com/output/ua/Corticon/#page/corticon%2Fidentity-strategies.html%23)is designed to augment data when processing a discrete Decision Service request. It is used by rule authors who seek the least-technical requirements for modeling data access in their rules, to read/write to an external relational database. However, because it is built on Hibernate and is tied to Hibernate’s object relational model and transactional models, it introduces query and data processing overhead when reading data from a database with related tables. So, EDC's limitations are in its performance in large, data intensive operations where large chunks of data are loaded into Corticon for processing and updating the connected database. Corticon ships with Progress DataDirect drivers for RDBMSs, but you can also use the drivers bundled to[ create new database connections](https://documentation.progress.com/output/ua/Corticon/#page/corticon%2Fusing-datadirect-drivers.html%23).
 
@@ -79,7 +80,7 @@ The built in support is not the only way to do batch processing with Corticon. W
 
 Fetching the transaction identifying data from the underlying relational data source that will be injected into the rules engine takes place outside the Decision Service. As such, Decision Service requests that are usually individual transactions are instead fetched in chunks for the rules engine, and then dispersed across multiple processing threads to concurrently process the incoming requests. Batch processing produces no return payload per request -- the result of each rule processing is persisted in the database. In this format, one of our biggest public sector clients scales their Corticon horizontally with s3, bringing up hundreds of servers for specific windows of time in bursts each month.
 
-#### To learn more, see [Getting Started with Batch](https://docs.progress.com/bundle/corticon-data-integration/page/Getting-Started-with-Batch.html) on Corticon Information Hub.
+### To learn more, see [Getting Started with Batch](https://docs.progress.com/bundle/corticon-data-integration/page/Getting-Started-with-Batch.html) on Corticon Information Hub.
 
 
 ## Third Party Database Access

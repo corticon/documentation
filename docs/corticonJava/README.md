@@ -89,5 +89,18 @@ You can customize Corticon Server's state and restart behavior by combining thes
 | `true`                      | `false`           | <p>Corticon Server maintains ServerState.xml during operation, but does NOT automatically read it upon restart. New Server state upon restart is unaffected by ServerState.xml.</p><p>This allows a system administrator to manually control state restoration from the ServerState.xml, if preferred.</p> |
 | `false`                     | `true`            | Corticon Server attempts to read ServerState.xml upon restart, but finds nothing there. No old state restored.                                                                                                                                                                                             |
 | `false`                     | `false`           | no ServerState.xml document exists, and Corticon Server does not attempt to read it upon restart. No old state restored.                                                                                                                                                                                   |
+# Corticon Server's Web Console
 
+Corticon's Web Console provides a central point for administering and monitoring your Corticon Decision Services, whether in Java or .NET environments. Through the console, you can easily deploy individual Decision Services to one or more Corticon Servers. You can also group related Decision Services into an Application to deploy and manage them as one.
 
+Once deployed, you can easily monitor the performance of the Decision Services and Corticon Servers and view both individual and aggregated metrics. Actions on Decision Services associated with a Server Group are automatically applied to each server member of the group that is running. For example, if you have a Decision Service managed by an Application which is deployed to a Server Group and add another server to the group, the Decision Service will be automatically deployed to the new server. This helps you scale up or scale down the servers in a deployment to meet demand.
+
+The Web Console is a web application that can be installed in the same application server as the Corticon Server for single-server environments or installed separately for multiple-server environments. The choice is yours, depending on the nature of your Corticon deployment. The Web Console maintains configuration information and historical metrics in a local data store. The historical metrics let you see changes in the performance of your Decision Services and Corticon Servers over time.
+
+# Java Environments
+
+The Corticon Server for Java provides the necessary components to deploy Corticon as a REST or SOAP service on a Java application server or to deploy Corticon in-process in your custom Java application. Corticon Server provides installers for both Windows and Linux. The actual deployment artifacts - the JAR and WAR files - are platform independent.
+
+# .NET Environments
+
+The Corticon Server for .NET provides the necessary components to deploy Corticon as a REST or SOAP service to Microsoft Internet Information Services (IIS) or to deploy Corticon in-process in your custom .NET application. Corticon Server .NET install is only available on Windows. Corticon uses a high performance bridging technology to call from .NET languages such as C# to Corticon Server.
