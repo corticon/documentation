@@ -1,14 +1,4 @@
----
-description: >-
-  You can extend the set of operators available to your users by writing your
-  own Java classes.
----
-
 # Extended Operators
-
-
-
-### Extended Operators
 
 Operators are used when defining conditions and actions in a Rulesheet. While Corticon has a large built-in set of operators, you can expand this set by adding custom operators. Operators can operate on individual attributes, collections or sequences. Examples include:
 
