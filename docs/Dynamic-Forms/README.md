@@ -55,9 +55,8 @@ There are only minor distinctions between how the CSC and decision service inter
 
 For more detail on the CSC and the decision service please refer to these documents:
 
-1. [Authoring a the dynamic form logic in Corticon (these will be generated into the Decision Service) ](Rules/README.md)
-2. [Building and configuring the client side component (CSC)](Rendering/README.md)
-
+1. [Authoring a the dynamic form logic in Corticon (these will be generated into the Decision Service) ]([](Authoring-the-Rules/README.md))
+2. [Building and configuring the client side component (CSC)]([](Rendering-the-Rules/README.md))
 
 ## Building Dynamic Forms with Corticon.js
 
