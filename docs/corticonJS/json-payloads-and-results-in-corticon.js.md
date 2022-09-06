@@ -65,10 +65,8 @@ Given this JSON:
 
 Corticon would generate this vocabulary:
 
-
-
-
 ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/hdd1618946519504.image?\_LANG=enus)
+
 
 This is similar to the previous vocabulary, the only differences are that the application entity is named `Root` and the `creditReport` association is one-to-one. Where the root entity in JSON doesn’t have a name, Corticon names it `Root`. It is common to rename this to something more meaningful to rule modelers. The `creditReport` association is one-to-one because there was only one credit report in the JSON.
 
@@ -149,8 +147,7 @@ If there is an error during the execution of the decision service, the status `"
     }
 }							
 ```
-
-NOTE: The pattern for an error was different in V1.2 where the status "error" and description were returned in the root JSON response as follows:
+> Note: The pattern for an error was different in V1.2 where the status "error" and description were returned in the root JSON response as follows:
 
 ```
 {
