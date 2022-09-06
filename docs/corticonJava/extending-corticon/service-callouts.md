@@ -6,7 +6,7 @@ In a Ruleflow, the flow of control moves from Rulesheet to Rulesheet, with all R
 
 When you add a Service Callout (SCO) to a Ruleflow diagram, you effectively instruct the system to transfer control to your extension class at a specific point in the flow. Your extension can directly update the fact pool, and your updated facts are available to subsequent Rulesheets.
 
-[](/docs/assets/service_callout_ruleflow_diagram.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/service_callout_ruleflow_diagram.png)
 
 The rule flow uses two service callouts (Get Patient Info and then Get Procedure History), then uses the data in the Determine Approval Rulesheet, and finally passes control to Service Callout extension class Save Approvals.
 
@@ -19,7 +19,7 @@ Your Service Callout class must implement marker interface ICcServiceCalloutExte
 
 Here is the source code for the service callout MedicalRecords.java: :
 
-
+```
 /* 
  * Copyright (c) 2016 by Progress Software Corporation. All rights reserved.
  */
@@ -164,14 +164,14 @@ The system will recognize your Service Callout method if the method signature ta
 			}
 		}
 	}
-
+```
 Recognized classes and methods are displayed in the Ruleflow Properties View/Service Name drop-down list when a Service Callout object is on a Ruleflow canvas:
 
 The Service Callout API provides your extension class complete access to the fact pool, allowing you to:
 
-    Find entities in several ways
-    Read and update entity attributes
-    Create and remove entity instances
-    Create and remove associations
+* Find entities in several ways
+* Read and update entity attributes
+* Create and remove entity instances
+* Create and remove associations
 
 Refer to Service Callout Java sample project and the API Javadocs for more information.

@@ -2,18 +2,18 @@
 
 When deployed or integrated into your application your Corticon.js decision services execute by accepting a JSON payload and returning a JSON result. The JSON payload contains the item or items your rules are to execute on—for example, a mortgage application to be evaluated or a set of sales leads to be routed. When your rules execute, they will update or add to the input payload—for example, adding a determination for a mortgage application or assigning the sales rep for each sales lead. The JSON result returned from the decision service will contain the state of the payload after rule execution.
 
-![](/docs/assets/corticon_js_integration-1.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/corticon_js_integration-1.png)
 
 Corticon.js accepts most well-formatted JSON as the input payload. The result JSON will reflect the input payload plus any changes made by the rules. In addition, it will contain information about the rule execution, such as status indicating if rule execution was successful.
 
 As a very simple example, consider a mortgage approval application where the JSON payload to your decision service is as follows:
 
 
-![](/docs/assets/mortgage%20approval%20application%20JSON%20payload%20.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/mortgage%20approval%20application%20JSON%20payload%20.png)
 
 The rules in the decision service look at the mortgage application information to determine if the applicant should be approved, how much they are approved for, and at what rate. The rules in the decision service set the attributes `approved`, `mortgageRate` and `mortgageAmount` on the application. The result payload would be similar to:
 
-![](/docs/assets/mortgage%20json%20response%20payload.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/mortgage%20json%20response%20payload.png)
 
 The result payload has the same data as was in the input payload plus the attributes set by the rules. In this case the applicant has been approved for $350,000 at 3.5%.
 
@@ -25,23 +25,23 @@ When your decision service is invoked, Corticon maps the JSON payload to the int
 
 In our simple mortgage application example, the vocabulary could be defined as:
 
-![](/docs/assets/mortgage%20vocab.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/mortgage%20vocab.png)
 
 This is a very simple vocabulary with a single entity, `Application`. Our JSON payload is equally simple:
 
 
-![](/docs/assets/mortgage%20json.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/mortgage%20json.png)
 
 Here the JSON payload represents a single application and Corticon would map it to the `Application` entity. In a real application your Corticon vocabulary and JSON payload are likely to be much more complex.
 
 Once the top-level objects in the JSON payload are mapped to the vocabulary model, Corticon can map any nested objects in the JSON to associations in the vocabulary. Let’s expand our mortgage sample to have a slightly more complex vocabulary:
 
-![](/docs/assets/mortgage%20complex.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/mortgage%20complex.png)
 
 Here the mortgage application was defined to have an `Application` entity with a one-to-many association to a `CreditReport` entity and a one-to-one association to a `Mortgage` entity. This is more reflective of a real Corticon vocabulary. A real vocabulary is likely to have many entities and associations. A JSON payload for this vocabulary may look like:
 
 
-![](/docs/assets/complex%20mortgage%20json.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/complex%20mortgage%20json.png)
 
 Once Corticon has mapped the root object in the JSON to the `Application` entity, it can use the knowledge that the `Application` entity has an association to a `CreditReport` entity to map the nested `creditReport` in the JSON. Corticon will set the association on the `Application` entity to this `CreditReport` entity.
 

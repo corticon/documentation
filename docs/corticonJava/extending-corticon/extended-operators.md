@@ -5,7 +5,3 @@ Operators are used when defining conditions and actions in a Rulesheet. While Co
 * Financial functions, such as net present value, and loan amortization
 * Statistical functions, such as standard deviation, and permutations
 * Engineering functions, such as pi, sine, and cosine
-
-![](<../../../.gitbook/assets/image (71).png>)
-
-###
