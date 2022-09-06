@@ -85,15 +85,13 @@ The html page and wrapper are pure sample code. They just demonstrate how Cortic
 
 The `browser.sample.html` is ready to run a simple page in a browser.
 
-Paste in the JSON you exported from Studio tester into the left panel, and then click **Run Decision Service**. The results in the right panel as shown:
-
-![Note that the rules replaced the default shipping mode and added a message.](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/oso1617031637426.image?\_LANG=enus)
+Paste in the JSON you exported from Studio tester into the left panel, and then click **Run Decision Service**. The results in the right panel as shown above.
 
 You can tailor `browser.sample.html` to build your UI around the Decision Service that you have now validated.
 
 ## Multiple decision services on a browser page 
 
-An integrator can put more than one Decision Services on a single HTML page so that a set of Corticon engine execution functions are created with one execute function per included Decision Service. In the browser bundle, the file `browser.sample.multipleDS.html` provides the format for multiple decision services. In it, you see the array property **corticonEngines**. Each entry in the array contains an object literal with the **execute** function. The script inclusion order determines where in the array a specific decision is located. The first included Decision Service is available at index 0 `window.corticonEngines[0].execute`):
+An integrator can put more than one Decision Services on a single HTML page so that a set of Corticon engine execution functions are created with one execute function per included Decision Service. In the browser bundle, the file `browser.sample.multipleDS.html` provides the format for multiple decision services. In it, you see the array property **corticonEngines**. Each entry in the array contains an object literal with the **execute** function. The script inclusion order determines where in the array a specific decision is located. The first included Decision Service is available at index 0 `window.corticonEngines[0].execute`:
 
 ```
 <script type="text/javascript" src="decisionServiceBundle.js" </script>
