@@ -396,5 +396,4 @@ To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletes
 * **Effective Dates**—you can have identically named Ruleflows with slight variations that respond to requests only when in the specified date range.
 * **Service Call-outs**—you can access Datasources to enrich your rules, and update databases
 
-![](../../assets/branching-node.png)
-
+[](/docs/assets/branching-node.png)
