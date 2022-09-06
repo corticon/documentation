@@ -192,9 +192,8 @@ There are 3 attributes in the decision service JSON results that deal with stage
 
 # Additional Resources
 
-Find out more about [Corticon.js](https://www.progress.com/corticon-js)
+- Find out more about [Corticon.js](https://www.progress.com/corticon-js)
 
-You can check [these blogs](https://www.progress.com/blogs/author/thierry-ciot) for Corticon news and features as well as Serverless industry trendecision service.
+- Check [these blogs](https://www.progress.com/blogs/author/thierry-ciot) for Corticon news and features as well as Serverless industry trendecision service.
 
-Free training for Corticon.js at https://www.progress.com/blogs/learning-opportunity-available-get-started-corticonjs-rules-today
-
+- [Free training for Corticon.js](https://www.progress.com/blogs/learning-opportunity-available-get-started-corticonjs-rules-today) 

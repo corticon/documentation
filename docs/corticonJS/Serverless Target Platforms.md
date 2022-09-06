@@ -76,6 +76,14 @@ The html page and wrapper are pure sample code. They just demonstrate how Cortic
 
 The `browser.sample.html` is ready to run a simple page in a browser.
 
+<p class="codepen" data-height="300" data-slug-hash="WNzoOJM" data-editable="true" data-user="SethMeldon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/SethMeldon/pen/WNzoOJM">
+  Decision Management Challenge July-2022 </a> by Seth Meldon (<a href="https://codepen.io/SethMeldon">@SethMeldon</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
 Paste in the JSON you exported from Studio tester into the left panel, and then click **Run Decision Service**. The results in the right panel as shown:
 
 ![Note that the rules replaced the default shipping mode and added a message.](https://progress-be-prod.zoominsoftware.io/bundle/corticon-js-integration/page/oso1617031637426.image?\_LANG=enus)
