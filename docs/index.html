@@ -93,11 +93,7 @@
 <body>
   <div id="app"></div>
   <script>
-    // Enter the URL of your own GitHub Repository in between the two quotes below
-    var gitLinkRepoURL = 'https://corticon.github.io/documentation/#/';
 
-    // Customize the text for your Edit this Page on GitHub link between the two quotes below
-    var editThisPageLinkText = 'Edit this Page';
 
     // Set standalone to true to permanently hide the Sidebar and Navbar
     var standalone = false;
@@ -188,39 +184,7 @@
 
       // CUSTOM PLUGINS
       // -----------------------------------------------------------------
-      plugins: [
-
-        function(hook, vm) {
-
-          hook.beforeEach(function(html) {
-            if (/githubusercontent\.com/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('raw.githubusercontent.com', 'github.com')
-                .replace(/\/master/, '/blob/master')
-            } else {
-              url = gitLinkRepoURL + '/blob/main/docs/' + vm.route.file
-            }
-            var editHtml = '[:memo: ' + editThisPageLinkText + '](' + url + ')\n'
-
-            var creditHtml = '\n\n' + 'This site was built with the <a href="https://github.com/hibbitts-design/docsify-open-publishing-starter-kit" target="_blank">Docsify Open Publishing Starter Kit</a>.'
-
-            if ( !(getURLParameterByName(['standalone','embedded'])) && !(getURLParameterByName('hidegitlink'))  && (!!gitLinkRepoURL)) {
-            return editHtml + '\n' + html + '<br />' + '\n\n' + '<hr>' + creditHtml
-
-            } else if ( getURLParameterByName(['standalone','embedded']) && !(getURLParameterByName('hidegitlink')) && (!!gitLinkRepoURL)) {
-              return editHtml + '\n' + html
-
-            } else if ( !(getURLParameterByName(['standalone','embedded']))) {
-              return html + '<br />' + '\n\n' + '<hr>' + creditHtml
-
-            } else {
-              return html
-            }
-          })
-
-        }
-
-      ]
+      
     }
 
   </script>
