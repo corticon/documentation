@@ -170,14 +170,14 @@
       homepage          : 'home.md',
       logo              : 'docs/assets/favicon/favicon.png',
       // coverpage      : 'coverpage.md',
-      loadSidebar       : !(getURLParameterByName(['standalone','embedded']) || standalone || false),
+      loadSidebar       : true,
       loadNavbar        : !(getURLParameterByName(['standalone','embedded']) || standalone || false),
       externalLinkTarget: (getURLParameterByName(['standalone','embedded'],'_top','_blank')),
 
       // SIDEBAR NAVIGATION
       // -----------------------------------------------------------------
       auto2top: true,
-      maxLevel: 2,
+      maxLevel: 3,
       // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
       subMaxLevel: 4,
       hideSidebar: (getURLParameterByName(['standalone','embedded']) || standalone),
