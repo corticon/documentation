@@ -1,30 +1,45 @@
-# Corticon.js Dynamic Forms Introduction
+# Rule-Driven Dynamic Forms
+
+
+## Introduction
 
 Implementing the complexities of a dynamic form's user interface often involves a  level of complexity comparable to that of a traditional decision automation use case (e.g. eligibility determination, claims handling, loan origination...). With Corticon.js, we can define this logic using the same declarative, rules-driven paradigm that enables traditional decision automation.
 
-There are a wide array of UI paradigms fit for the purpose of building forms with a multitude of questions/prompts, the answers from which will be passed into downstream workflows. But the form logic can evolve into a monolith in its own right when-
+There are a wide array of UI paradigms fit for the purpose of building forms with a multitude of questions/prompts, the answers from which will be passed into downstream workflows. But the form logic can evolve into a monolith in its own right when--
 
 1.  Answers to the form's earlier questions change which questions are asked later in the form.
 2.  The questions change frequently.
 3.  External data must be wrangled from external systems in order to pre-populate or predetermine certain steps.
 
+
 Quickly, the number of unique paths which a user can progress through increases exponentially, as does the effort required to maintain and update it.
 
-Using a rules-driven paradigm for dynamic form logic, authored with a proven decision automation engine like Corticon.js, this complexity can be tamed through logic modularization and data abstraction.
+Using a rules-driven paradigm for dynamic form logic, authored with a proven decision automation engine like [Corticon.js](https://www.progress.com/corticon-js), this complexity can be tamed through logic modularization and data abstraction.
 
 Rules define the model for what, when, and how to present prompts to an end user independently from the definition of how these prompts are presented stylistically in the front end UI (denoted here as the Client Side Component, or CSC).
 
 
-## Design
+## Building Dynamic Forms with Corticon.js
 
-- The Dynamic Forms in the sample page are rendered by a reusable Client Side Component (CSC). Just switch samples with the dropdown and you're in a different dynamic form.
-- This framework-separating the CSC from the rules-promotes agility for development teams, as it distinguishes the 'instructions' for what to present to the user (defined in a Corticon.js decision service) and the code that renders the form based upon these instructions.
-- The CSC does not know the questions to be asked at each step and what the answers mean but it knows how to render these questions and collect the answers.
-- The decision service driving the dynamic forms, specify what the questions, the constraints on questions and where to store the answers.  The decision services do not know the current state of the questionnaire but know what to do at each step.
-- Typically, a CSC is written and maintained by a developer or a team of developers while the decision services are written by business analysts
+> It may be easiest to conceptualize Corticon.js Dynamic Forms by first checking out the samples that you can interact with as an end user, leveraging the 'test driver' web page. You can launch it right away at [this link](https://refined-github-html-preview.kidonng.workers.dev/corticon/corticon.js-samples/raw/master/DynamicForms/CSC/client.html), or review the HTML [here](https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/client.html).
+
+
+### Design
+
+The Dynamic Forms in the sample page are rendered by a reusable Client Side Component (CSC). Just switch samples with the dropdown and you're in a different dynamic form.
+
+This framework--separating the CSC from the rules--promotes agility for development teams, as it distinguishes the 'instructions' for what to present to the user (defined in a Corticon.js decision service) and the code that renders the form based upon these instructions.
+
+The CSC does not know the questions to be asked at each step and what the answers mean but it knows how to render these questions and collect the answers.
+
+The decision service driving the dynamic forms, specify what the questions, the constraints on questions and where to store the answers.  The decision services do not know the current state of the questionnaire but know what to do at each step.
+
+Typically, a CSC is written and maintained by a developer or a team of developers while the decision services are written by business analysts
 who understand well the problem domain of the questionnaire.
 
-![](../assets/RolesResponsibilities.PNG)
+Here is a summary of the roles and responsibilities:
+
+![](../assets/architecture.png)
 
 
 ## Local versus Remote Decision Services
@@ -46,23 +61,22 @@ In-process deployments provide essentially instant response time, however, there
 	- Don't to risk exposing the decision service to reverse engineering
 
 There are only minor distinctions between how the CSC and decision service interactions take place when running in-process or remotely:
+
 ![](../assets/LocalDS.png)
+
+
 ![](../assets/RemoteDS.png)
- 
 ## Building and integrating a rule-driven form's components
 
 For more detail on the CSC and the decision service please refer to these documents:
 
-1. [Authoring a the dynamic form logic in Corticon (these will be generated into the Decision Service)](Authoring-the-Rules/README.md)
-2. [Building and configuring the client side component (CSC)](Rendering-the-Rules/README.md)
-
-## Building Dynamic Forms with Corticon.js
-
-It may be easiest to conceptualize Corticon.js Dynamic Forms by first checking out the samples that you can interact with as an end user, leveraging the 'test driver' web page. You can launch it right away at [this link](https://refined-github-html-preview.kidonng.workers.dev/corticon/corticon.js-samples/raw/master/DynamicForms/CSC/client.html), or review the HTML [here](https://github.com/corticon/corticon.js-samples/blob/master/DynamicForms/CSC/client.html).
+1. [Authoring a the dynamic form logic in Corticon (these will be generated into the Decision Service) ](docs/AuthoringDecisionService.md)
+2. [Building and configuring the client side component (CSC)](docs/AuthoringClientSideComponents.md)
 
 ## Summary
 
-![](../assets/SameModelforDifferentRenderersSmaller.png)
+![](/docs/assets/SameModelforDifferentRenderersSmaller.png)
+
 
 - A single component for rendering dynamic questionnaires can be reused with multiple applications
 - In other words, to implement a new use cases, you only need to develop the *model* for the new use case.
