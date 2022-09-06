@@ -19,7 +19,7 @@ The result payload has the same data as was in the input payload plus the attrib
 
 The result payload also contains a `corticon` object that has the `timestamp` of when the rules were run plus the status, `success`, of the execution. The `corticon` object contains additional information about the execution of your rules.
 
-### JSON to Vocabulary mapping 
+## JSON to Vocabulary mapping 
 
 When your decision service is invoked, Corticon maps the JSON payload to the internal data model of your Corticon vocabulary to enable the rules to execute on it. To perform this mapping, Corticon must first examine the JSON payload to identify the top-level objects in the JSON and the vocabulary entities they correspond to.
 
@@ -45,7 +45,7 @@ Here the mortgage application was defined to have an `Application` entity with a
 
 Once Corticon has mapped the root object in the JSON to the `Application` entity, it can use the knowledge that the `Application` entity has an association to a `CreditReport` entity to map the nested `creditReport` in the JSON. Corticon will set the association on the `Application` entity to this `CreditReport` entity.
 
-### JSON Path and JSON Element Name 
+## JSON Path and JSON Element Name 
 
 Corticon employs two strategies to map a JSON payload to the vocabulary. First, it will use the knowledge it has of the vocabulary to identify how to perform the mapping. When this information is insufficient, Corticon will use a "best match" strategy to perform the mapping.
 
@@ -102,7 +102,7 @@ Now let’s examine how **JSON Element Name** would be set in this vocabulary:
 
 The JSON Element Name is the name of the field or nested object in the JSON. You can rename attributes and associations in your vocabulary to be a name more meaningful to a rule modeler. If specified, the JSON Element Name must match the JSON payload.
 
-**Best Match Mapping**
+## Best Match Mapping
 
 You don’t have to specify **JSON Path** or **JSON Element Name** in your vocabulary. When not specified, Corticon.js will use a "best match" algorithm to map JSON payload to your vocabulary. This algorithm is dependent on the object and field names in your JSON closely matching the entity, attribute, and association names in your vocabulary.
 
@@ -112,7 +112,7 @@ Corticon.js "best matching" is very effective in most use cases. The negative as
 
 At minimum, you should have **JSON Path** specified for the top-level entities in your JSON payload and identify these as the top-level entities when packaging your rules for deployment.
 
-**Identifying Top-Level Entities**
+## Identifying Top-Level Entities
 
 When you package your rules for deployment, you can specify the top-level entities of interest in the JSON payload that will be processed when integrated with your application. This information can then be used by Corticon.js to optimize the mapping of JSON payloads to your vocabulary. It is not uncommon for a Corticon vocabulary to have hundreds of entities. If only one of these entities will be at the top-level, identifying the entity allows Corticon.js to map payloads to the vocabulary much more efficiently.
 
@@ -131,11 +131,11 @@ Here the mortgage application is nested in a JSON document where the other infor
 
 Corticon.js allows the top-level entities to be identified when a Ruleflow is packaged for deployment. The integration API allows you to override this within your application. See [Config options](https://docs.progress.com/bundle/corticon-js-integration/page/Config-options.html).
 
-**Unmapped JSON Payload**
+## Unmapped JSON Payload
 
 Any objects or fields in the JSON payload that are not mapped to your vocabulary are preserved and included in the result payload.
 
-### Error handling <a href="#d837e547" id="d837e547"></a>
+##  Error handling 
 
 If there is an error during the execution of the decision service, the status `"error"` is returned to the user along with the description of the error which will be part of the `"corticon"` JSON object as follows:
 
