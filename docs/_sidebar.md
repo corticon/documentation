@@ -1,4 +1,5 @@
 - [Home](home.md)
+---
 
 - Rule Modeling in Corticon Studio
   - [Overview](Modeling-Rules/README.md)
