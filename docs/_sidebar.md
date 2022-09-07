@@ -1,15 +1,14 @@
 - [Home](home.md)
+
 ---
 
-- Rule Modeling in Corticon Studio
-  - [Overview](Modeling-Rules/README.md)
+- [Rule Modeling in Corticon Studio](Modeling-Rules/README.md)
   - [Rule Vocabulary](Modeling-Rules/Rule-Vocabulary.md)
   - [Rulesheets](Modeling-Rules/Rulesheets.md)
   - [Ruletests](Modeling-Rules/Ruletest.md)
   - [Ruleflows](Modeling-Rules/Ruleflows.md)
 ---
-- Corticon.js for Dynamic Forms
-  - [Overview](Dynamic-Forms/README.md)
+- [Corticon.js for Dynamic Forms](Dynamic-Forms/README.md)
   - [Authoring Dynamic Form Rules](Dynamic-Forms/Authoring-the-Rules/README.md)
   - [Rendering Dyanamic Forms](Dynamic-Forms/Rendering-the-Rules/README.md)
 <!-- 
@@ -23,9 +22,6 @@
   - [JavaScript Functions](corticonJS/Custom%20JavaScript%20functions.md)
   - [Rule statements and Rule messages in Corticon.js](corticonJS/Rule%20statements%20and%20Rule%20messages%20in%20Corticon.js.md)
   - [Scripting](corticonJS/Scripting.md)
-
-
-
 
 - Corticon Server Deployment
   - [Overview](corticonJava/README.md)
