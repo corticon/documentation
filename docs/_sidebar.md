@@ -7,6 +7,11 @@
   - [Ruletests](Modeling-Rules/Ruletest.md)
   - [Ruleflows](Modeling-Rules/Ruleflows.md)
 
+- Corticon.js for Dynamic Forms
+  - [Overview](Dynamic-Forms/README.md)
+  - [Authoring Dynamic Form Rules](Dynamic-Forms/Authoring-the-Rules/README.md)
+  - [Rendering Dyanamic Forms](Dynamic-Forms/Rendering-the-Rules/README.md)
+<!-- 
 - Corticon.js
   - [Overview](corticonJS/README.md)
   - [JavaScript Platforms](corticonJS/Serverless%20Target%20Platforms.md)
@@ -19,10 +24,6 @@
   - [Scripting](corticonJS/Scripting.md)
 
 
-- Corticon.js for Dynamic Forms
-  - [Overview](Dynamic-Forms/README.md)
-  - [Authoring Dynamic Form Rules](Dynamic-Forms/Authoring-the-Rules/README.md)
-  - [Rendering Dyanamic Forms](Dynamic-Forms/Rendering-the-Rules/README.md)
 
 
 - Corticon Server Deployment
@@ -32,4 +33,4 @@
   
 
 - Additional Resources
-  * [GitHub](https://github.com/corticon/)
+  * [GitHub](https://github.com/corticon/) -->
