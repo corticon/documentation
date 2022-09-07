@@ -5,7 +5,9 @@
 .pagination-item, .pagination-item-title {
   opacity: .9 !important;
 }
-
+.app-nav ul {
+  background-color: #7FFFD4
+}
 .pagination-item:not(:last-child) a .pagination-item-label, .pagination-item:not(:last-child) a .pagination-item-subtitle, .pagination-item:not(:last-child) a .pagination-item-title {
   opacity: .9 !important;
   transition: all .2s;
