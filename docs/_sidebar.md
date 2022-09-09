@@ -2,12 +2,12 @@
 
 ---
 
-- [Rule Modeling in Corticon Studio](Modeling-Rules/README.md)
+<!-- - [Rule Modeling in Corticon Studio](Modeling-Rules/README.md)
   - [Rule Vocabulary](Modeling-Rules/Rule-Vocabulary.md)
   - [Rulesheets](Modeling-Rules/Rulesheets.md)
   - [Ruletests](Modeling-Rules/Ruletest.md)
   - [Ruleflows](Modeling-Rules/Ruleflows.md)
----
+--- -->
 - [Corticon.js for Dynamic Forms](Dynamic-Forms/README.md)
   - [Authoring Dynamic Form Rules](Dynamic-Forms/Authoring-the-Rules/README.md)
   - [Rendering Dyanamic Forms](Dynamic-Forms/Rendering-the-Rules/README.md)
