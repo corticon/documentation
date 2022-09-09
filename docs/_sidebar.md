@@ -8,4 +8,4 @@
 
 
 - Additional Resources
-  * [GitHub](https://github.com/corticon/) -->
+  * [GitHub](https://github.com/corticon/) d
