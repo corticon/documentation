@@ -6,7 +6,7 @@
 
 Here is an example of a Rulesheet with three rules. The Rulesheet editor has the following parts:
 
-![](../assets/rulesheet-highighted.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/rulesheet-highighted.png)
 
 
 * **Conditions**—where you define the conditions for each rule. For example, `Aircraft.aircraftType` = 747. The condition value could be a single value (747), a set of values (747, 777, 787), or a range of values (weight=100000..200000).
@@ -26,7 +26,7 @@ Each rule is documented with **Rule Statements**. Rule Statements will be sent a
 
 Note that you can define multiple rule statements for a single rule. For example, one rule statement can document the rule, while another is sent as part of the output message when the rule fires
 
-![](../assets/rule-statements.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/rule-statements.png)
 
 ## Rule Operators
 
@@ -36,7 +36,7 @@ The Rule Operators view organizes operators into folders based on their function
 
 You can learn about each rule operator in the Rule Operators view by hovering the mouse pointer over it. A tooltip appears, describing the rule operator, as shown in this image. The Rule Language Guide in the documentation set provides details of all rule operators available in Corticon Studio.
 
-![](../assets/rule-operators.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/rule-operators.png)
 
 ---
 
@@ -71,7 +71,7 @@ A conflict occurs when two or more rules overlap in some way. They have conditio
 
 The rules in this Rulesheet conflict with each other because a person who is, for instance, 45 years old and also a skydiver, satisfies the conditions of both the rules.
 
-![](../assets/pre-con-check.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/pre-con-check.png)
 
 To perform a conflict check, open the Rulesheet, and click on the Check for Conflicts icon or select Rulesheet > Logical Analysis > Check for Conflicts.
 
@@ -82,7 +82,7 @@ When you define a rule in a Rulesheet, Corticon Studio creates sub-rules that ad
 To do this you must double-click the column number in the main rule. The sub-rules are numbered by adding a decimal point to the main rule’s column number (if the main rule is in column 1, the sub-rules are numbered 1.1, 1.2, 1.3, etc).
 Each sub-rule addresses one scenario within the main rule. In this example, both rules are expanded. Consider the rule that verifies if a person is less than or equal to 55 years of age and assigns a low risk rating. Since, in this rule, it does not matter if the person is a skydiver, Corticon Studio identifies three scenarios1 within the rule:
 
-![](../assets/conflict-highlight.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/conflict-highlight.png)
 
 * Where Person.age <= 55 and Person.skydiver = true (sub-rule 1.1)
 * Where Person.age <= 55 and Person.skydiver = false (sub-rule 1.2)
@@ -118,7 +118,7 @@ Based on the rules that you define, Corticon Studio detects if any scenarios are
 
 Corticon Studio has a built-in completeness checking algorithm that calculates the set of all possible mathematical combinations of all values in all conditions. The algorithm then compares this set of possible combinations to those already specified in the Rulesheet and detects missing combinations.
 
-![](../assets/comp.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/comp.png)
 
 #### Check and resolve incomplete rules
 
@@ -189,7 +189,7 @@ To help identify inadvertent loops, Corticon Studio provides a Check for Logical
 
 Clicking the Check for Logical Loops icon displays a window that describes the mutual dependencies found on the Rulesheet. To illustrate loop detection, we will use a few of the same examples from before.
 
-![](../assets/looping.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/looping.png)
 
 
 When applied to a Rulesheet containing just the single-rule loop shown in this figure, the Check for Logical Loops tool displays the following window:

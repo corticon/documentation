@@ -12,9 +12,9 @@ A Ruletest stores this information in a Ruletest file, enabling you to save use-
 
 Take a close look at the images. Here is an example of a Rulesheet (`AircraftRules.ers`) with two rules and a Ruletest (`TestingAircraftRules.ert`) that has been executed.
 
-![](../assets/rulesheet-highighted.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/rulesheet-highighted.png)
 
-![](../assets/ruletest-output-vs-expected.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/ruletest-output-vs-expected.png)
 
 ## The Ruletest editor
 
@@ -27,7 +27,7 @@ The Ruletest tests the Rulesheet. The Ruletest editor has four parts:
 * **Output**—where Corticon Studio displays the result of a Ruletest execution. As you can see, a value for `Aircraft.maxCargoWeight` has been assigned based on the rules in the AircraftRules.ers Rulesheet.
 * **Expected**—where you can optionally define the result that you expect.
 * 
-![](../assets/rule-messages.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/rule-messages.png)
 
 
 ## When you run a Ruletest

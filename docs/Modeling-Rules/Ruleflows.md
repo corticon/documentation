@@ -5,17 +5,17 @@
 
 From here, you can continue adding more rules to the rulesheet, or more commonly, compartmentalize our rules into different rulesheets, and create a **Ruleflow** to specify the sequence from one rulesheet to another. When multiple Rulesheets are included in a Ruleflow, the Rulesheets will execute in a sequence determined by their Rulesheet order in the Ruleflow. With ruleflows, behavior like branching into separate rules for different scenarios can be defined and specify when the execution of a given Decision Service call that Corticon should retrieve additional data from external datasources.
 
-![](../assets/ruleflowBreakdown.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/ruleflowBreakdown.png)
 
 As more rulesheets are added to our Ruleflow, Ruletests can be run against entire Ruleflows, instead of testing only the Rulesheets as they are developed. This enables you to test not only the rules as they are defined in the Rulesheet, but also how the Ruleflow works, and how the rules behave as part of the Ruleflow. This way, problems can be detected and fixed earlier in the lifecycle.
 
-![](../assets/multi-branch.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/multi-branch.png)
 
 ## Ruleflow Properties
 
 Ruleflows are the final step in the rule development process and are thus deployed as Decision Services. Ruleflows can always be versioned as well, with either a major/minor version tag or effective date range for which they will execute when invoked. The invocation (request) payload must contain a version number or data parameter to consume the desired "versioned" decision service.
 
-![](../assets/ruleflow-props.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/ruleflow-props.png)
 
 ## Test Ruleflows using Ruletests
 
@@ -34,4 +34,4 @@ To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletes
 * **Effective Dates**—you can have identically named Ruleflows with slight variations that respond to requests only when in the specified date range.
 * **Service Call-outs**—you can access Datasources to enrich your rules, and update databases
 
-![](../assets/branching-node.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/branching-node.png)
