@@ -10,13 +10,13 @@ When you build a Vocabulary, you not only define the terms, you also define rela
 
 The rule vocabulary can be created manually, or it can be auto generated based on an external data source, the schema of any relational database, or the JSON structure of a REST endpoint.
 
-![](../assets/pop-from-json.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/pop-from-json.png)
 
 ## Building a Corticon Vocabulary
 
 Business terms are represented in the Vocabulary as either **entities** or **attributes**.
 
-![](../assets/vocab-overview.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/vocab-overview.png)
 
 An attribute is like a data field that holds a value. An entity is a collection of attributes. For example, the term cargo may have data fields such as cargoID, weight, volume, etc. So, cargo should be defined as an entity in a Vocabulary and the terms cargo ID, weight, and volume should be defined as attributes that belong to the entity cargo.
 
@@ -55,14 +55,14 @@ You define Custom Data Types in the Custom Data Types tab. You access the Custom
 
 A specific list of acceptable values. For example, in the transport company scenario, you may want to limit the acceptable values for the `Aircraft.aircraftType` attribute to 747, 777, and 787. You can achieve this by: – Defining a Custom Data Type that is based on the String data type, – with the values ‘747’, ‘777’, and ‘787’, and, – configure the `aircraftType`attribute to use this Custom Data Type.
 
-![](../assets/enumDataType.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/enumDataType.png)
 
 ### Constrained Custom Data Types
 A constrained Custom Data Type enables you to limit acceptable values through a constraint expression. The constraint expression must include the special term value.
 
 For example, if you want to define a Custom Data Type that constrains the value of an attribute to less than 10,000, the constraint expression would be value < 10000.
 
-![](../assets/constraint-cdt.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/constraint-cdt.png)
 
 Bear in mind the following when you define constraint expressions:
 
@@ -92,6 +92,6 @@ After you define a Custom Data Type, you can apply the Custom Data Type to attri
 
 Corticon Studio enables you to localize Vocabulary terms. This is useful if there are multiple rule modelers who are responsible for developing or maintaining the rule model and they speak different languages.
 
-![](../assets/local.png)
+![](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/local.png)
 
 To localize Vocabulary terms, you open the Localization panel (select Vocabulary > Localize), select the desired language or languages in the Locale section of the panel, and then manually enter the localized word for each term as shown in this image.
