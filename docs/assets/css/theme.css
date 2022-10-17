@@ -273,6 +273,16 @@ body .app-nav {
   margin-right: -10px;
 }
 
+
+
+.app-nav > ul:nth-child(1) {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+
 body .docsify-pagination-container {
   display: flex;
   flex-wrap: wrap;
