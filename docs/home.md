@@ -82,12 +82,3 @@ For more detail on the CSC and the decision service please refer to these docume
 - Additionally, the same model can be used to drive dynamic questionnaires on different platforms (for example, Web page and Mobile device).
 - All of this provides agility and improves delivery time.
 
-
-
-## Additional Resources
-
-Find out more about [Corticon.js](https://www.progress.com/corticon-js)
-
-You can check [these blogs](https://www.progress.com/blogs/author/thierry-ciot) for Corticon news and features as well as Serverless industry trends.
-
-Free training for Corticon.js at [https://www.progress.com/blogs/learning-opportunity-available-get-started-corticonjs-rules-today](https://www.progress.com/blogs/learning-opportunity-available-get-started-corticonjs-rules-today)
