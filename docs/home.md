@@ -4,8 +4,6 @@
 
 # Corticon Overview
 
-![Corticon Components](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/corticonservervsjs.png)
-
 Corticon has three main components:
 
 - [**Corticon Studio**](https://docs.progress.com/bundle/corticon-quick-reference/page/A-guide-to-Progress-Corticon-Studio.html)
@@ -15,3 +13,4 @@ Corticon has three main components:
 - [**Corticon.js**](https://docs.progress.com/bundle/corticon-js-integration/page/About-Corticon.js-integration.html)
     Generates decision services as self contained JavaScript bundles, (created in Corticon.js Studio), without any external dependencies. These bundles include both the business rules and the rule engine and can be run in any browser application client-side.
 
+![Corticon Components](https://cdn.jsdelivr.net/gh/corticon/documentation/docs/assets/corticonservervsjs.png)
