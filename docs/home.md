@@ -5,7 +5,7 @@
 
 Implementing the complexities of a dynamic form's user interface often involves a  level of complexity comparable to that of a traditional decision automation use case (e.g. eligibility determination, claims handling, loan origination...). With Corticon.js, we can define this logic using the same declarative, rules-driven paradigm that enables traditional decision automation.
 
-There are a wide array of UI paradigms fit for the purpose of building forms with a multitude of questions/prompts, the answers from which will be passed into downstream workflows. But the form logic can evolve into a monolith in its own right when&mdash;
+There are a wide array of UI paradigms fit for the purpose of building forms with a multitude of questions/prompts, the answers from which will be passed into downstream workflows. But the form logic can evolve into a monolith in its own right when;
 
 1.  Answers to the form's earlier questions change which questions are asked later in the form.
 2.  The questions change frequently.
@@ -28,7 +28,7 @@ Rules define the model for what, when, and how to present prompts to an end user
 
 The Dynamic Forms in the sample page are rendered by a reusable Client Side Component (CSC). Just switch samples with the dropdown and you're in a different dynamic form.
 
-This framework&mdash;separating the CSC from the rules&mdash;promotes agility for development teams, as it distinguishes the 'instructions' for what to present to the user (defined in a Corticon.js decision service) and the code that renders the form based upon these instructions.
+This framework;separating the CSC from the rules;promotes agility for development teams, as it distinguishes the 'instructions' for what to present to the user (defined in a Corticon.js decision service) and the code that renders the form based upon these instructions.
 
 The CSC does not know the questions to be asked at each step and what the answers mean but it knows how to render these questions and collect the answers.
 
