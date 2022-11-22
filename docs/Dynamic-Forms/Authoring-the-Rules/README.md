@@ -1,5 +1,27 @@
 # Modeling Dynamic Form Rules in Corticon.js Studio
 
+## Introduction
+
+For scenarios where the input data for a decision is being entered into a form by an end user, the decisions-from-data paradigm can be extended to optimize dynamic data-collection logic presented to end users. 
+
+To illustrate, we'll consider a scenario where an insurance company is building out a new dynamic form to apply for a car insurance policy. They have documented business rules that they want to guide the mobile app’s behavior related to—
+
+- Maintaining updated versions of the myriad business rules and benchmarks set forth by the policy’s eligibility rules.
+- Guiding the user of the app (applicants) with prompts to gather information on the driver(s), the vehicle(s), risk factors, etc., without presenting unnecessary or unlawful prompts along the way (car insurance regulations in the United States are handled at a state level). 
+
+In this section, we’ll explore one implementation possibility for handling the form that will produce a quote.  
+
+## Building the Data Model 
+We can use Corticon.js Studio to model business rules to define both the dynamic form’s behavior and the eligibility/qualification rules. First, we define a unified data model—the Rule Vocabulary—that captures:
+
+- The underwriters’ mental model of necessary data points for evaluating the applicant
+- The user experience team’s vision for the logic and steps involved throughout the form’s user interface   
+
+When working with this model in Corticon.js Studio, it is referred to as a Rule Vocabulary, but once we compile the rules into a JavaScript file, the Rule Vocabulary is translated into the JSON schema used to communicate between the front-end rendering component and the embedded business rules.
+
+
+
+
 ## Unique Considerations when Building Rules for Dynamic Forms Rules
 
 In a typical decision automation use case, rulesheets and ruleflows are 'connected' from one to another when constructing the top level ruleflow. Connections are the objects that connect or “stitch” assets and objects together to control their sequence of execution.
