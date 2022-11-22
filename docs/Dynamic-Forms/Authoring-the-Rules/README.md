@@ -111,11 +111,11 @@ Each UI control element has multiple attributes. The most important one is the `
 When using the MultipleChoices UI Control, the actual choices can be populated from a JSON endpoint or be specified by the rule modeler. For the first option, the rule modeler must specify a URL on the field `UIControl.dataSource`. The default client renderer will look for the options at that endpoint under the `value` and `displayName` field. So if the endpoint looks like this, then you’re good to go:
 
 <p align="center">  <img src="../../assets/formattedJSON.png" />
-
+</p>
 If the JSON data has different keys, such as shown below, the client renderer must be told which field is going to serve as the `value` field and which as the `displayName` field—these can be, and often are, the same. These are specified with the `DataSourceOptions` entity.
 
  <p align="center">  <img src="../../assets/unformattedJsonEnd.png" />
-
+</p>
   
 #### *DataSourceOptions (UI.containers.uiControls.dataSourceOptions)*
 
