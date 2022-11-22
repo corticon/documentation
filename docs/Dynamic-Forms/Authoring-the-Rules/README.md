@@ -24,9 +24,9 @@ When working with this model in Corticon.js Studio, it is referred to as a Rule 
 
 
 
-|<p>![](Aspose.Words.aea7655b-0a4b-4a48-864c-111810561bb3.002.png)</p><p></p><p>*Rule Vocabulary - Quote Details Section*</p>|<p>![Graphical user interface, application
+|<p>![](docs\assets\quoteVocab.png)</p><p></p><p>*Rule Vocabulary - Quote Details Section*</p>|<p>![Graphical user interface, application
 
-Description automatically generated](Aspose.Words.aea7655b-0a4b-4a48-864c-111810561bb3.003.png)</p><p>*Rule Vocabulary - Dynamic Forms Section*</p>|
+Description automatically generated](docs\assets\formVocab.png)</p><p>*Rule Vocabulary - Dynamic Forms Section*</p>|
 | :-: | :-: |
 
 
