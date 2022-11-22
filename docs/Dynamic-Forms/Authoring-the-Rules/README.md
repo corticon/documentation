@@ -125,7 +125,7 @@ If the JSON data has different keys, such as shown below, the client renderer mu
 |<p>**dataTextField**</p><p></p>|<p>Optionally define the key name to use as the display name for this option from dropdown, if its name isn't `displayName`. Oftentimes this will be the same as the `dataValueField` field.</p><p></p><p>![Alt text](../../assets/dataTextField.png)</p><p></p>|
 |**dataValueField**|<p>Optionally define the name of the key whose value should be stored should end user select this option from dropdown, if its name isn't `value`. Oftentimes this will be the same as the `dataTextField` field. </p><p></p><p>![](../../assets/dataValueField.png)</p><p></p>|
 |**pathToOptionsArray**|<p>Optionally define where in a JSON endpoint is the array of options to populate a dropdown list with</p><p></p><p>![](../../assets/pathToOptionsArray.png)</p><p></p>|
-####
+
 
 When the rule modeler is defining the list of dropdown options, they can do so with the Option entity.
 
