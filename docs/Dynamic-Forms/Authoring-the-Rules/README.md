@@ -22,10 +22,9 @@ We can use Corticon.js Studio to model business rules to define both the dynamic
 
 When working with this model in Corticon.js Studio, it is referred to as a Rule Vocabulary, but once we compile the rules into a JavaScript file, the Rule Vocabulary is translated into the JSON schema used to communicate between the front-end rendering component and the embedded business rules.
 
-
-Rule Vocabulary - Quote Details Section| Rule Vocabulary - Dynamic Forms Section 
----------|----------
- ![](../../assets/quoteVocab.png) | ![](../../assets/formVocab.png) 
+|**Rule Vocabulary - Quote Details Section**|**Rule Vocabulary - Dynamic Forms Section**|
+| :-: | :-: | 
+|![](../../assets/quoteVocab.png) | ![](../../assets/formVocab.png) |
 
 
 ## Car Insurance Quote Rules
@@ -57,7 +56,6 @@ The entity UI is the ‘parent’ entity, returned at index 0, which will guide 
 |**currentStageNumber**|Integer|<p>When the client side rendering component is ready for the next step in the flow, it invokes the decision service by setting UI.currentStageNumber to UI.nextStageNumber in the input payload of the decision service.</p><p></p><p>![](../../assets/currentStageNumber.png)</p><p></p>|
 |**language**||On start, the rendered can accept the language from the UI but a decision service may switch the language based on some rules|
 
-
 #### *Container (UI.containers)*
 For all steps in which something is being presented to the user (versus just a calculation/decision made in the background), the decision service will specify the list of UI controls to render from the decision service JSON payload at the UI.containers element. This is an array of all the containers to render for this stage. The container can be viewed as a panel containing various labels and input fields. The container has various attributes, for example a title.
 
@@ -69,7 +67,8 @@ For all steps in which something is being presented to the user (versus just a c
 |**id\***|Any unique alphanumeric string|Required if any container is being rendered.|
 |**title\***|Alphanumeric string|h3 header on Container|
 
-![Alt text](../../assets/createContainer.png)
+<p align="center">  <img src="../../assets/createContainer.png" />
+</p>
 
 #### *UIControl (UI.containers.uiControls)*
 Each UI control element has multiple attributes. The most important one is the 'type' attribute as it allows the client-side component to know what kind of control to render and which necessary attributes to access based on the type. See table below for full scope of available out of the box options. Items with an asterisk are required.
