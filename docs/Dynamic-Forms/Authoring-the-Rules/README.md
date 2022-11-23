@@ -140,10 +140,6 @@ When the rule modeler is defining the list of dropdown options, they can do so w
 ![](../../assets/manualOptions.png)
 
 
-[^1]: McGinnis, Tyler. “Imperative vs Declarative Programming.” Ui.dev, 16 July 2016, ui.dev/imperative-vs-declarative-programming. Accessed 17 Oct. 2022.
-
-
-
 ## Unique Considerations when Building Rules for Dynamic Forms Rules
 
 In a typical decision automation use case, rulesheets and ruleflows are 'connected' from one to another when constructing the top level ruleflow. Connections are the objects that connect or “stitch” assets and objects together to control their sequence of execution.
