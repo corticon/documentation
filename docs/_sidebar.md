@@ -1,4 +1,6 @@
-- [Home](/home.md)
+<!-- markdownlint-disable-next-line first-line-heading -->
+
+- [Home](/)
 - [Authoring Dynamic Form Rules](Dynamic-Forms/Authoring-the-Rules/README.md)
 - [Demo Examples](Dynamic-Forms/Demos/README.md)
   
