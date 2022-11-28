@@ -1,5 +1,5 @@
 - Getting Started
-  - [Corticon.js Studio](Getting-Started/Corticon.js-Studio.md)
+  - [Corticon.js Studio](README.md)
   - [Vocabulary](Getting-Started/Vocabulary.md)
   - [Rulesheets](Getting-Started/Rulesheets.md)
   - [Ruletests](Getting-Started/Ruletests.md)
