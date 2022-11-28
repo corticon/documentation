@@ -78,7 +78,7 @@ If the JSON data has different keys, such as shown below, the client renderer mu
 
  <p align="center">  <img src="https://cdn.jsdelivr.net/gh/corticon/documentation@latest/docs/assets/unformattedJsonEnd.png" />
 </p>
-  
+
 #### *DataSourceOptions (UI.containers.uiControls.dataSourceOptions)*
 
 
