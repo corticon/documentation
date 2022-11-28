@@ -1,6 +1,6 @@
 - Getting Started
   - [Corticon.js Studio](README.md)
-  - [Vocabulary](Getting-Started/Vocabulary.md)
+  - [Rule Vocabulary](Getting-Started/Vocabulary.md)
   - [Rulesheets](Getting-Started/Rulesheets.md)
   - [Ruletests](Getting-Started/Ruletests.md)
   - [Ruleflows](Getting-Started/Ruleflows.md)
