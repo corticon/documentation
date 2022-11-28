@@ -29,7 +29,7 @@ For all steps in which something is being presented to the user (versus just a c
 |**id\***|Any unique alphanumeric string|Required if any container is being rendered.|
 |**title\***|Alphanumeric string|h3 header on Container|
 
-<p align="center">  <img src="../assets/createContainer.png" />
+<p align="center">  <img src="https://cdn.jsdelivr.net/gh/corticon/documentation@main/docs/assets/createContainer.png" />
 </p>
 
 #### *UIControl (UI.containers.uiControls)*
