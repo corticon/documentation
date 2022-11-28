@@ -7,4 +7,4 @@
 - Execute decisions and calculations over the course of a course
 
 [GitHub](https://github.com/corticon/corticon.js-samples)
-[Learn More](#README.md)
+[Learn More](README.md)
