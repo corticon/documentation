@@ -8,5 +8,5 @@ When working with this model in Corticon.js Studio, it is referred to as a Rule 
 
 |**Rule Vocabulary - Quote Details Section**|**Rule Vocabulary - Dynamic Forms Section**|
 | :-: | :-: | 
-|![](../../assets/quoteVocab.png) | ![](../../assets/formVocab.png) |
+|![](../assets/quoteVocab.png) | ![](../assets/formVocab.png) |
 
