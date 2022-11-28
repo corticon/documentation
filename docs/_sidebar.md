@@ -13,7 +13,7 @@
   - [Notes](Authoring-the-Rules/Dynamic-Form-Rules-Notes.md)
   
 - Demo Examples
-    [Demos](Demos/README.md)
+  - [Demos](Demos/README.md)
     
 - Links
   - [Corticon Information Hub](https://docs.progress.com/category/corticon-information-hub)
