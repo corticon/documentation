@@ -1,5 +1,10 @@
 - Getting Started
-  - [Authoring Dynamic Form Rules](Dynamic-Forms/Authoring-the-Rules/README.md)
+  - [Corticon.js Studio](Getting-Started/Corticon.js-Studio.md)
+  - [Vocabulary](Getting-Started/Vocabulary.md)
+  - [Rulesheets](Getting-Started/Rulesheets.md)
+  - [Ruletests](Getting-Started/Ruletests.md)
+  - [Ruleflows](Getting-Started/Ruleflows.md)
+
   - [Demo Examples](Dynamic-Forms/Demos/README.md)
     
 - Links
