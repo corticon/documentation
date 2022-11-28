@@ -1,9 +1,9 @@
-
-## The Rule Vocabulary
+# The Rule Vocabulary
 
 Each of the vocabulary entities (`UI`, `UIControl`, `AutoQuote` etc) represents part of a JSON array that will be passed between the form’s presentation layer and the embedded Corticon.js decision service (a JavaScript bundle which will always be generated with the name decisionServiceBundle.js). Each attribute underlying the entities (`AutoQuote.state`, `Driver.credit_score`, etc) represents a key/value pair.
 
 In any given use case, some of the values specified within the JSON array will only be used occasionally, and the majority of the values are relevant only ephemerally, i.e., it is unnecessary to document in the final policy quote to report that at the first stage in the application, we presented to the user each of these 50 states—we just need the actual value that was selected.
+
 
 ### Vocabulary Elements for Form Definition
 #### `UI`
@@ -100,32 +100,3 @@ When the rule modeler is defining the list of dropdown options, they can do so w
 |**value**|The value stored in the `pathToData.fieldName` when user selects corresponding `displayName`. |
 
 ![](../../assets/manualOptions.png)
-
-
-## Unique Considerations when Building Rules for Dynamic Forms Rules
-
-In a typical decision automation use case, rulesheets and ruleflows are 'connected' from one to another when constructing the top level ruleflow. Connections are the objects that connect or “stitch” assets and objects together to control their sequence of execution.
-
-If a connector is drawn from Rulesheet `sample1.ers` to `sample2.ers`, then when a deployed Ruleflow is invoked, it will execute the rules in `sample1.ers` first, followed by the rules in `sample2.ers`.
-
-For dynamic forms however, instead of a decision that will always go through the same chronology during a single execution, dynamic forms require the ability to navigate throughout the objects in a ruleflow, such that different rules may fire at different times, depending upon dynamic variables. For example, the sequence may be determined based upon:
-
--   Data that the end user has entered to that point (e.g. to route to different parts of a ruleflow depending upon what type of claim a user has chosen to file)
--    Whether any data is pre-populated at the start of a ruleflow (e.g. leveraging account information specific to the end user as part of the decision for what gets presented in the form)
-
-<table><tr>
-<td>
-  <p align="center" style="padding: 10px">
-    <img alt="Forwarding" src="https://user-images.githubusercontent.com/40301564/186739602-888ae2bc-9d55-4bc6-a3cf-527e3d7e47a7.PNG" width="554">
-    <br>
-    <em style="color: grey">Dynamic Form Ruleflow </em>
-  </p>
-</td>
-<td>
-  <p align="center">
-    <img alt="Routing" src="https://user-images.githubusercontent.com/40301564/186739592-17ba7774-31ed-413f-81f4-991308728116.PNG" width="515">
-    <br>
-    <em style="color: grey">Typical, Connected Ruleflow</em>
-  </p>
-</td>
-</tr></table>
