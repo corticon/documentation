@@ -5,14 +5,13 @@
   - [Ruletests](Getting-Started/Ruletests.md)
   - [Ruleflows](Getting-Started/Ruleflows.md)
 
-- Dynamic Form Rules
+- Guided Overview
   - [Introduction](Authoring-the-Rules/Rule-Modeling-Intro.md)
-  - Tutorial
-    - [Tutorial Scenario](Authoring-the-Rules/Tutorial-Intro.md)
-    - [Data Model](Authoring-the-Rules/Data-Model.md)
-    - [Rule Vocabulary](Authoring-the-Rules/Tutorial-Vocabulary.md)
-    - [Notes](Authoring-the-Rules/Dynamic-Form-Rules-Notes.md)
-    - 
+  - [Tutorial Scenario](Authoring-the-Rules/Tutorial-Intro.md)
+  - [Data Model](Authoring-the-Rules/Data-Model.md)
+  - [Rule Vocabulary](Authoring-the-Rules/Tutorial-Vocabulary.md)
+  - [Notes](Authoring-the-Rules/Dynamic-Form-Rules-Notes.md)
+  
 - Demo Examples
     [Demos](Demos/README.md)
     
