@@ -13,7 +13,7 @@
   - [Rule Vocabulary](Authoring-the-Rules/Tutorial-Vocabulary.md)
   - [Notes](Authoring-the-Rules/Dynamic-Form-Rules-Notes.md)
   
-- [Demo Examples](Demos/README.md)
+- [**Demo Examples**](Demos/README.md)
 
 - Links
   - [Corticon Information Hub](https://docs.progress.com/category/corticon-information-hub)
