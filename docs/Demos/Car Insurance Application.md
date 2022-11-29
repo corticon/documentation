@@ -1,6 +1,6 @@
 # Car Insurance Application
 
-<iframe src="https://codesandbox.io/embed/car-insurance-wj9dxb?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
+<iframe src="https://codesandbox.io/embed/car-insurance-wj9dxb?autoresize=1&fontsize=14&hidenavigation=1&theme=light&view=preview"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="Car Insurance"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
