@@ -23,7 +23,7 @@ To make everyone's life easier, we provide  open source implementations of Corti
 
 There are many tools out there for working with git repositories; here we'll outline one approach from the standpoint of someone with little to no development experience.
 
-Access the Sample Rule Assets in Corticon.js Studio
+Access the Sample Rule Assets in Corticon.js Studio:
 
     1. Create a user account on [Github.com](github.com)
     2. [Download Github Desktop](https://desktop.github.com/) and [install](https://docs.github.com/en/desktop) with default settings. Authorize the application with your Github login. 
@@ -36,4 +36,4 @@ Access the Sample Rule Assets in Corticon.js Studio
     9. Navigate to where the repository was cloned then click next
     10. Click 'Import as general project'
     11. Click on the folder 'Dynamic Forms' under 'Working Tree' then click next
-    12. Hit finish
+    12.  Hit finish
