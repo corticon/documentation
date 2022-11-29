@@ -25,15 +25,15 @@ There are many tools out there for working with git repositories; here we'll out
 
 Access the Sample Rule Assets in Corticon.js Studio:
 
-    1. Create a user account on [Github.com](github.com)
-    2. [Download Github Desktop](https://desktop.github.com/) and [install](https://docs.github.com/en/desktop) with default settings. Authorize the application with your Github login. 
-    3. From [this link](https://github.com/corticon/corticon.js-samples), click the green "Code" button, then 'Open with GitHub Desktop'
-    4. If desired, change the default 'Local path'
-    5. Click 'Clone'
-    6. Open Corticon.js Studio
-    7. Click File > Import > Expand out 'Git' > Projects from Git then click next
-    8. Select 'Existing local repository' then click next
-    9. Navigate to where the repository was cloned then click next
-    10. Click 'Import as general project'
-    11. Click on the folder 'Dynamic Forms' under 'Working Tree' then click next
-    12.  Hit finish
+1. Create a user account on [Github.com](github.com)
+2. [Download Github Desktop](https://desktop.github.com/) and [install](https://docs.github.com/en/desktop) with default settings. Authorize the application with your Github login. 
+3. From [this link](https://github.com/corticon/corticon.js-samples), click the green "Code" button, then 'Open with GitHub Desktop'
+4. If desired, change the default 'Local path'
+5. Click 'Clone'
+6. Open Corticon.js Studio
+7. Click File > Import > Expand out 'Git' > Projects from Git then click next
+8. Select 'Existing local repository' then click next
+9. Navigate to where the repository was cloned then click next
+10. Click 'Import as general project'
+11. Click on the folder 'Dynamic Forms' under 'Working Tree' then click next
+12.  Hit finish
