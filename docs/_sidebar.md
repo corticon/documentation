@@ -1,7 +1,7 @@
 - Getting Started
   - [Corticon.js Studio Overview](README.md)
   - [Corticon.js Studio Installation](Getting-Started/Installation.md)
-[Rule Vocabulary](Getting-Started/Vocabulary.md)
+    - [Rule Vocabulary](Getting-Started/Vocabulary.md)
     - [Rulesheets](Getting-Started/Rulesheets.md)
     - [Ruletests](Getting-Started/Ruletests.md)
     - [Ruleflows](Getting-Started/Ruleflows.md)
