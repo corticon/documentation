@@ -10,3 +10,4 @@
 
 [GitHub](https://github.com/corticon/corticon.js-samples)
 [Learn More](#corticonjs-studio)
+[Try it Out](Demos/README.md)
