@@ -16,7 +16,7 @@ Rulesheets also provide rule modelers with multiple click-of-a-button Logical In
 Determines the completeness of the rule set (creates rules to fill in gaps).
 
 ### Rule ambiguity
-Determines the completeness of the rule set (creates rules to fill in gaps).
+Determines if rules are in conflict (overlapping conditions).
 
 ### Logical Loops
 Detects logical loops in rule interaction that may need special attention.
