@@ -21,7 +21,6 @@
   - [Type 2 Diabetes Risk Calculator](Demos/Type%202%20Diabetes%20Risk%20Calculator.md)
   - [Vehicle Model Make Year Selection](Demos/Vehicle%20Model%20Make%20Year%20Selection.md)
 
-    
 - Links
   - [Corticon Information Hub](https://docs.progress.com/category/corticon-information-hub)
   - [Tutorials](https://www.progress.com/corticon/corticon-learning-center)
