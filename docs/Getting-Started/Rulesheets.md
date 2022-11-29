@@ -8,4 +8,17 @@ Logic is authored and tested in Corticon Studio through Rule Modeling in a sprea
   <img  src="https://cdn.jsdelivr.net/gh/corticon/corticon.js-samples/DynamicForms/docs/images/rulesheet%20overview.png" title="rulesheet  overview" >
 </p>
 
+## Logical Integrity Checks
+
+Rulesheets also provide rule modelers with multiple click-of-a-button Logical Integrity Checks which identify incompleteness, conflict between rules, and infinite loops. 
+
+### Rule completeness
+Determines the completeness of the rule set (creates rules to fill in gaps).
+
+### Rule ambiguity
+Determines the completeness of the rule set (creates rules to fill in gaps).
+
+### Logical Loops
+Detects logical loops in rule interaction that may need special attention.
+
 [Rule Authoring](../assets/Rule%20Authoring.mp4  ':include')
