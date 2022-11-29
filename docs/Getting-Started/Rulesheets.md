@@ -7,3 +7,5 @@ Logic is authored and tested in Corticon Studio through Rule Modeling in a sprea
 <p>
   <img  src="https://cdn.jsdelivr.net/gh/corticon/corticon.js-samples/DynamicForms/docs/images/rulesheet%20overview.png" title="rulesheet  overview" >
 </p>
+
+[Rule Authoring](../assets/Rule%20Authoring.mp4  ':include')
