@@ -1,98 +1,9 @@
 [Corticon Installation](/assets/corticon_install.htm)
 
->   
-> 
-> ## Corticon
-> 
-> Installation
-> 
-> ![image](/assets/corticon_install_files/server_install_Image_001.jpg)
-> 
->   
-> 
-> ### Copyright
-> 
->   
-> 
->   
-> 
-> ![image](/assets/corticon_install_files/server_install_Image_002.png)
-> 
->   
-> 
-> © 2022 Progress Software Corporation and/or its subsidiaries or affiliates. All rights reserved.
-> 
-> ®
-> 
-> These materials and all Progress software products are copyrighted and all rights are reserved by Progress Software Corporation. The information in these materials is subject to change without notice, and Progress Software Corporation assumes no responsibility for any errors that may appear therein. The references in these materials to specific platforms supported are subject to change.
-> 
-> #1 Load Balancer in Price/Performance, 360 Central, 360 Vision, Chef, Chef (and design), Chef Habitat, Chef Infra, Code Can (and design), Compliance at Velocity, Corticon, Corticon.js, DataDirect (and design), DataDirect Cloud, DataDirect Connect, DataDirect Connect64, DataDirect XML Converters, DataDirect XQuery, DataRPM, Defrag This, Deliver More Than Expected, DevReach (and design), Driving Network Visibility, Flowmon, Inspec, Ipswitch, iMacros, K (stylized), Kemp, Kemp (and design), Kendo UI, Kinvey, LoadMaster, MessageWay,
-> 
-> MOVEit, NativeChat, OpenEdge, Powered by Chef, Powered by Progress, Progress, Progress Software Developers Network, SequeLink, Sitefinity (and Design), Sitefinity, Sitefinity (and design), Sitefinity Insight,
-> 
-> SpeedScript, Stylized Design (Arrow/3D Box logo), Stylized Design (C Chef logo), Stylized Design of Samurai, TeamPulse, Telerik, Telerik (and design), Test Studio, WebSpeed, WhatsConfigured, WhatsConnected,
-> 
-> WhatsUp, and WS\_FTP are registered trademarks of Progress Software Corporation or one of its affiliates or subsidiaries in the U.S. and/or other countries.
-> 
-> Analytics360, AppServer, BusinessEdge, Chef Automate, Chef Compliance, Chef Desktop, Chef Workstation, Corticon Rules, Data Access, DataDirect Autonomous REST Connector, DataDirect Spy, DevCraft, Fiddler, Fiddler Classic, Fiddler Everywhere, Fiddler Jam, FiddlerCap, FiddlerCore, FiddlerScript, Hybrid Data Pipeline, iMail, InstaRelinker, JustAssembly, JustDecompile, JustMock, KendoReact, OpenAccess, PASOE, Pro2, ProDataSet, Progress Results, Progress Software, ProVision, PSE Pro, Push Jobs, SafeSpaceVR, Sitefinity Cloud, Sitefinity CMS, Sitefinity Digital Experience Cloud, Sitefinity Feather, Sitefinity Thunder, SmartBrowser, SmartComponent, SmartDataBrowser, SmartDataObjects, SmartDataView, SmartDialog, SmartFolder, SmartFrame, SmartObjects, SmartPanel, SmartQuery, SmartViewer, SmartWindow, Supermarket, SupportLink, Unite UX, and WebClient are trademarks or service marks of Progress Software Corporation and/or its subsidiaries or affiliates in the U.S. and other countries. Java is a registered trademark of Oracle and/or its affiliates. Apache and Kafka are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. Any other marks contained herein may be trademarks of their
-> 
-> respective owners.
-> 
-> Please refer to the NOTICE.txt or Release Notes – Third-Party Acknowledgements file applicable to a particular Progress product/hosted service offering release for any related required third-party acknowledgements.
-> 
-> Last updated with new content: Corticon 6.3.1
-> 
->   
-> 
-> Updated: 2022/09/23
-> 
-> Contents
-> 
->   
-> 
 > ![image](/assets/corticon_install_files/server_install_Image_003.png)
 > 
 >   
-> 
-> #### Table of Contents
-> 
-> [Learn about Corticon installations](/assets/corticon_install.htm#bookmark5) [](/assets/corticon_install.htm#bookmark5) [7](/assets/corticon_install.htm#bookmark5)
-> 
-> [System requirements](/assets/corticon_install.htm#bookmark6) [](/assets/corticon_install.htm#bookmark6) [8](/assets/corticon_install.htm#bookmark6)
-> 
-> [Download the latest Corticon installer packages](/assets/corticon_install.htm#bookmark7) [](/assets/corticon_install.htm#bookmark7) [9](/assets/corticon_install.htm#bookmark7)
-> 
-> [How to prepare for a Corticon installation](/assets/corticon_install.htm#bookmark12) [](/assets/corticon_install.htm#bookmark12) [11](/assets/corticon_install.htm#bookmark12)
-> 
-> [If you are evaluating Corticon](/assets/corticon_install.htm#bookmark13) [](/assets/corticon_install.htm#bookmark13) [11](/assets/corticon_install.htm#bookmark13)
-> 
-> [If you are upgrading Corticon](/assets/corticon_install.htm#bookmark14) [](/assets/corticon_install.htm#bookmark14) [12](/assets/corticon_install.htm#bookmark14)
-> 
-> [Procedures for upgrading Corticon installations](/assets/corticon_install.htm#bookmark15) [](/assets/corticon_install.htm#bookmark15) [12](/assets/corticon_install.htm#bookmark15)
-> 
-> [How to install Corticon Studio](/assets/corticon_install.htm#bookmark36) [](/assets/corticon_install.htm#bookmark36) [19](/assets/corticon_install.htm#bookmark36)
-> 
-> [Run the Corticon Studio installer wizard](/assets/corticon_install.htm#bookmark37) [](/assets/corticon_install.htm#bookmark37) [20](/assets/corticon_install.htm#bookmark37)
-> 
-> [Perform silent installations of Studio](/assets/corticon_install.htm#bookmark38) [](/assets/corticon_install.htm#bookmark38) [23](/assets/corticon_install.htm#bookmark38)
-> 
-> [Increase Corticon Studio memory allocation](/assets/corticon_install.htm#bookmark39) [](/assets/corticon_install.htm#bookmark39) [24](/assets/corticon_install.htm#bookmark39)
-> 
-> [Set Studio to run in another language](/assets/corticon_install.htm#bookmark40) [](/assets/corticon_install.htm#bookmark40) [24](/assets/corticon_install.htm#bookmark40)
-> 
-> [How to install Corticon Servers and Web Console](/assets/corticon_install.htm#bookmark46) [](/assets/corticon_install.htm#bookmark46) [27](/assets/corticon_install.htm#bookmark46)
-> 
-> [Run the Server and Web Console installer wizard](/assets/corticon_install.htm#bookmark47) [](/assets/corticon_install.htm#bookmark47) [28](/assets/corticon_install.htm#bookmark47)
-> 
-> [Perform silent installations of Server components](/assets/corticon_install.htm#bookmark48) [](/assets/corticon_install.htm#bookmark48) [32](/assets/corticon_install.htm#bookmark48)
-> 
-> [Perform command-line Linux installations of Server components](/assets/corticon_install.htm#bookmark49) [](/assets/corticon_install.htm#bookmark49) [33](/assets/corticon_install.htm#bookmark49)
-> 
-> [How to set up Corticon .NET Server resources on an IIS server](/assets/corticon_install.htm#bookmark50) [](/assets/corticon_install.htm#bookmark50) [34](/assets/corticon_install.htm#bookmark50)
-> 
-> [How to uninstall Corticon components](/assets/corticon_install.htm#bookmark52) [](/assets/corticon_install.htm#bookmark52) [35](/assets/corticon_install.htm#bookmark52)
-> 
->   
+
 > 
 > ![image](/assets/corticon_install_files/server_install_Image_004.png)
 > 
