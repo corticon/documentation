@@ -1,17 +1,17 @@
 [Corticon Installation](/assets/corticon_install.htm)
 
-> ![image](/assets/corticon_install_files/server_install_Image_003.png)
+> ![image](/assets/corticon_install_files/server_install_Image_003.jpg)
 > 
 >   
 
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_004.png)
+> ![image](/assets/corticon_install_files/server_install_Image_004.jpg)
 > 
 > # 1‌
 > 
 > ### Learn about Corticon installations
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_005.png)
+> ![image](/assets/corticon_install_files/server_install_Image_005.jpg)
 > 
 >   
 > 
@@ -95,7 +95,7 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_006.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_006.jpg)
 >     
 > -   Supported Windows operating system
 >     
@@ -123,13 +123,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_007.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_007.jpg)
 >     
 >     Note: When all three Corticon Server components are installed on one machine, the required space for the installation is about 1 GB.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_008.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_008.jpg)
 >     
 >       
 >     
@@ -172,13 +172,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_009.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_009.jpg)
 >     
 >     # 2‌
 >     
 >     ### How to prepare for a Corticon installation
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_010.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_010.jpg)
 >     
 >       
 >     
@@ -226,13 +226,13 @@
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_011.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_011.jpg)
 >         
 >         **Note:** The Corticon Server log can capture errors and exceptions caused by expired or under-strength licenses. These log messages are detailed in the _Corticon Server logs section of the Server Guide_.
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_012.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_012.jpg)
 >         
 >         If you are Progress Corticon customer, you should have access to an unlimited license that will lift these restrictions. If you are an evaluator, and discover that these limitations are preventing or inhibiting your
 >         
@@ -264,13 +264,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_013.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_013.jpg)
 >     
 >     **Note:** Do **not** copy a .war file from an older version installation to a new one.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_014.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_014.jpg)
 >     
 >       
 >     
@@ -318,13 +318,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_015.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_015.jpg)
 >     
 >     Note: You can keep an installed prior version of Studio for 90 days. See your EULA for information about the "Replaced Product."
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_016.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_016.jpg)
 >     
 >     [For the updated product, proceed with](/assets/corticon_install.htm#bookmark36) How to install Corticon Studio on page 19
 >     
@@ -348,13 +348,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_017.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_017.jpg)
 >     
 >     **Note:** Do not copy eclipse.ini from an older release. After you do an install, compare your old file to the new one to determine whether any lines are appropriate to migrate.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_018.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_018.jpg)
 >     
 >     Update the Studio license file
 >     
@@ -383,7 +383,7 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_020.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_020.jpg)
 >     
 >     Note: If you are using a workspace that was used in a previous installation, you might need to refresh the
 >     
@@ -391,7 +391,7 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_021.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_021.jpg)
 >     
 >       
 >     
@@ -427,13 +427,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_022.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_022.jpg)
 >     
 >     Note: If you are using load balancers to carry the load during upgrade, take one of its peers offline, and then stop it.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_023.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_023.jpg)
 >     
 > -   Default Tomcat server—When you install Corticon Server or Corticon Web Console, a Tomcat server is installed that is ready to use.
 >     
@@ -455,13 +455,13 @@
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_024.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_024.jpg)
 >         
 >         Note: [To review the currently supported UNIX/Linux platforms and brands of application servers, refer to](https://docs.progress.com/bundle/corticon-supported-platforms/page/Corticon-6.3-Supported-Platforms-Matrix.html) [Corticon Supported Platforms](https://docs.progress.com/bundle/corticon-supported-platforms/page/Corticon-6.3-Supported-Platforms-Matrix.html) Matrix [For detailed instructions on configuring Corticon Server on all supported platforms, see the Corticon KnowledgeBase entry](https://knowledgebase.progress.com/articles/Knowledge/Corticon-Server-6-x-sample-WAR-installation-for-different-Application-Servers) [Corticon Server WAR installation for different Application](https://knowledgebase.progress.com/articles/Knowledge/Corticon-Server-6-x-sample-WAR-installation-for-different-Application-Servers) Servers .
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_025.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_025.jpg)
 >         
 >           
 >         
@@ -483,13 +483,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_026.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_026.jpg)
 >     
 >     Note: [You must have a license enabling .NET Server to work with Corticon. See](https://knowledgebase.progress.com/articles/Article/Corticon-6-0-licensing) [Knowledge Base article:](https://knowledgebase.progress.com/articles/Article/Corticon-6-0-licensing) [Corticon 6 licensing](https://knowledgebase.progress.com/articles/Article/Corticon-6-0-licensing)
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_027.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_027.jpg)
 >     
 >     -   \[CORTICON\_HOME\]\\Server .NET\\ThirdParty\\lib\\—propagated to the IIS location by the install utility.
 >         
@@ -503,13 +503,13 @@
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_028.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_028.jpg)
 >         
 >         **Note:** On .NET Servers, you can copy the brms.properties file from the Corticon Server root, paste it adjacent to axis in the IIS location, and thereafter apply updates to it.
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_029.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_029.jpg)
 >         
 >         **Corticon Server registration in Corticon Web Console**—When new servers want to be managed in the Web Console, you can add properties to the server's brms.properties file that will connect and authenticate on the Web Console, and even put the server into a specified group so that the server automatically gets decision services deployed in the group. For details, see _"Server registration with Web Console" in the Server Guide_
 >         
@@ -527,13 +527,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_030.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_030.jpg)
 >     
 >     Note: [If the IIS Server does not restart, the classic application pool stops running, and no logs are generated, then it is likely that the user performing the upgrade did not have adequate write permissions in related folders. For more information, see the Knowledge Base entry](https://knowledgebase.progress.com/articles/Article/Corticon-Server-for-NET-does-not-start) Corticon Server for .NET does not start.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_031.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_031.jpg)
 >     
 >     Deploy the fresh Decision Services
 >     
@@ -557,13 +557,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_032.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_032.jpg)
 >     
 >     # 3‌
 >     
 >     ### How to install Corticon Studio
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_033.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_033.jpg)
 >     
 >       
 >     
@@ -619,13 +619,13 @@
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_034.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_034.jpg)
 >         
 >         Note: While not typically required, if you are told to do an administrator install, right-click on the EXE file, and then choose Run as administrator.
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_035.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_035.jpg)
 >         
 >         The installer opens in the installer wizard.
 >         
@@ -637,13 +637,13 @@
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_037.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_037.jpg)
 >         
 >         Note: If the same or higher Corticon Studio 6.3.x is installed at any location on the target machine, an alert is posted that denies permission to continue. You will be able to apply 6.3 Studio service packs and patches. You can have other versions of Corticon Studio installed in distinct folders and they can run concurrently, although they must keep their workspaces separate.
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_038.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_038.jpg)
 >         
 >           
 >         
@@ -763,23 +763,23 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_044.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_044.jpg)
 >     
 >     Note: A preferred user language might use different separator symbols than those documented for decimal values, list ranges, and dates.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_045.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_045.jpg)
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_046.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_046.jpg)
 >     
 >     # 4‌
 >     
 >     ### How to install Corticon Servers and Web Console
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_047.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_047.jpg)
 >     
 >       
 >     
@@ -787,23 +787,23 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_048.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_048.jpg)
 >     
 >     Note: IMPORTANT: Default application server—Corticon Server and Web Console install a standard Tomcat distribution to help you quickly get started. This is a standard Tomcat distribution at the time of Corticon release. It may not have the latest security patches or other security configuration changes recommended for production use. When moving to production, it is recommended to deploy Corticon Server and Web Console to a supported application server that you have supplied and secured. If you choose to use the bundled Tomcat in production, you assume responsibility for applying Tomcat security patches and performing security configuration.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_049.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_049.jpg)
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_050.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_050.jpg)
 >     
 >     **Note: Linux Installation**—When you download and run the Linux server installer, you get shell (.sh) scripts for start/stop and utility tools that correspond to the batch (.bat) scripts in a Windows installation.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_051.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_051.jpg)
 >     
 >     There are several techniques for installing Corticon Server components:
 >     
@@ -829,13 +829,13 @@
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_052.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_052.jpg)
 >         
 >         Note: Corticon as a Windows Service[—If you want to run Corticon Server as a Windows Service, see the Knowledgebase article](https://knowledgebase.progress.com/articles/Knowledge/000028756) https://knowledgebase.progress.com/articles/Knowledge/000028756.
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_053.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_053.jpg)
 >         
 >           
 >         
@@ -865,7 +865,7 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_054.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_054.jpg)
 >     
 >     Note: [You can install Corticon Servers and the Web Console on a machine that has a previous version installed. Where a previous version is installed, you must manage any port overloads that might result from running both versions. However, an installed version of Corticon Server 5.2 or earlier on the target machine must be](/assets/corticon_install.htm#bookmark52) uninstalled, then Corticon Server 6.3 installed. Consult with Progress Corticon Support or your Progress
 >     
@@ -873,7 +873,7 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_055.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_055.jpg)
 >     
 >     To create or update an installation of Corticon Servers (Java and .NET) and Web Console 6.3:
 >     
@@ -885,13 +885,13 @@
 >             
 >               
 >             
->             ![image](/assets/corticon_install_files/server_install_Image_056.png)
+>             ![image](/assets/corticon_install_files/server_install_Image_056.jpg)
 >             
 >             Note: While not typically required, if you are told to do an administrator install, right-click on the EXE file, and then choose Run as administrator.
 >             
 >               
 >             
->             ![image](/assets/corticon_install_files/server_install_Image_057.png)
+>             ![image](/assets/corticon_install_files/server_install_Image_057.jpg)
 >             
 >               
 >             
@@ -903,13 +903,13 @@
 >             
 >               
 >             
->             ![image](/assets/corticon_install_files/server_install_Image_059.png)
+>             ![image](/assets/corticon_install_files/server_install_Image_059.jpg)
 >             
 >             Note: If the same or higher Corticon Server 6.3.x is installed at any location on the target machine, an alert is posted that denies permission to continue. You will be able to apply Server 6.3 service packs and patches. You can have other versions of Corticon Server installed in distinct folders and they can run concurrently, although they must run on separate ports.
 >             
 >               
 >             
->             ![image](/assets/corticon_install_files/server_install_Image_060.png)
+>             ![image](/assets/corticon_install_files/server_install_Image_060.jpg)
 >             
 >               
 >             
@@ -933,13 +933,13 @@
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_063.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_063.jpg)
 >         
 >         Note: For Linux installations, the work directory path must not contain spaces.
 >         
 >           
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_064.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_064.jpg)
 >         
 >           
 >         
@@ -953,9 +953,9 @@
 >         
 >     7.  [Choose the one or more components you want to install at this time. Any components already installed are chosen and grayed out. If you choose Corticon Server for .NET as one of the components, see the topic](/assets/corticon_install.htm#bookmark50) How to set up Corticon .NET Server resources on an IIS server on page 34 for further instructions.
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_066.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_066.jpg)
 >         
->         ![image](/assets/corticon_install_files/server_install_Image_067.png)
+>         ![image](/assets/corticon_install_files/server_install_Image_067.jpg)
 >         
 >         Note: The Linux installer does not enable a Corticon Server for .NET installation. Click Next.
 >         
@@ -978,13 +978,13 @@
 >     12.  Click **Done** to complete the Corticon Server / Web Console installation and close the installer. The installation and update of Corticon Servers and Web Console 6.3 is complete.
 >         
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_069.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_069.jpg)
 >     
 >     Note: Using an LDAP store for Web Console authentication \- You can set up Corticon Web Console to authenticate users using an LDAP server. See the topic _"How to use LDAP for Web Console authentication" in the Web Console Guide._‌
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_070.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_070.jpg)
 >     
 >       
 >     
@@ -996,7 +996,7 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_071.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_071.jpg)
 >     
 >     Silent installations or updates for Corticon Server Components on Windows:
 >     
@@ -1055,13 +1055,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_072.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_072.jpg)
 >     
 >     Note: For Linux installations, the work directory path must not contain spaces.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_073.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_073.jpg)
 >     
 >       
 >     
@@ -1073,13 +1073,13 @@
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_074.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_074.jpg)
 >     
 >     Note: Corticon embeds a limited evaluation license that enables testing of rule modeling projects on all supported platform configurations except .NET. You must obtain .NET evaluation and deployment licenses from your Progress representative.
 >     
 >       
 >     
->     ![image](/assets/corticon_install_files/server_install_Image_075.png)
+>     ![image](/assets/corticon_install_files/server_install_Image_075.jpg)
 >     
 >       
 >     
@@ -1094,13 +1094,13 @@
 > 
 >   
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_076.png)
+> ![image](/assets/corticon_install_files/server_install_Image_076.jpg)
 > 
 > # 5‌
 > 
 > ### How to uninstall Corticon components
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_077.png)
+> ![image](/assets/corticon_install_files/server_install_Image_077.jpg)
 > 
 >   
 > 
@@ -1119,13 +1119,13 @@
 > 
 >   
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_078.png)
+> ![image](/assets/corticon_install_files/server_install_Image_078.jpg)
 > 
 > **Note:** You could initiate the same task directly by navigating to \[CORTICON\_HOME\]\\Uninstall\_Progress Corticon Studio 6.3, and then running Uninstall Progress Corticon Studio 6.3.exe.
 > 
 >   
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_079.png)
+> ![image](/assets/corticon_install_files/server_install_Image_079.jpg)
 > 
 >   
 > 
@@ -1145,7 +1145,7 @@
 > 
 >   
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_080.png)
+> ![image](/assets/corticon_install_files/server_install_Image_080.jpg)
 > 
 >   
 > 
@@ -1158,13 +1158,13 @@
 > 
 >   
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_081.png)
+> ![image](/assets/corticon_install_files/server_install_Image_081.jpg)
 > 
 > **Note:** You could initiate the same task directly by navigating to \[CORTICON\_HOME\]\\Uninstall\_Progress Corticon Studio 6.3, and then running Uninstall Progress Corticon Server 6.3.exe.
 > 
 >   
 > 
-> ![image](/assets/corticon_install_files/server_install_Image_082.png)
+> ![image](/assets/corticon_install_files/server_install_Image_082.jpg)
 > 
 >   
 > 
