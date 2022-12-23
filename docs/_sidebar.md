@@ -1,6 +1,6 @@
 - Getting Started
   - [Installation](Getting-Started/Installation.md)
-  - [Platform Compability]
+  - [Platform Compability](https://docs.progress.com/bundle/corticon-supported-platforms/ ':include :type=text')
 
 - Guided Overview
 
