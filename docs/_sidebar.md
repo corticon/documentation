@@ -4,7 +4,6 @@
 - Decision Services on Corticon Server
   - [Platform Compability](https://docs.progress.com/bundle/corticon-supported-platforms/ ':include :type=text')
   - [System Requirements](https://docs.progress.com/bundle/corticon-install/page/System-requirements.html)
-  - [Installation](/server/installation.md)
 
 - Serverless Decision Services
   - [Platform Compability](https://docs.progress.com/bundle/corticon-js-supported-platforms/ ':include :type=text')
