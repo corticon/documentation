@@ -74,7 +74,7 @@
 
 .markdown-section .button {
   cursor: pointer;
-  color: white;
+  color: rgba(15, 255, 111, 0.598);
   height: auto;
   display: inline-block;
   margin-top: 4px;
@@ -300,7 +300,7 @@ body .docsify-pagination-container {
 
    .markdown-section h1 {
       font-size: 1.35rem;
-      line-height: 2.45rem;
+      line-height: 2.00rem;
    }
 
    .markdown-section h2 {
