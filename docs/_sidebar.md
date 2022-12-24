@@ -1,4 +1,12 @@
-- Getting Started
+- [Introduction](introduction/)
+- [Quick start](quickstart/)
+- [Configuration](configuration/)
+- [UI](ui/)
+- [Api](api/)
+- [Monitoring](monitoring/)
+- [FAQ](faq/)
+- [Changelog](changelog/)
+- 
   - [Installation](Getting-Started/Installation.md)
 
 - Decision Services on Corticon Server
