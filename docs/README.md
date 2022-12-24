@@ -11,5 +11,5 @@ Corticon is broken out into rule definition and rule execution components. Rules
 
 Rules are then either:
 
-1) **Corticon Server Deployment**: Deployed as stateless decision services on a Corticon Server, exposed as web services or embedded within a Java application.
-2) **Corticon.js Deployment**: Transpiled into a self-contained JavaScript bundle, runnable wherever JavaScript is supported.
+1) **[Corticon Server Deployment](server/)**: Deployed as stateless decision services on a Corticon Server, exposed as web services or embedded within a Java application.
+2) **[Corticon.js Deployment](js/)**: Transpiled into a self-contained JavaScript bundle, runnable wherever JavaScript is supported.
