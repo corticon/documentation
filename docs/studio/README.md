@@ -4,10 +4,10 @@ Once modeled, rules are then deployed as Decision Services onto Corticon Server 
 
 There are four key steps of building rules in Corticon Studio, culminating as a RuleFlow to deploy as a Decision Service.
 
-1. The first step of the rule modeling process with Corticon is to build the 'dictionary' of business terms used throughout the rules, the [**Rule Vocabulary**](/quickstart/Vocabulary.md).
+1. The first step of the rule modeling process with Corticon is to build the 'dictionary' of business terms used throughout the rules, the [**Rule Vocabulary**](quickstart/Vocabulary.md).
 
-2.  [**Rulesheets**](/quickstart/Rulesheets.md) are like Decision Tables. Users ‘model’ the business rules by defining actions to take when specific conditions are met.
+2.  [**Rulesheets**](quickstart/Rulesheets.md) are like Decision Tables. Users ‘model’ the business rules by defining actions to take when specific conditions are met.
 
-3. Once the rules created in the rulesheet are satisfied, the first [**Ruletest**](/quickstart/Ruletests.md) in Corticon Studio can be created to run test data through the rules in the test server embedded in the local application.
+3. Once the rules created in the rulesheet are satisfied, the first [**Ruletest**](quickstart/Ruletests.md) in Corticon Studio can be created to run test data through the rules in the test server embedded in the local application.
 
-4. From here, you can continue adding more rules to the rulesheet, or more commonly, compartmentalize our rules into different rulesheets, and create a [**Ruleflow**](/quickstart/Ruleflows.md) to specify the sequence from one rulesheet to another. When multiple Rulesheets are included in a Ruleflow, the Rulesheets will execute in a sequence determined by their Rulesheet order in the Ruleflow.
+4. From here, you can continue adding more rules to the rulesheet, or more commonly, compartmentalize our rules into different rulesheets, and create a [**Ruleflow**](quickstart/Ruleflows.md) to specify the sequence from one rulesheet to another. When multiple Rulesheets are included in a Ruleflow, the Rulesheets will execute in a sequence determined by their Rulesheet order in the Ruleflow.
