@@ -47,8 +47,6 @@ when the rule fires. Follow these steps to create a rule statement:
 1. Open the Rulesheet in Corticon Studio. The Rule Statements view becomes active
 2. The Rule Statements view comprises several rows and columns. To create the rule statement, double-click a cell in the column named Text and type the rule statement
 
-### Link a rule with a rule statement
-
 ![Alt text](../assets/statements.png)
 
 You must explicitly link each rule statement with its rule. To link a rule statement with its rule, enter the number of the rule column in the rule statement's **Ref** cell.
@@ -306,7 +304,7 @@ By default, when Corticon Studio detects a loop, it disables it, preventing rule
 
 You can check if a Rulesheet contains any intentional or unintentional loops by selecting Rulesheet > Logical Analysis > Check for Logical Loops. If there are any loops in the Rulesheet, Corticon Studio identifies and displays the loop in a dialog box.
 
-# Scope and Aliases
+## Scope and Aliases
 
 Every rule has Scope. Scope determines which entity instances are evaluated and acted upon by a rule. Recall that when you create an association between two entities, a branch gets added under each entity. In this example, an association was created between `Aircraft` and `FlightPlan`. As you can see, a branch for `FlightPlan` appears under `Aircraft` and a branch for `Aircraft` appears under `FlightPlan`.
 
