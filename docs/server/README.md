@@ -2,9 +2,11 @@
 
 Corticon Server processes the rules modeled, verified and tested in Corticon Studio. Corticon Server is a natural fit for today's deployment architectures, supporting on-premise and cloud deployment, web service deployment in popular application servers, in-process deployment for real-time applications, and application containers.
 
-#### Minimize Integration Effort, Maximize Integration Flexibility
+![Alt text](../assets/webservice.png)
 
-Corticon Server takes advantage of industry standards to provide flexible options for integration with applications running on [Java ](how-would-you-like-your-corticon-server/java-server/)or .[NET ](how-would-you-like-your-corticon-server/.net-server.md)platforms. You can embed Corticon Server in any layer of an application’s architecture, from the presentation layer on the desktop to the shared-service layer distributed across back-end servers. By design, Corticon Server integrates easily with composite or packaged applications through service-oriented architecture (SOA) or business process management (BPM) systems.
+## Minimize Integration Effort, Maximize Integration Flexibility
+
+Corticon Server takes advantage of industry standards to provide flexible options for integration with applications running on Java or .NET platforms. You can embed Corticon Server in any layer of an application’s architecture, from the presentation layer on the desktop to the shared-service layer distributed across back-end servers. By design, Corticon Server integrates easily with composite or packaged applications through service-oriented architecture (SOA) or business process management (BPM) systems.
 
 The Corticon Server for Java provides the necessary components to deploy Corticon as a REST or SOAP service on a Java application server or to deploy Corticon in-process in your custom Java application. Corticon Server provides installers for both Windows and Linux. The actual deployment artifacts - the JAR and WAR files - are platform independent. See the Web Services and In-Process guides for more information. See the Corticon 6.2 - Supported Platforms Matrix for a list of supported application servers.
 
@@ -32,13 +34,13 @@ The Corticon Server is configured by default to fit the majority of use cases. R
 
 Multiple Decision Services place their requests in a queue for processing. Server-level thread pooling is implemented by default, using built-in Java concurrent pooling mechanisms to control the number of concurrent executions. This design allows the server to determine how many concurrent requests are to be processed at any one time.
 
-### Execution queue
+## Execution queue
 
 Each thread coming into the Server gets an available Reactor from the Decision Service, and then the thread is added to the Server's Execution Thread Pooling Queue, or, simply put, the Execution Queue.The Execution Queue guarantees that threads do not overload the cores of the machine by allowing a specified number of threads in the Execution Queue to start executing, while holding back the other threads. Once an executing thread completes, the next thread in the Execution Queue starts executing.&#x20;
 
 The Server will discover the number of cores on a machine and, by default, limit the number of concurrent executions to that many cores, but a property can be set to specify the number of concurrent executions. Most use cases will not need to set this property. However, if you have multiple applications running on the same machine as Corticon Server, you might want to set this property lower to limit the system resources Corticon uses. While this tactic might slow down Corticon processing when there is a heavy load of incoming threads, it will help ensure Corticon does not monopolize the system. Conversely, if you have Decision Services which make calls to external services (such as connection to a Datasource) you may want to set this property higher so that a core is not idle while a thread is waiting for a response.
 
-### Memory management
+## Memory management
 
 Allocation means that you could allocate hundreds of execution threads for one Decision Service. The way Reactors are maintained in each Decision Service, the Server can re-use cached processing data (not including payload data) across all Reactors for the Decision Service. Runtime performance should reveal only modest differences in memory utilization between a Decision Service that contains just one Reactor and another that contains hundreds of Reactors. Because each Reactor reuses cached processing data, the Server can dynamically create a new Reactor per execution thread (rather than creating Reactors and holding them in memory.) Even when an allocation is set to 100, the Server only creates a new Reactor (with cached data) for every incoming execution thread, up to 100. If there are only 25 execution threads against Decision Service 1, then there are just 25 Reactors in memory. Large request payloads are more of a concern than the number of concurrent executions or the number of Reactors.
 
