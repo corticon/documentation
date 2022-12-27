@@ -13,6 +13,7 @@
 
  --- 
 [Corticon.js](js/)
+  - [Platforms](js/platforms.md)
 
 ---
 [Further Reading](more/)
