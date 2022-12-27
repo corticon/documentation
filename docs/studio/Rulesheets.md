@@ -307,3 +307,280 @@ By default, when Corticon Studio detects a loop, it disables it, preventing rule
 #### How to check for loops in a Rulesheet
 
 You can check if a Rulesheet contains any intentional or unintentional loops by selecting Rulesheet > Logical Analysis > Check for Logical Loops. If there are any loops in the Rulesheet, Corticon Studio identifies and displays the loop in a dialog box.
+
+# Scope and Aliases
+
+Every rule has Scope. Scope determines which entity instances are evaluated and acted upon by a rule. Recall that when you create an association between two entities, a branch gets added under each entity. In this example, an association was created between `Aircraft` and `FlightPlan`. As you can see, a branch for `FlightPlan` appears under `Aircraft` and a branch for `Aircraft` appears under `FlightPlan`.
+
+So both `Aircraft` and `FlightPlan` appear in two places—at a top level and at a branch level.
+
+![Alt text](../assets/scopeview.png)
+
+Notice that the attributes of each entity also appear in two places. When you drag and drop one of the attributes, such as `maxCargoWeight`, from the top-level `Aircraft` on to a cell in the Rulesheet, you form the term `Aircraft.maxCargoWeight`. If you use this term in a rule, it applies to ALL instances of the Aircraft entity in the rule’s input or output messages. This rule has global scope.
+
+If you drag and drop the `maxCargoWeight` attribute from the branch level `Aircraft` (under `FlightPlan`), you form the term `FlightPlan.aircraft.maxCargoWeight`. If you use this term in a rule, it applies ONLY to those instances of `Aircraft` that are associated with a `FlightPlan` in the rule’s input or output messages. Aircraft that are not associated with a `FlightPlan` will not be evaluated or acted upon by the rule. This rule has narrow or limited scope.
+
+Whether you use a term from a top level or a branch level entity depends on the scope of the rule that you want to model.
+
+### Example of rule scope
+
+Let’s assume that the transportation company creates a flight plan. It assigns a cargo container and an aircraft to the flight plan and wants to model a rule that throws a Violation message if the cargo weight exceeds the maximum cargo weight of the aircraft assigned to that flight plan.
+
+![Alt text](../assets/scope%20example.png)
+
+To achieve this, you define a rule that uses `FlightPlan`’s associations with `Cargo` and with `Aircraft`. You define a condition that compares `Cargo.weight` under `FlightPlan` in the Rule Vocabulary with `Aircraft.maxCargoWeight`, also under `FlightPlan`. When you drag and drop these terms from under `FlightPlan` in the Rule Vocabulary, the terms get represented as shown above.
+
+To test this Rulesheet, you must define input data in the Ruletest in the same hierarchical structure. You must drag and drop FlightPslan from its top level first. Then, you drag and drop Cargo and Aircraft from their branch levels to FlightPlan in the Input pane.
+
+![Alt text](../assets/scopetest.png)
+
+When you run the Ruletest, Corticon evaluates only those Cargo-Aircraft pairings that match the same `FlightPlan`. This means that a `Cargo.weight` will only be compared to an `Aircraft.maxCargoWeight` if both the `Cargo` and the `Aircraft` share the same `FlightPlan`.
+
+If you had used `Aircraft.maxCargoWeight` and `Cargo.weight` from the top level in the Vocabulary tree to define your rule (`Cargo.weight > Aircraft.maxCargoWeight`), Corticon would have compared every Cargo weight with every `Aircraft.maxCargoWeight`, which is not what you want.
+
+When you model rules, it is important to understand what you want your rules to do and define scope accordingly.
+
+### How to choose the right Scope in the Rule Statement
+
+Now that you have some understanding of Scope in rules, let’s look at how to choose the right Scope in a Rule Statement.
+
+As you know, a Rule Statement describes the purpose of a rule and can also be posted as a Rule Message. When you configure it to be posted as a Rule Message, you choose an entity to post it to in the Alias column. What this means is that when the Rule Message is sent or displayed, it is associated with an instance of that entity. For example, if you choose FlightPlan, the rule message contains the entity name (FlightPlan) along with the instance ID (FlightPlan\[1], FlightPlan\[2], etc) as shown in this example:
+
+![Alt text](../assets/scope%20statements.png)
+
+This helps a client application that is invoking the rule, or a rule modeler who is testing the rule, know which entity instance is responsible for triggering which rule. In some cases, choosing the right entity in the Alias column of a Rule Statement is intuitive. In the FlightPlan.cargo.weight > FlightPlan.aircraft.maxCargoWeight example, you would choose FlightPlan in the Alias column, because you want to know which FlightPlan instance triggered the rule. However, in cases where you are comparing the attributes of two root-level entities, (for example if Cargo.weight > Aircraft.maxCargoWeight), it may be unclear which entity to use in the Alias column. In these cases, you should pick whichever entity you are more interested in from a business point-of-view.
+
+### The Scope Pane
+
+So far, you have modeled simple rules with a small Vocabulary where Scope is easy to identify. However, when you model rules using a complex Vocabulary with many terms and associations, you may find that it is easier to first determine which entities (top level or branch level) and attributes you want to use in your Rulesheet and preselect them for rule modeling.
+
+To do this, you use the Scope pane. To open the Scope pane, switch the Rulesheet to an Advanced View by selecting Rulesheet > Advanced View. You can then drag and drop just those top-level and branch-level terms that you want to use in your Rulesheet from the Rule Vocabulary view. You can then drag and drop terms from the Scope pane to Rulesheet cells.
+
+![Alt text](../assets/scopepane.png)
+
+### Aliases
+
+An Alias is a name you define for an entity in the Scope pane. Aliases help reduce the length of terms in Rulesheet cells and make it easier to read the rules. You can define an Alias for a top-level or branch-level entity by double-clicking the node in the Scope pane and entering the Alias name as shown in this example.
+
+![Alt text](../assets/scopealias.png)
+
+For example, if you want to compare cargo weight and aircraft maxCargoWeight for a FlightPlan, you could define the Alias plane for aircraft under FlightPlan and the Alias load to cargo as shown in this example. The comparison expression in the Rulesheet cell changes from FlightPlan.cargo.weight > FlightPlan.aircraft.maxCargoWeight to load.weight > plane.maxCargoWeight. Although the length of the terms reduce, the Scope of the rule remains the same.
+
+When you define an Alias in the Scope pane, the Alias name replaces the entity name in the list of choices in the Rule Statement’s Alias column. For example, instead of FlightPlan.aircraft, the Alias column will display plane when you click on one of its cells.
+
+In some cases, such as in Collections, Aliases are mandatory.
+
+## Collections
+
+A Collection is a set of instances of the same entity. Each instance is called an element of the Collection. For example, in the input of this Ruletest, there are two elements in the Cargo collection:
+
+![Alt text](../assets/image%20(14).png)
+
+Corticon provides Collection operators that enable you to model rules that apply to a Collection. For example, you can use a Collection operator to find the highest or lowest value, or calculate the total or average value for an attribute, across all elements in a Collection.
+
+Collections have another useful feature. When data is structured in a parent-child hierarchy (for example when one FlightPlan entity—the parent—has an association with many Cargo child entities), Corticon automatically recognizes that each set of children is a separate Collection. In this image, there are two Cargo collections:
+
+![](../assets/image%20(24).png)
+
+So when you define a rule to calculate the sum of cargo weights for example, the rule will calculate the total weight for each Cargo Collection separately. For FlightPlan \[1] in this image, the rule will calculate a total of 300,000, while for FlightPlan \[2], it will calculate a total of 400,000.
+
+### The role of Aliases and Scope in Collections
+
+Aliases and Scope play a role in Collections too. They determine which entity instances are added to a Collection.
+
+You can define an Alias for a top-level or branch-level entity in the Scope pane of a Rulesheet’s Advanced View. For example, in this image the Cargo branch (the child entity) under FlightPlan (the parent entity) is assigned the Alias load:
+
+![](../assets/image%20(107).png)
+
+In this case, load represents Cargo instances that are associated with a FlightPlan. If there are multiple FlightPlans, there will be a load Collection (containing a set of Cargo elements) for each FlightPlan. Cargo instances that are not associated with a FlightPlan do not get added to a load Collection.
+
+Any rule that uses the term load applies only to instances of Cargo that are associated with a FlightPlan. Further, if you define a rule, for example to calculate the average value of cargo weight for each FlightPlan (denoted by load.weight instead of FlightPlan.cargo.weight), the rule will calculate an average value for each load Collection.
+
+On the other hand, if Cargo is at the top-level, and an Alias shipment is defined for it, such as in the image below, the shipment Collection will contain all instances of Cargo regardless of association. Any rule that uses the term shipment will apply to all instances of Cargo, irrespective of association.
+
+![](../assets/image%20(119).png)
+
+Note that you must define an Alias for an entity if you want to use that entity in a Collection-based rule.
+
+### Define rules that apply to Collections
+
+To define rules that apply to Collections, perform the following tasks:
+
+1. Define the Scope of the rules—identify parent-child relationships between entities (if any) that you want to use in the rule and drag and drop those entities and their attributes from the Rule Vocabulary view to the Scope pane in the Rulesheet’s Advanced View. Drag and drop the parent entity first and then the child entity (that appears as a branch under the parent entity). Then, drag and drop attributes. This should create a hierarchy as shown here:
+
+![Alt text](../assets/image%20(21).png)
+
+2. Define Aliases—define an Alias for each entity in the hierarchy for which you want to define a Collection operator-based rule. In this example, we want to calculate the sum of cargo weights for each FlightPlan, so we assign an Alias named load to the Cargo branch under FlightPlan:
+
+![Alt text](../assets/image%20(46).png)
+
+3. Use a Collection operator in a rule—you can see the entire list of Collection operators by expanding the Entity/Association Operators > Collection folder in the Rule Operators view.
+
+![](../assets/image%20(105).png)
+
+### Example: How to use the sum operator
+
+The sum operator is used at the end of a condition or action expression. It enables you to calculate the total of values of one attribute across all elements of the Collection.
+
+![](../assets/image%20(35).png)
+
+Observe that in this example, an attribute, totalWeight, has been added to the FlightPlan entity. The purpose of the totalWeight attribute is to hold the value of the sum of all cargo weights assigned to the flight plan.
+
+The rule has just one action expression, FlightPlan.totalWeight=load.weight->sum. Notice that load is the Alias for the cargo association in FlightPlan. The ->sum operator can be dragged and dropped from the Rule Operator view or entered manually.
+
+So, what does this rule do? The rule calculates the sum of the weight attributes for all elements in the load Collection for each FlightPlan and assigns the total to the totalWeight attribute for the FlightPlan.
+
+![](../assets/image%20(90).png)
+
+As you can see, in the results of the Ruletest, the totalWeight attribute of each FlightPlan displays the sum of the weight attributes of only those Cargo instances associated with it. The top-level Cargo entity instances are not included in any of these calculations.
+
+### Example: How to use the exists operator
+
+The exists operator enables you to check if a certain value for a specified attribute exists within a Collection.
+
+![](../assets/image%20(30).png)
+
+The syntax for the exists operator is as follows:
+
+```
+<AliasName> ->exists(Alias.attribute<ComparisonOperator>value).
+```
+
+In this example, there is one rule with a single condition expression. The rule checks if any of the elements in a load Collection holds the value “overweight” for the attribute named container. If the condition expression is true, a Violation rule message is generated.
+
+If the condition expression is false, an Info rule message is generated. Observe that in the Scope pane, load has been defined as the Alias for the Cargo association in FlightPlan. So the condition expression is `load->exists(load.container=‘overweight’).`
+
+When this rule is executed against test data in the Ruletest, Corticon detects the “overweight” value in the first cargo instance and the Violation rule message is generated.
+
+![](../assets/image%20(41).png)
+
+### Example: How to use the forAll operator
+
+The forAll operator enables you to check if an attribute has a specific value, across all the elements of a Collection.
+
+![](../assets/image%20(98).png)
+
+The syntax of the forAll operator is:
+
+```
+<Alias> -> forAll (Alias.attribute<ComparisonOperator>value).
+
+```
+
+In this example, there is one rule with a single condition expression. The rule checks if the manifest number for each cargo container assigned to a flight plan matches the flight plan number. If the condition expression is true, an Info rule message is generated.
+
+If the condition expression is false, a Violation rule message is generated. Again, in the Scope pane, load has been defined as the Alias for the Cargo association in FlightPlan. Additionally, since FlightPlan will also be used in the expression, plan has been defined as the Alias for FlightPlan.
+
+So the expression is `load->forAll(load.manifestNumber=plan.flightNumber).`
+
+But you will find that this is an invalid expression. Why? The flightNumber is an integer and the manifestNumber is not really a “number”, it is a String. For the purposes of this example, change the flightNumber data type to String.
+
+![](../assets/image%20(76).png)
+
+In the Input data in the Ruletest, there are two FlightPlan instances. In the first instance, all the associated cargo instances have the same manifest number as the flight number. In the second FlightPlan instance one of the cargo instances has a different manifest number. The rule messages indicate that one Info message and one Violation message is generated.
+
+
+## Filters and Preconditions
+
+### What is a Filter?
+
+A Filter is an expression that filters out data in an incoming request message. Filters only apply to rules that share the same Scope—only data that survives the Filter is evaluated by those rules. Filters do not apply to rules that have a different Scope. Filters are evaluated before rules in a Rulesheet.&#x20;
+
+You specify a Filter in the Advanced View of a Rulesheet. Here is an example of a simple Filter:
+
+![Alt text](../assets/image%20(83).png)
+
+The Rulesheet solves the problem that was introduced in the beginning of this lesson. The expression in the Conditions area compares the maxCargoWeight of each Aircraft with the sum of cargo weight (denoted by the Alias load) of each FlightPlan. Note the Filters section to the left of the Rulesheet (under the Scope pane). The Filter expression checks if the value of Aircraft.isAircraftReady is True for each instance of Aircraft in input data.&#x20;
+
+Imagine input data containing multiple Aircraft instances and multiple FlightPlan instances, each with a set of Cargo children. Some Aircraft instances have the isAircraftReady attribute set to False and some have it set to True. Only those Aircraft instances that have the attribute to True survive the Filter and are processed by the rule.
+
+### How is a Filter useful?
+
+A Filter is useful in many ways:&#x20;
+
+* It reduces repetition and is easier to maintain. For example, in this Rulesheet we define the expression Cargo.needsRefrigeration=T over several columns:
+
+![Alt text](../assets/image%20(2).png)
+
+If we used a Filter instead, we could define Cargo.needsRefrigeration=T as a Filter expression just once and it would apply to all the rules in this Rulesheet (since in this case the rules share the same Scope).
+
+* You can make a Filter a Precondition. When you do this, if no data survives the Filter, the Rulesheet stops executing, and the flow of execution skips to the next Rulesheet in the Ruleflow. This improves performance because the Decision Service does not spend time processing rules that it does not need to process.
+* You can use Filters to partition elements of a Collection into sub-collections. For example, suppose you have a FlightPlan with a Collection of Cargo instances and each Cargo instance has a different type of container. You could create Filters to partition the elements in the FlightPlan’s Cargo Collection by container type and define rules to determine how many instances of each type of container are assigned to the FlightPlan.
+
+### How to define a Filter
+
+To define a Filter, open the Rulesheet’s Advanced View and define the Filter in the Filters pane. You can drag and drop entities and attributes from the Rule Vocabulary to cells in the Filters pane or enter the expression manually. When you define a Filter, the Filter is also displayed in the Scope pane.
+
+![Alt text](../assets/image%20(51).png)
+
+You can define multiple Filters (each in a separate row) that have the same Scope. In this case, input data must survive all the Filters (sequentially top-to-bottom) for any rule with the same Scope to process it.
+
+### How to limit a Filter
+
+Note that when you define a Filter at the branch or ‘child’ level (for example FlightPlan.cargo.weight<100000), the Filter is displayed in two places in the Scope pane—at the parent level (under FlightPlan) as well as under the branch/child level (FlightPlan.cargo).&#x20;
+
+By default, if no child entity survives the Filter, the parent entity is filtered out as well. Any rule that processes an attribute of the parent entity or any other child branches of the parent entity will not fire since the parent entity has been filtered out.&#x20;
+
+This type of behavior is called a Full Filter. A Full Filter is desirable in most cases. However, in some situations you may want to limit the Filter so that rules that process other branches of the parent entity or attributes of the parent entity will still fire.&#x20;
+
+To limit the Filter, expand the Filters node under the parent entity (in this case FlightPlan) in the Scope pane, right-click the Filter and select Disable.
+
+![Alt text](../assets/image%20(87).png)
+
+
+This disables the Filter at the parent level (it gets greyed out as shown here) but still keeps it enabled at the child level.&#x20;
+
+![Alt text](../assets/image%20(92).png)
+
+Because the Filter is enabled at the child level for the load entity, any rule that uses the load entity will only process those elements of load that survive the Filter. Any other rules that process attributes of the parent entity (FlightPlan) or other branches of the parent entity (plane, pilot) will ignore the Filter.
+
+### How to use Filters to partition Collections
+
+As you learned earlier, you can use Filters to partition Collections of child entities. To do this, you:&#x20;
+
+1. Drag and drop the child entity’s branch to the Scope pane multiple times&#x20;
+2. Assign an Alias for each branch to represent each Collection&#x20;
+3. Create a Filter for each Alias&#x20;
+
+For example, if there are two types of containers—STANDARD and LARGE—you can use Filters to count how many of each type of container is assigned to a FlightPlan:
+
+![Alt text](../assets/image%20(26).png)
+
+As you can see, the Cargo branch of FlightPlan has been added to FlightPlan two times. Each branch has been assigned a different Alias (stan and large) to represent the two types of sub-collections we want (STANDARD and LARGE). Finally, each Filter defines which instances of Cargo get added to which sub-collection. Cargo instances that have the value STANDARD (for the container attribute) get added to stan, as defined by the expression stan.container=‘STANDARD’. Similarly Cargo instances that have the value LARGE get added to large.
+
+Once you define Filters to create sub-collections, you can use the Aliases in rules to compare sub-collections or perform Collection-based operations. For example, you could create a rule to check which type of container is greater in number using the ->size operator as shown here:
+
+![Alt text](../assets/image%20(77).png)
+
+![Alt text](../assets/image%20(95).png)
+
+### Preconditions
+
+You can make a Filter a Precondition. If no data survives the Precondition Filter, none of the rules will execute, regardless of whether the Scope of the rules match the Scope of the Filter. This is useful when the Rulesheet is part of a Ruleflow, and you want the Rulesheet to stop executing if no data survives the Filter, and pass the data to the next Rulesheet. This improves performance since the Decision Service does not spend time processing rules that it does not need to process.&#x20;
+
+Let’s take an example. Suppose that we want to identify Cargo instances that have high priority so that we can ship them the same day. To enable this, we add an attribute named priorityLevel to the Cargo entity and an attribute named departureDate to the FlightPlan entity. Next, we create a Rulesheet with the following components:
+
+* A Filter containing the expression: Cargo.priorityLevel=1&#x20;
+* An action-only rule that uses the .new operator to create a new FlightPlan entity: FlightPlan.new\[flightNumber=11,departureDate=today]&#x20;
+
+Note that if there are no containers with a priorityLevel of 1, we do not want the rule to fire. However, since this is an action-only rule, and it does not have the same Scope as the Filter, it will still fire. To get the result we want, we can make the Filter a Precondition by right-clicking the Filter and selecting Precondition:
+
+![Alt text](../assets/image%20(124).png)
+
+The Filter icon changes as shown below, indicating that the Filter is a Precondition:
+
+![Alt text](../assets/image%20(27).png)
+
+Here is the complete Rulesheet:
+
+![Alt text](../assets/image%20(58).png)
+
+Now let’s test the Rulesheet with input data containing a Cargo instance that survives the Filter. As you can see here, a new FlightPlan is created:
+
+![Alt text](../assets/image%20(80).png)
+
+Let’s test this Rulesheet again with data where no Cargo instances survive the Filter:
+
+![Alt text](../assets/image%20(128).png)
+
+As you can see, no FlightPlan is created.
