@@ -1,4 +1,4 @@
-[Home](README.md)
+<!-- [Home](README.md)
 
 ---
 [Corticon Studio](studio/)
@@ -18,4 +18,4 @@
 ---
 [Further Reading](more/)
 
----
+--- -->
