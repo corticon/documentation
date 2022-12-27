@@ -1,8 +1,6 @@
 # Rulesheets
 
-You define your rule logic in a Corticon Rulesheet. A rule is like an ‘if-then’ statement.
-Each rule consists of one or more conditions (if) that are associated with one or more
-actions (then).
+You define your rule logic in a Corticon Rulesheet. A rule is like an ‘if-then’ statement. Each rule consists of one or more conditions (if) that are associated with one or more actions (then).
 Here is an example of a Rulesheet with three rules. The Rulesheet editor has the following
 parts:
 
