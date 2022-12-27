@@ -1,6 +1,9 @@
 .app-nav:not(:empty)~main .markdown-section {
   padding-top: 5.0rem;
 }
+img {
+  max-width: 61%;
+}
 
 .pagination-item, .pagination-item-title {
   opacity: .9 !important;
@@ -345,6 +348,3 @@ body .docsify-pagination-container {
 
 /* vue.css | https://unpkg.com/docsify@4/lib/themes/vue.css */
 
-img {
-  max-width: 61%;
-}
