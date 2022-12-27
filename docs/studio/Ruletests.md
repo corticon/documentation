@@ -1,6 +1,6 @@
 # Ruletests
 
-### Ruletests Overview
+## Ruletests Overview
 
 A Ruletest simulates a business scenario where the rules are applied to input data. If the data satisfies all the conditions in a rule, the rule fires and some output containing the results of the rule execution is produced.&#x20;
 
@@ -10,7 +10,7 @@ A Ruletest stores this information in a Ruletest file, enabling you to save use-
 
 Take a close look at the images. Here is an example of a Rulesheet (`AircraftRules.ers`) with two rules and a Ruletest (`TestingAircraftRules.ert`) that has been executed.
 
-### When you run a Ruletest
+## When you run a Ruletest
 
 1. Input data is processed by the rules in the Rulesheet.&#x20;
 2. If the input data satisfies all the conditions in one or more rules, those rules fire. The Ruletest then displays output that could include the same data as the input but with changed values, and/or additional data and values.&#x20;
@@ -23,7 +23,7 @@ A fully formatted sample request in each form can be exported from the ruletest.
 
 ![](https://raw.githubusercontent.com/corticon/Corticon\_Enablement/master/assets/images/toclip.png)
 
-### How to link a rule statement to multiple rules
+## How to link a rule statement to multiple rules
 
 Using dynamic data, you can create a single rule statement that describes multiple rules. You can then link the rule statement to each of the rules. When any of the rules fire, attribute names will be replaced by actual values in the rule message.
 

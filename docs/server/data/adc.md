@@ -1,6 +1,6 @@
 # Advanced Data Connectivity
 
-#### The Basic Steps:
+## The Basic Steps:
 
 1. Define a mapping of your vocabulary to a database (same as for EDC)&#x20;
 2. Craft optimized SQL queries&#x20;

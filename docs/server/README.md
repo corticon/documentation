@@ -1,4 +1,4 @@
-# Server-Based Decision Services
+# Corticon Server
 
 Corticon Server processes the rules modeled, verified and tested in Corticon Studio. Corticon Server is a natural fit for today's deployment architectures, supporting on-premise and cloud deployment, web service deployment in popular application servers, in-process deployment for real-time applications, and application containers.
 

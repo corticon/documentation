@@ -1,7 +1,7 @@
+# Rule Vocabulary
+
 A **Rule Vocabulary** enables you to define all the business terms that you require in your rules. 
  
-
-
 For example, a transport company may have a rule that determines how much cargo each type of vehicle can carry. There are two key business terms used in this rule—cargo and vehicle. You could define these terms as entities in your Vocabulary.
  
 A Vocabulary is similar to a data model such as a UML model or an ER model. The terms for the Vocabulary could come from database tables, forms used in business operations, policy and procedure documents, etc.

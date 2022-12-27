@@ -1,3 +1,5 @@
+# Corticon Studio
+
 Corticon Studio is a standalone desktop environment to model, analyze, test, and save business rules as executable decision services. Corticon ‘rule modelers’ are commonly business analysts with expertise in the business domain and its policies, using Corticon Studio to define, author, analyze and test rules.
 
 Once modeled, rules are then deployed as Decision Services onto Corticon Server or as serverless functions with Corticon.js.

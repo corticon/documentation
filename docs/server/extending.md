@@ -13,7 +13,7 @@ Extensions can be created in the Java development environment included in Cortic
 There are two types of Corticon extensions: Extended Operators and Service Callouts.&#x20;
 
 
-### Extended Operators
+## Extended Operators
 
 Operators are used when defining conditions and actions in a Rulesheet. While Corticon has a large built-in set of operators, you can expand this set by adding custom operators. Operators can operate on individual attributes, collections or sequences. Examples include:
 
@@ -22,6 +22,6 @@ Operators are used when defining conditions and actions in a Rulesheet. While Co
 * Engineering functions, such as pi, sine, and cosine
 
 
-### Service Callouts
+## Service Callouts
 
 Callouts can be used in a ruleflow to retrieve, modify, or store data that is being processed by the rules. The most common use is to access data in a database or external web service. For example, if your Ruleflow needs to look up an applicant's credit rating, the service callout can have a step in the Ruleflow processing that calls out to a trusted real-time ratings provider, and then adds the response back into the decision processing.
