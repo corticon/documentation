@@ -13,7 +13,7 @@ As more rulesheets are added to our Ruleflow, Ruletests can be run against entir
 
 Ruleflows are the final step in the rule development process and are thus deployed as Decision Services. Ruleflows can always be versioned as well, with either a major/minor version tag or effective date range for which they will execute when invoked. The invocation (request) payload must contain a version number or data parameter to consume the desired "versioned" decision service.
 
-![Alt text](../assets/image%20(23).png>)
+![Alt text](../assets/image%20(23).png)
 
 ### Test Ruleflows using Ruletests
 
@@ -23,7 +23,7 @@ The Output pane then displays the final output of the Ruleflow. The Rule Message
 
 To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletest’s test subject either while creating the Ruletest or by modifying the Test Subject property in the Ruletest editor.
 
-![Alt text](../assets/image%20(91).png>)
+![Alt text](../assets/image%20(91).png)
 
 ### Advanced Ruleflow features
 
