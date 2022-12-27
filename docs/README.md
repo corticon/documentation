@@ -1,14 +1,20 @@
-# Corticon
+# Corticon Decision Magement
 
-Corticon Studio is a standalone desktop environment to model, analyze, test, and save business rules as executable decision services. Corticon ‘rule modelers’ are commonly business analysts with expertise in the business domain and its policies, using Corticon Studio to define, author, analyze and test rules.
+Corticon, is a low-code, model-driven approach for creating and managing business rules that is targeted at businesspeople, subject-matter experts, and business analysts rather than application developers.
 
-Once satisfied, rules are then deployed as Decision Services onto Corticon Server or as serverless functions with Corticon.js.
+<p align="center">  <img src="assets/be-more-explicit.jpg" width="300"/>
+</p>
 
-This site is focused on enablement related to building dynamic forms with Corticon.js. If you're unfamiliar with Corticon but only interested in the dynamic forms use case, below is a brief overview of the core components involved in modeling Corticon business rules. These are just as important to know when building dynamic forms to gather form response data as they are for automating decisions based upon that data. 
+## Corticon Components
 
-There are four main steps of building rules in Corticon Studio, culminating in the RuleFlow which will be deployed as a Decision Service.
+Corticon is broken out into rule definition and rule execution components. Rules are designed, logically analyzed, documented, sequenced, and tested in **[Corticon Studio](studio/)**, along with any configurations for accessing/operating upon external datasources.
 
-1. The first step of the rule modeling process with Corticon is to build the 'dictionary' of business terms used throughout the rules, the **Rule Vocabulary**.
-2. **Rulesheets** are like Decision Tables. Users ‘model’ the business rules by defining actions to take when specific conditions are met.
-3. Once the rules created in the rulesheet are satisfied, the first **Ruletest** in Corticon Studio can be created to run test data through the rules in the test server embedded in the local application.
-4. From here, you can continue adding more rules to the rulesheet, or more commonly, compartmentalize our rules into different rulesheets, and create a  **Ruleflow** to specify the sequence from one rulesheet to another. When multiple Rulesheets are included in a Ruleflow, the Rulesheets will execute in a sequence determined by their Rulesheet order in the Ruleflow.
+Rules are then either:
+
+1) **[Corticon Server Deployment](server/)**: Deployed as stateless decision services on a Corticon Server, exposed as web services or embedded within a Java application.
+2) **[Corticon.js Deployment](js/)**: Transpiled into a self-contained JavaScript bundle, runnable wherever JavaScript is supported.
+
+<br>
+<br>
+<p align="center">  <img src="assets/design flow corticon.png" width="600"/>
+</p>

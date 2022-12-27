@@ -1,0 +1,25 @@
+This section describes the concepts and purposes of a Corticon Vocabulary. You see how to build a Vocabulary from general business concepts and relationships.
+Depending on your point of view, a Vocabulary represents different things and serves different purposes. For the rule modeler, the Vocabulary provides the basic elements of the rule language—the building blocks with which business rules are implemented in Corticon. For a systems analyst or programmer, a vocabulary is an abstracted version of a data model that contains the objects used in those business rules implemented in Corticon.
+A vocabulary serves the following purposes:
+•	Provides terms that represent business “things.” Throughout the documentation, these things are referred to as entities, and the properties or characteristics of these things as attributes. Entities and their attributes in underlying data sources (such as tables in a relational database or fields in a user interface) can be represented in the Vocabulary.
+•	Provides terms that are used to hold temporary or transient values within Corticon (such as the outcome of intermediate derivations). These entities and attributes usually have a business meaning or context, but do not need to be saved (which are referred to as persistent) in a database, or communicated to other applications external to Corticon. An example of this might be the following two simple computational rules:
+
+In these two rules, itemSubTotal is the intermediate or transient term. You may never use itemSubTotal by itself; instead, you may only create it for purposes of subsequent derivations, as in the calculation of orderTotal in rule #2. Because a transient attribute may be the result of a very complicated rule, it may be convenient to create a Vocabulary term for it and use it whenever rewriting the complex rule would be awkward or unclear. Also see the note on Transients.
+ 
+
+•	Provides a federated data model that consolidates entities and attributes from various enterprise data resources. This is important because a company's data may be stored in many different databases in many different physical locations. Progress believes that rule modelers should not be concerned with where data is, only how it is used in the context of building and evaluating business rules. The decision management system should ensure that proper links are maintained between the Vocabulary and the underlying data. This concept is called abstraction—the complexities of an enterprise's data storage and retrieval systems were hidden so that only the aspects relevant to rule writing are presented to the rule modeler.
+•	Provides a built-in library of literal terms and operators that can be applied to entities or attributes in the Vocabulary. This part of the Vocabulary, the lower half of the Vocabulary window shown in Figure 1: Operator Vocabulary on page 14, is called the Operator Vocabulary because it provides many of the verbs (the operators ) needed for business rules. Many standard operators such as the mathematical functions ( +, -,
+*, /) and comparator functions (<, >, =) as well as more specialized functions are contained within this portion of the Vocabulary. See the Rule Language Guide for descriptions and examples of all operators available, as well as detailed instructions for extending the library.
+Figure 1: Operator Vocabulary
+
+
+•	When XML messaging is used to carry data to and from the rules for evaluation, data must be organized in a predefined structure that can be understood and processed by the rules. A schema supplies the contract for sending data to and from a Corticon Decision Service. An XML schema, generated directly from the Vocabulary, accomplishes this purpose. This schema is called a Vocabulary-Level service contract and details can be found in the Deployment Guide.
+Scope
+An important point about a Vocabulary: there does not need to be a one-to-one correlation between terms in the Vocabulary and terms in the enterprise data model. In other words, there may be terms in the data model that are not included in or referenced by rules. Such terms do not need to be included in the Vocabulary.
+Conversely, the Vocabulary may include terms (such as transient attributes) that are used only in rules. These terms do not need to be present in the data model. Two guiding principles:
+ 
+
+•	If the rule modeler wants to use a particular term in a business rule, then that term must be part of the Vocabulary. Terms can exist only within the Vocabulary. These are the transient attributes that were introduced previously.
+•	If a rule produces a value that must be retained, persisted, or otherwise saved in a database (or other means external to the rules), then that Vocabulary term must also be present in the enterprise data model. There are many methods for linking or mapping these Vocabulary terms with corresponding terms in the data model, but a discussion of these methods is technical and is not included in this manual.
+There are two basic starting points for building a Vocabulary: construct one, or generate one from a REST or database source.
+

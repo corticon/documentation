@@ -33,3 +33,6 @@ body .markdown-section {
     font-size: 14px;
 }
 */
+.sidebar, body {
+    background-color: #7cee0a17;
+  }

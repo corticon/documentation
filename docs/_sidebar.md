@@ -1,15 +1,21 @@
-- Getting Started
-  - [Installation](Getting-Started/Installation.md)
+[Home](README.md)
 
-- Decision Services on Corticon Server
-  - [Platform Compability](https://docs.progress.com/bundle/corticon-supported-platforms/ ':include :type=text')
-  - [System Requirements](https://docs.progress.com/bundle/corticon-install/page/System-requirements.html)
+---
+[Corticon Studio](studio/)
+  - [Installing](studio/quickstart/Installation.md)
+  - [Defining the Rule Vocabulary](studio/quickstart/Vocabulary.md)
+  - [Modeling Rules in Rule Sheets](studio/quickstart/Rulesheets.md)
+  - [Organizing Rules into Rule Flows](studio/quickstart/Ruleflows.md)
+  - [Testing Rules with Rule Tests](studio/quickstart/Ruletests.md)
 
-- Serverless Decision Services
-  - [Platform Compability](https://docs.progress.com/bundle/corticon-js-supported-platforms/ ':include :type=text')
+---
+[Corticon Server](server/)
 
-- Links
-  - [Corticon Information Hub](https://docs.progress.com/category/corticon-information-hub)
-  - [Tutorials](https://www.progress.com/corticon/corticon-learning-center)
-  - [Blog Roll](https://www.progress.com/blogs/cognitive-services)
-  - [Corticon Videos](https://docs.progress.com/category/corticon-videos)
+ --- 
+[Corticon.js](js/)
+  - [Platforms](js/platforms.md)
+  - [JSON Payloads/Results](js/JSON%20payloads%20and%20results%20in%20Corticon.js.md)
+---
+[Further Reading](more/)
+
+---
