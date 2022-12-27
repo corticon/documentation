@@ -23,4 +23,3 @@
   - [Platforms](js/platforms.md)
   - [JSON Payloads/Results](js/JSON%20payloads%20and%20results%20in%20Corticon.js.md)
 
-[Further Reading](more/)
