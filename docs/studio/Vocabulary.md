@@ -58,3 +58,9 @@ Working with IT, you've been supplied this sample JSON file representing an orde
 5. Choose the temporary file with the JSON you saved, and then click Open.
 
 The Vocabulary that the JSON generates is the following:
+
+![Alt text](../assets/generated%20vocabulary.png)
+
+Let's take a closer look at the Vocabulary:
+
+Root entity—The JSON source has an object definition at root, indicated by the JSON starting with initial brace. You know this root entity is an order. Corticon does not know that, so it named the top-level entity Root. After vocabulary generation completes you can refactor the root entity name to Order:
