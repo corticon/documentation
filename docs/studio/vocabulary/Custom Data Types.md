@@ -244,7 +244,3 @@ The label/value data is retrieved into the Vocabulary as highlighted:
 Figure 5. Definition and retrieved label/values in Corticon Studio
 
 ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/gsa1373402594830.image?_LANG=enus)
-
-**Previous topic:** [Enumerations defined in the Vocabulary](https://docs.progress.com/bundle/corticon-rule-modeling/page/Enumerations-defined-in-the-Vocabulary.html)
-
-[](https://docs.progress.com/bundle/corticon-rule-modeling/page/Enumerations-defined-in-the-Vocabulary.html)
