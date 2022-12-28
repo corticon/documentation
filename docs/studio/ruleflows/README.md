@@ -1,4 +1,4 @@
-# Building a Ruleflow
+## Building a Ruleflow
 
 From here, you can continue adding more rules to the rulesheet, or more commonly, compartmentalize our rules into different rulesheets, and create a **Ruleflow** to specify the sequence from one rulesheet to another. When multiple Rulesheets are included in a Ruleflow, the Rulesheets will execute in a sequence determined by their Rulesheet order in the Ruleflow. With ruleflows, behavior like branching into separate rules for different scenarios can be defined and specify when the execution of a given Decision Service call that Corticon should retrieve additional data from external datasources.
 
@@ -7,13 +7,13 @@ As more rulesheets are added to our Ruleflow, Ruletests can be run against entir
 
 ![Alt text](../assets/image%20(122).png)
 
-# Ruleflow Properties
+## Ruleflow Properties
 
 Ruleflows are the final step in the rule development process and are thus deployed as Decision Services. Ruleflows can always be versioned as well, with either a major/minor version tag or effective date range for which they will execute when invoked. The invocation (request) payload must contain a version number or data parameter to consume the desired "versioned" decision service.
 
 ![Alt text](../assets/image%20(23).png)
 
-# Test Ruleflows using Ruletests
+## Test Ruleflows using Ruletests
 
 You can test a Ruleflow using a Ruletest just as you use it to test a Rulesheet. When you test a Ruleflow in a Ruletest, the input data that you define is processed by the first Rulesheet in the Ruleflow’s sequence. After the first Rulesheet completes executing, its output becomes the input to the next Rulesheet in the sequence, and so on, until the last Rulesheet completes executing.&#x20;
 
@@ -23,7 +23,7 @@ To test a Ruleflow using a Ruletest, you must select the Ruleflow as the Ruletes
 
 ![Alt text](../assets/image%20(91).png)
 
-# Advanced Ruleflow features
+## Advanced Ruleflow features
 
 * **Nested Ruleflows**—you can reduce the complexity of large Ruleflows by breaking them into smaller, ‘child’ Ruleflows and adding them to the parent Ruleflow, referred to as “a Ruleflow in a Ruleflow.”&#x20;
 * **Conditional Branching**—you can create branches in a Ruleflow, where the value of an attribute determines which branch the data is routed to.&#x20;

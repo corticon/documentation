@@ -15,7 +15,7 @@ satisfied, the actions in the rule are triggered.
 
 Note: If an action does not execute for some reason, Corticon still tries to execute the other actions in the rule
 
-# Defining rules in a Rulesheet
+## Defining rules in a Rulesheet
 
 ![Alt text](../assets/BasicRuleModeling_Lessons4.png)
 
