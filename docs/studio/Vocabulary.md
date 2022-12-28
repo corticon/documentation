@@ -265,11 +265,12 @@ To generate a Vocabulary from a REST data source:
 2.  In the new project, create a Vocabulary named **GenRates**.
 3.  Open the Vocabulary in its editor, and then select **Vocabulary > Add Datasource > Add REST Datasource**.
 4.  Define the Datasource connection for the URL `https://bj36i9ki66.execute-api.us-east-2.amazonaws.com/prod/ReimbursementRate?procedureCode=B5120ZZ` as shown, and then click **CONNECTION Test**:
-    
+
+
 ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/cje1597856316359.image?_LANG=enus)
     
-5.  Click **SCHEMA Discover**. If your REST source has a schema, or is one that you exported in an earlier processing of this source you could import it now. For this source, you need to let the Progress® DataDirect® Autonomous Rest Connector map the JSON in the REST source to a relational database schema, and then translate SQL statements to REST API requests.
-6.  Select **Vocabulary > Populate Vocabulary From Datasource**
+1.  Click **SCHEMA Discover**. If your REST source has a schema, or is one that you exported in an earlier processing of this source you could import it now. For this source, you need to let the Progress® DataDirect® Autonomous Rest Connector map the JSON in the REST source to a relational database schema, and then translate SQL statements to REST API requests.
+2.  Select **Vocabulary > Populate Vocabulary From Datasource**
     
 ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/cdk1570789386967.image?_LANG=enus)
     
