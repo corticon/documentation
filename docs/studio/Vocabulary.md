@@ -70,13 +70,18 @@ Let's take a closer look at the Vocabulary:
 ![Alt text](../assets/trg1618183111787.png)
 
 - Attributes—Each attribute takes the JSON Element Name that was in the source JSON. The root entity has five attributes that are added as attributes of Root. You can manually revise the data type as appropriate. This is the incoming payload identifier that will map to its Vocabulary attribute name:
+  
 ![Alt text](../assets/uwq1618199296489.png)
 - Non-root entities—Other entities take the name in the source JSON, and specify their JSON Path as relative to the root:
+  
 ![Alt text](../assets/jtj1618199407549.png)
 - Associations: Corticon added the Products entity, and then added an association from Root (Order) to products:
+
 ![Alt text](../assets/wtw1618199638327.png)
+
 - Scalar arrays—A scalar array is handled as an association from the entity with its own identifying Entity. The JSON Array's relationship shows that products is relative to root ($) and one or more tags are related to products:
-- ![Alt text](../assets/jaf1618199763563.png)
+
+ ![Alt text](../assets/jaf1618199763563.png)
 
 ### Update a vocabulary from a JSON payload
 Suppose your Sales department wants to enhance the discount program to provide an additional discount to government agencies and whether an order is marked for expedited handling. In support of this IT has provided an updated sample JSON the includes the new information.
