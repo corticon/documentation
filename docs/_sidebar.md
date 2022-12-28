@@ -2,7 +2,7 @@
 
 **Corticon Studio**
 
-[Introduction](studio/)
+[Introduction](studio/README.md)
   - [Defining the Rule Vocabulary](studio/vocabulary/)
     - [By hand](studio/vocabulary/create-by-hand.md)
     - [Using JSON Schema](studio/vocabulary/create-from-json-schema.md)
@@ -20,9 +20,9 @@
 
 **Corticon Server**
 
-[Introduction](server/)
+[Introduction](server/README.md)
 - [Java Server (Default)](server/java.md)
-- [.NET Server](server/.net.md)
+- [.NET Server](server/net.md)
 - [Web Console](server/console.md)
 - [Extensions](server/extending.md)
 - [Data Integration](server/data/README.md)
@@ -33,7 +33,7 @@
 
 **Corticon.js**
 
-[Introduction](js/)
+[Introduction](js/README.md)
   - [Platforms](js/platforms.md)
   - [JSON Payloads/Results](js/json-payloads.md)
 

@@ -10,7 +10,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="assets/favicon/favicon.png">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+  <link rel="stylesheet" href="//unpkg.com/vue-material@beta/dist/vue-material.min.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="./assets/css/theme.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+
 
 </head>
 
@@ -18,7 +23,7 @@
   <div id="app"></div>
   <script>
 
-    // Docsify
+// Docsify
     window.$docsify = {
 
       name: 'Getting Started with Corticon Decision Automation',
@@ -28,7 +33,8 @@
       coverpage: false,
       loadSidebar: true,
       auto2top: true,
-      autoheader: true,
+      autoheader : true,
+      subMaxLevel: 0,
       // PLUGIN SETTINGS
       // -----------------------------------------------------------------
       search: {
@@ -48,19 +54,20 @@
         crossChapterText: false,
       },
 
-      //     toc: {
-      //   scope: '.markdown-section',
-      //   headings: 'h2, h3',
-      //   title: 'On this page:',
-      // }
+        toc: {
+      scope: '.markdown-section',
+      headings: 'h1, h2, h3, h4, h5, h6',
+      title: 'Table of Contents',
     }
+   }
 
   </script>
 
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 
   <!-- Search Box Plugin -->
   <script src="https://unpkg.com/docsify/lib/plugins/search.min.js"></script>
+
 
 
   <!-- Font Awesome Plugin -->
@@ -79,11 +86,11 @@
   <!-- docsify-image-caption -->
 
   <script src="https://unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
-  <!-- 
+
 
   <!-- docsify-toc -->
-  <!-- 
-  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script> --> -->
+
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
 
 </body>
 
