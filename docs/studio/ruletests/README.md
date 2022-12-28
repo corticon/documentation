@@ -8,7 +8,6 @@ You can define different sets of input data to test how the rules behave in diff
 
 A Ruletest stores this information in a Ruletest file, enabling you to save use-cases that are of interest, change rules, and run the test again to see how the modified rules behave when applied to the same use-cases.
 
-Take a close look at the images. Here is an example of a Rulesheet (`AircraftRules.ers`) with two rules and a Ruletest (`TestingAircraftRules.ert`) that has been executed.
 
 ## When you run a Ruletest
 
