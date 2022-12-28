@@ -22,7 +22,7 @@ The result payload has the same data as was in the input payload plus the attrib
 
 The result payload also contains a `corticon` object that has the `timestamp` of when the rules were run plus the status, `success`, of the execution. The `corticon` object contains additional information about the execution of your rules.
 
-### JSON to vocabulary mapping 
+## JSON to vocabulary mapping 
 
 When your decision service is invoked, Corticon maps the JSON payload to the internal data model of your Corticon vocabulary to enable the rules to execute on it. To perform this mapping, Corticon must first examine the JSON payload to identify the top-level objects in the JSON and the vocabulary entities they correspond to.
 
@@ -134,7 +134,7 @@ Corticon.js allows the top-level entities to be identified when a Ruleflow is pa
 
 Any objects or fields in the JSON payload that are not mapped to your vocabulary are preserved and included in the result payload.
 
-### Error handling <a href="#d837e547" id="d837e547"></a>
+## Error handling <a href="#d837e547" id="d837e547"></a>
 
 If there is an error during the execution of the decision service, the status `"error"` is returned to the user along with the description of the error which will be part of the `"corticon"` JSON object as follows:
 

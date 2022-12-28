@@ -1,6 +1,9 @@
 .app-nav:not(:empty)~main .markdown-section {
   padding-top: 5.0rem;
 }
+img {
+  max-width: 61%;
+}
 
 .pagination-item, .pagination-item-title {
   opacity: .9 !important;
@@ -147,11 +150,7 @@
   color: var(--link-color);
   padding: 0;
 
-  h1, h2, h3 {
-    margin: 0;
-    display: inline-block;
-  }
-}
+
 
 .markdown-section code {
   white-space: pre-wrap!important;
@@ -341,3 +340,11 @@ body .docsify-pagination-container {
   }
 
 }
+.sidebar {
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+
+
+/* vue.css | https://unpkg.com/docsify@4/lib/themes/vue.css */
+
