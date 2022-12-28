@@ -266,21 +266,21 @@ To generate a Vocabulary from a REST data source:
 3.  Open the Vocabulary in its editor, and then select **Vocabulary > Add Datasource > Add REST Datasource**.
 4.  Define the Datasource connection for the URL `https://bj36i9ki66.execute-api.us-east-2.amazonaws.com/prod/ReimbursementRate?procedureCode=B5120ZZ` as shown, and then click **CONNECTION Test**:
     
-    ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/cje1597856316359.image?_LANG=enus)
+![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/cje1597856316359.image?_LANG=enus)
     
 5.  Click **SCHEMA Discover**. If your REST source has a schema, or is one that you exported in an earlier processing of this source you could import it now. For this source, you need to let the Progress® DataDirect® Autonomous Rest Connector map the JSON in the REST source to a relational database schema, and then translate SQL statements to REST API requests.
 6.  Select **Vocabulary > Populate Vocabulary From Datasource**
     
-    ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/cdk1570789386967.image?_LANG=enus)
+![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/cdk1570789386967.image?_LANG=enus)
     
 7.  Choose the **REST Service** Datasource. If there were several Datasources defined, choose them one at a time for this process. In this example, there is only one, **REST Service**. Click **Next**.
 8.  A wizard opens to let you review the Datasource prior to creating the Vocabulary elements, where you can select the Tables and Columns to create as Entities and Attributes. Here, the tree was expanded for `REST_DATA`, the primary table that was unnamed so it was given this default name. You can see links between tables to all the other tables at the bottom of the table.
     
-    ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/vas1571674814421.image?_LANG=enus)
+![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/vas1571674814421.image?_LANG=enus)
     
 9.  Click **Finish**. The Vocabulary is generated, as shown:
     
-    ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/llf1571675600191.image?_LANG=enus)
+![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/llf1571675600191.image?_LANG=enus)
     
     The Primary Key in `RATES` is `POSITION`, a standard that REST connector uses to ensure keys are unique, plus the `REST_DATA_PROCEDURECODE`, the default name of the primary entity. The Primary Key in the `REST_DATA` entity is the single primary key, `PROCEDURECODE`
 
