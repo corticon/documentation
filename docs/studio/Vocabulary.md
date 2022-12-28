@@ -49,3 +49,12 @@ Working with IT, you've been supplied this sample JSON file representing an orde
     "discount": 0.0
 }			
 ```
+### To populate a Vocabulary from a JSON payload:
+
+1. Copy the preceding JSON and then save in a temporary file.
+2. In Corticon Studio, create a new Rule Project named OnlineRetail.
+3. In the project, create a Vocabulary named Orders.
+4. Click in the Vocabulary edit window, and then select Vocabulary > Populate Vocabulary from JSON.
+5. Choose the temporary file with the JSON you saved, and then click Open.
+
+The Vocabulary that the JSON generates is the following:
