@@ -11,4 +11,4 @@ To create a new Vocabulary:
 4.	Click Finish to create your new Vocabulary.
 The Vocabulary is now displayed in the Project Explorer window (1), in the new Rule Vocabulary window (2), and as the open file and active tab in the GroceryStore.ecore window (3) in the following illustration.
 
-![Alt text](../assets/GroceryStore.ecore.jpg)
+![Alt text](../../assets/GroceryStore.ecore.jpg)

@@ -5,7 +5,7 @@ You define your rule logic in a Corticon Rulesheet. A rule is like an ‘if-then
 Here is an example of a Rulesheet with three rules. The Rulesheet editor has the following
 parts:
 
-![Alt text](../assets/BasicRuleModeling_Lessons1.png)
+![Alt text](../../assets/BasicRuleModeling_Lessons1.png)
 
 - Conditions—where you define the conditions for each rule. For example, Aircraft.aircraftType = 747. The condition value could be a single value (747), a set of values (747, 777, 787), or a range of values (weight=100000..200000).
 - Actions—where you define the actions that need to be triggered when the conditions are satisfied. For example, Aircraft.maxCargoWeight=150000.
