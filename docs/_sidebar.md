@@ -3,7 +3,7 @@
 **Corticon Studio**
 
   - [Introduction](studio/README.md)
-    - [Defining the Rule Vocabulary](studio/vocabulary/)
+    - [Defining the Rule Vocabulary](studio/vocabulary/README.md)
       - [By hand](studio/vocabulary/create-by-hand.md)
       - [Using JSON Schema](studio/vocabulary/create-from-json-schema.md)
       - [Using JSON Payload](studio/vocabulary/create-from-json-payload.md)
