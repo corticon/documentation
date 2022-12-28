@@ -3,13 +3,13 @@
 
 A Collection is a set of instances of the same entity. Each instance is called an element of the Collection. For example, in the input of this Ruletest, there are two elements in the Cargo collection:
 
-![Alt text](../assets/image%20(14).png)
+![Alt text](../../assets/image%20(14).png)
 
 Corticon provides Collection operators that enable you to model rules that apply to a Collection. For example, you can use a Collection operator to find the highest or lowest value, or calculate the total or average value for an attribute, across all elements in a Collection.
 
 Collections have another useful feature. When data is structured in a parent-child hierarchy (for example when one FlightPlan entity—the parent—has an association with many Cargo child entities), Corticon automatically recognizes that each set of children is a separate Collection. In this image, there are two Cargo collections:
 
-![](../assets/image%20(24).png)
+![](../../assets/image%20(24).png)
 
 So when you define a rule to calculate the sum of cargo weights for example, the rule will calculate the total weight for each Cargo Collection separately. For FlightPlan \[1] in this image, the rule will calculate a total of 300,000, while for FlightPlan \[2], it will calculate a total of 400,000.
 
@@ -19,7 +19,7 @@ Aliases and Scope play a role in Collections too. They determine which entity in
 
 You can define an Alias for a top-level or branch-level entity in the Scope pane of a Rulesheet’s Advanced View. For example, in this image the Cargo branch (the child entity) under FlightPlan (the parent entity) is assigned the Alias load:
 
-![](../assets/image%20(107).png)
+![](../../assets/image%20(107).png)
 
 In this case, load represents Cargo instances that are associated with a FlightPlan. If there are multiple FlightPlans, there will be a load Collection (containing a set of Cargo elements) for each FlightPlan. Cargo instances that are not associated with a FlightPlan do not get added to a load Collection.
 
@@ -27,7 +27,7 @@ Any rule that uses the term load applies only to instances of Cargo that are ass
 
 On the other hand, if Cargo is at the top-level, and an Alias shipment is defined for it, such as in the image below, the shipment Collection will contain all instances of Cargo regardless of association. Any rule that uses the term shipment will apply to all instances of Cargo, irrespective of association.
 
-![](../assets/image%20(119).png)
+![](../../assets/image%20(119).png)
 
 Note that you must define an Alias for an entity if you want to use that entity in a Collection-based rule.
 
@@ -37,21 +37,21 @@ To define rules that apply to Collections, perform the following tasks:
 
 1. Define the Scope of the rules—identify parent-child relationships between entities (if any) that you want to use in the rule and drag and drop those entities and their attributes from the Rule Vocabulary view to the Scope pane in the Rulesheet’s Advanced View. Drag and drop the parent entity first and then the child entity (that appears as a branch under the parent entity). Then, drag and drop attributes. This should create a hierarchy as shown here:
 
-![Alt text](../assets/image%20(21).png)
+![Alt text](../../assets/image%20(21).png)
 
 2. Define Aliases—define an Alias for each entity in the hierarchy for which you want to define a Collection operator-based rule. In this example, we want to calculate the sum of cargo weights for each FlightPlan, so we assign an Alias named load to the Cargo branch under FlightPlan:
 
-![Alt text](../assets/image%20(46).png)
+![Alt text](../../assets/image%20(46).png)
 
 3. Use a Collection operator in a rule—you can see the entire list of Collection operators by expanding the Entity/Association Operators > Collection folder in the Rule Operators view.
 
-![](../assets/image%20(105).png)
+![](../../assets/image%20(105).png)
 
 ### Example: How to use the sum operator
 
 The sum operator is used at the end of a condition or action expression. It enables you to calculate the total of values of one attribute across all elements of the Collection.
 
-![](../assets/image%20(35).png)
+![](../../assets/image%20(35).png)
 
 Observe that in this example, an attribute, totalWeight, has been added to the FlightPlan entity. The purpose of the totalWeight attribute is to hold the value of the sum of all cargo weights assigned to the flight plan.
 
@@ -59,7 +59,7 @@ The rule has just one action expression, FlightPlan.totalWeight=load.weight->sum
 
 So, what does this rule do? The rule calculates the sum of the weight attributes for all elements in the load Collection for each FlightPlan and assigns the total to the totalWeight attribute for the FlightPlan.
 
-![](../assets/image%20(90).png)
+![](../../assets/image%20(90).png)
 
 As you can see, in the results of the Ruletest, the totalWeight attribute of each FlightPlan displays the sum of the weight attributes of only those Cargo instances associated with it. The top-level Cargo entity instances are not included in any of these calculations.
 
@@ -67,7 +67,7 @@ As you can see, in the results of the Ruletest, the totalWeight attribute of eac
 
 The exists operator enables you to check if a certain value for a specified attribute exists within a Collection.
 
-![](../assets/image%20(30).png)
+![](../../assets/image%20(30).png)
 
 The syntax for the exists operator is as follows:
 
@@ -87,7 +87,7 @@ When this rule is executed against test data in the Ruletest, Corticon detects t
 
 The forAll operator enables you to check if an attribute has a specific value, across all the elements of a Collection.
 
-![](../assets/image%20(98).png)
+![](../../assets/image%20(98).png)
 
 The syntax of the forAll operator is:
 
@@ -104,7 +104,7 @@ So the expression is `load->forAll(load.manifestNumber=plan.flightNumber).`
 
 But you will find that this is an invalid expression. Why? The flightNumber is an integer and the manifestNumber is not really a “number”, it is a String. For the purposes of this example, change the flightNumber data type to String.
 
-![](../assets/image%20(76).png)
+![](../../assets/image%20(76).png)
 
 In the Input data in the Ruletest, there are two FlightPlan instances. In the first instance, all the associated cargo instances have the same manifest number as the flight number. In the second FlightPlan instance one of the cargo instances has a different manifest number. The rule messages indicate that one Info message and one Violation message is generated.
 

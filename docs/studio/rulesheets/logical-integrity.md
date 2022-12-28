@@ -5,7 +5,7 @@ Rulesheets also provide rule modelers with multiple click-of-a-button **Logical 
 
 ### Rule Conflicts
 
-![Alt text](../assets/conflicts.png)
+![Alt text](../../assets/conflicts.png)
 
 A conflict occurs when two or more rules overlap in some way. They have condition expressions that apply to the same input data in some scenarios, but have different actions that need to be performed on that data. For example, consider the following rules:
 
@@ -16,7 +16,7 @@ These rules conflict with each other because a person who is, for instance, 45 y
 
 In Corticon, if two or more rules are in conflict, and data is received that satisfies the conditions of all the conflicting rules, they all fire.
 
-![Alt text](../assets/conflict%20test.png)
+![Alt text](../../assets/conflict%20test.png)
 
 However, the rules do not fire concurrently. They fire in a sequence. The rule that fires first updates the value of the attribute or attributes at the center of the conflict (in this example riskRating). The rule that fires next updates the value of the attribute or attributes again and so on until the last conflicting rule fires and the attribute is sent in an outgoing response message.
 
@@ -28,7 +28,7 @@ Note that since all conflicting rules fire, all rule statements linked to the ru
 
 To perform a conflict check, open the Rulesheet, and click on the Check for Conflicts icon or select Rulesheet > Logical Analysis > Check for Conflicts.
 
-![Alt text](../assets/resolve%20conflict.png)
+![Alt text](../../assets/resolve%20conflict.png)
 
 When you check for conflicts, either of the following things may happen:
 
@@ -55,7 +55,7 @@ Each sub-rule addresses one scenario within the main rule. In this example, both
 
 Similarly, the rule that verifies if a person is a skydiver or not is expanded into three subrules. As you can see here, sub-rule 1.1 conflicts with sub-rule 2.1. In this case, the conflict is quite clear—the condition expressions in these rules are the same but the action is different. Sub-rules give you clarity about the cause of the conflict. Based on this, you can decide what steps to take to resolve the conflict.
 
-![Alt text](../assets/multi%20conflict%20expanded.png)
+![Alt text](../../assets/multi%20conflict%20expanded.png)
 
 Conflicts are not necessarily wrong. Whether or not you have to resolve them depends on their context and the business requirement. Only the domain or subject matter expert responsible for articulating the rules will know for sure.
 
@@ -69,7 +69,7 @@ Again, how you choose to resolve a conflict depends on the context and business 
 
 #### Specify overriding behavior
 
-![Alt text](../assets/overrides.png)
+![Alt text](../../assets/overrides.png)
 
 You can specify one rule to override another if they are in conflict. During testing or in production, if data satisfies the conditions in both rules, only the rule that overrides the other will fire. To specify overriding you must:
 
@@ -91,7 +91,7 @@ Corticon Studio has a built-in completeness checking algorithm that calculates t
 
 To perform a conflict check, open the Rulesheet, and click on the Check for Completeness icon or select Rulesheet > Logical Analysis > Check for Completeness.
 
-![Alt text](../assets/completeness.png)
+![Alt text](../../assets/completeness.png)
 
 After you run a completeness check, either of the following may happen:
 
@@ -115,7 +115,7 @@ You can resolve incompleteness in one of the following ways:
 
 #### Disable rules
 
-![Alt text](../assets/disable%20rule.png)
+![Alt text](../../assets/disable%20rule.png)
 
 Sometimes you may want to keep newly added rules in a Rulesheet but only for reference so that you know which scenarios you want to leave out of the decision-making process. You can disable a rule by right-clicking the column number and selecting Disable. You can optionally write a rule statement and link it to the disabled rule to document the scenario.
 
@@ -175,7 +175,7 @@ A Rulesheet with dependent rules executes as follows:
 
 #### Identifying dependencies in the Rulesheet
 
-![Alt text](../assets/dependency.png)
+![Alt text](../../assets/dependency.png)
 
 The Logical Dependency Graph is a flowchart-like display of how rules in a Rulesheet execute and which attributes are updated at which point in the execution process.
 

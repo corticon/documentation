@@ -1,6 +1,6 @@
 # Defining rules in a Rulesheet
 
-![Alt text](../assets/BasicRuleModeling_Lessons4.png)
+![Alt text](../../assets/BasicRuleModeling_Lessons4.png)
 
 To define rules in the Rulesheet, you:
 
@@ -15,7 +15,7 @@ When you specify a value in a rule column cell, the equality operator is implied
 
 ## Rule Statements
 
-![Alt text](../assets/BasicRuleModeling_Lessons3.png)
+![Alt text](../../assets/BasicRuleModeling_Lessons3.png)
 
 A rule statement serves the following purposes:
 
@@ -29,7 +29,7 @@ when the rule fires. Follow these steps to create a rule statement:
 1. Open the Rulesheet in Corticon Studio. The Rule Statements view becomes active
 2. The Rule Statements view comprises several rows and columns. To create the rule statement, double-click a cell in the column named Text and type the rule statement
 
-![Alt text](../assets/statements.png)
+![Alt text](../../assets/statements.png)
 
 You must explicitly link each rule statement with its rule. To link a rule statement with its rule, enter the number of the rule column in the rule statement's **Ref** cell.
 If you only want to document the rule, you do not need to configure any other properties.
