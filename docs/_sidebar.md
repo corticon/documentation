@@ -1,7 +1,6 @@
 [Home](README.md)
 
 [Corticon Studio](studio/)
-  - [Installing](studio/Installation.md)
   - [Defining the Rule Vocabulary](studio/vocabulary/)
     - [By hand](studio/vocabulary/Designing%20a%20Vocabulary%20by%20Hand.md)
     - [Using JSON Schema](studio/vocabulary/Create%20a%20Vocabulary%20from%20a%20JSON%20schema.md)
