@@ -8,6 +8,11 @@
     - [From a Data Source](studio/vocabulary/create-from-datasource.md)
     - [Custom Data Types](studio/vocabulary/cdt.md)
   - [Modeling Rules in Rule Sheets](studio/rulesheets/)
+    - [Defining Rules in a Rule Sheet](studio/rulesheets/Defining-rules-in-a-Rulesheet.md)
+    - [Validate Rule Logic](studio/rulesheets/logical-integrity.md)
+    - [Collections](studio/rulesheets/collections.md)
+    - [Scope & Aliases](studio/rulesheets/scope-and-aliases.md)
+    - [Filters & Preconditions](studio/rulesheets/filters-preconditions.md)
   - [Organizing Rules into Rule Flows](studio/ruleflows/)
   - [Testing Rules with Rule Tests](studio/ruletests/)
 
