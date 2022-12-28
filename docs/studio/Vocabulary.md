@@ -63,4 +63,55 @@ The Vocabulary that the JSON generates is the following:
 
 Let's take a closer look at the Vocabulary:
 
-Root entity—The JSON source has an object definition at root, indicated by the JSON starting with initial brace. You know this root entity is an order. Corticon does not know that, so it named the top-level entity Root. After vocabulary generation completes you can refactor the root entity name to Order:
+- Root entity—The JSON source has an object definition at root, indicated by the JSON starting with initial brace. You know this root entity is an order. Corticon does not know that, so it named the top-level entity Root. After vocabulary generation completes you can refactor the root entity name to Order:
+
+![Alt text](../assets/trg1618183111787.png)
+
+- Attributes—Each attribute takes the JSON Element Name that was in the source JSON. The root entity has five attributes that are added as attributes of Root. You can manually revise the data type as appropriate. This is the incoming payload identifier that will map to its Vocabulary attribute name:
+![Alt text](../assets/uwq1618199296489.png)
+- Non-root entities—Other entities take the name in the source JSON, and specify their JSON Path as relative to the root:
+![Alt text](../assets/jtj1618199407549.png)
+- Associations: Corticon added the Products entity, and then added an association from Root (Order) to products:
+![Alt text](../assets/wtw1618199638327.png)
+- Scalar arrays—A scalar array is handled as an association from the entity with its own identifying Entity. The JSON Array's relationship shows that products is relative to root ($) and one or more tags are related to products:
+- ![Alt text](../assets/jaf1618199763563.png)
+
+### Update a vocabulary from a JSON payload
+Suppose your Sales department wants to enhance the discount program to provide an additional discount to government agencies and whether an order is marked for expedited handling. In support of this IT has provided an updated sample JSON the includes the new information.
+
+An update generates new entities, attributes, and associations. The existing entities, attributes, and associations are not revised by regenerating over the existing Vocabulary. If you want one element to be regenerated, delete it before you perform the update. You could even delete the vocabulary entirely, and then start fresh. The original sample payload adds a requirement for Billing Address to the sampleCustomer Vocabulary.
+
+```
+{
+    "orderId": 494748,
+    "customer": "Acme Industries",
+    "customerStatus": "elite",
+    "governmentAgency": false,
+
+    "shippingAddress": {
+        "address1": "1234 Industrial Lane",
+        "address2": null,
+        "city": "Boston",
+        "state": "MA",
+        "zip": "01234"
+    },
+    "shippingDetails": {
+        "expedite": true,
+        "mode": "ground"
+    },
+
+    "products": [
+        {
+            "sku": "XYZ-BB-43",
+            "unitPrice": 2300.00,
+            "quantity": 2,
+            "tags": [
+                "industrial",
+                "compressor"
+            ]
+        }
+    ],
+    "discount": 0.0
+}				
+```
+When you regenerate your vocabulary from this JSON, it will add new entities, attributes and associations to your vocabulary for the new items in the JSON. The Vocabulary shows the added entity, attributes, and association:
