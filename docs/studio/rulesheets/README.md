@@ -1,4 +1,3 @@
-# Rulesheets
 
 You define your rule logic in a Corticon Rulesheet. A rule is like an ‘if-then’ statement. Each rule consists of one or more conditions (if) that are associated with one or more actions (then).
 Here is an example of a Rulesheet with three rules. The Rulesheet editor has the following
@@ -16,7 +15,7 @@ satisfied, the actions in the rule are triggered.
 
 Note: If an action does not execute for some reason, Corticon still tries to execute the other actions in the rule
 
-## Defining rules in a Rulesheet
+# Defining rules in a Rulesheet
 
 ![Alt text](../assets/BasicRuleModeling_Lessons4.png)
 
