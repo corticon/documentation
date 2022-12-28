@@ -1,6 +1,8 @@
 [Home](README.md)
 
-[Corticon Studio](studio/)
+**Corticon Studio**
+
+[Introduction](studio/)
   - [Defining the Rule Vocabulary](studio/vocabulary/)
     - [By hand](studio/vocabulary/create-by-hand.md)
     - [Using JSON Schema](studio/vocabulary/create-from-json-schema.md)
@@ -16,8 +18,9 @@
   - [Organizing Rules into Rule Flows](studio/ruleflows/)
   - [Testing Rules with Rule Tests](studio/ruletests/)
 
+**Corticon Server**
 
-[Corticon Server](server/)
+[Introduction](server/)
 - [Java Server (Default)](server/java.md)
 - [.NET Server](server/.net.md)
 - [Web Console](server/console.md)
@@ -28,7 +31,9 @@
   - [Batch](server/data/batch.md)
   - [REST](server/data/rest.md)
 
-[Corticon.js](js/)
+**Corticon.js**
+
+[Introduction](js/)
   - [Platforms](js/platforms.md)
   - [JSON Payloads/Results](js/json-payloads.md)
 
