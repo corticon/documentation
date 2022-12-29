@@ -44,13 +44,13 @@ To generate a Vocabulary from a relational data source:
 3.  Open the Vocabulary in its editor, and then select the menu command **Vocabulary > Add Datasource > Add ADC Datasource**.
 4.  Define the Datasource name as **Patient Data**. Connect to SQL Server database **PatientRecords**. Enter credentials, and the click **CONNECTION Test**:
     
-    ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/bee1613764156636.image?_LANG=enus)
+![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/bee1613764156636.image?_LANG=enus)
     
     Note: You might want to add a **Schema Filter** value, such as `dbo`, to constrain the results of the next step.
     
 5.  Click **METADATA Import**, and then choose the option to choose the tables you want to use. For this example, choose just the two `dbo` tables, as shown:
     
-    ![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/pws1571670182276.image?_LANG=enus)
+![](https://progress-be-prod.zoominsoftware.io/bundle/corticon-rule-modeling/page/pws1571670182276.image?_LANG=enus)
     
     and click **Finish**.
 6.  Select **Vocabulary > Populate Vocabulary From Datasource**:
