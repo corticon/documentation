@@ -1,6 +1,9 @@
 ## Simple Database Connectivity
 
-Corticon [EDC ](https://documentation.progress.com/output/ua/Corticon/#page/corticon%2Fidentity-strategies.html%23)is designed to augment data when processing a discrete Decision Service request. It is used by rule authors who seek the least-technical requirements for modeling data access in their rules, to read/write to an external relational database. However, because it is built on Hibernate and is tied to Hibernate’s object relational model and transactional models, it introduces query and data processing overhead when reading data from a database with related tables. So, EDC's limitations are in its performance in large, data intensive operations where large chunks of data are loaded into Corticon for processing and updating the connected database. Corticon ships with Progress DataDirect drivers for RDBMSs, but you can also use the drivers bundled to[ create new database connections](https://documentation.progress.com/output/ua/Corticon/#page/corticon%2Fusing-datadirect-drivers.html%23).
+EDC allows you read data from a single relational database and persist the rule evaluation data) back into that same database. In general, rule authors find it easy to use/setup (high productivity) as no coding is required to fetch and write data. EDC has been purposely designed for a very common use case scenario which is single transaction enrichment (e.g. you pass Corticon an Order ID and EDC will look up all additional order details including data from related tables. Data is pulled in selectively in case it is needed in the rules (lazy loading). 
+
+As EDC is using the Java data Hibernate framework, there is a drawback in terms of performance. EDC is not designed to handle large volumes typically found in transaction rich batch processes due to the (relative inefficient) way it queries and updates databases.
+
 
 ## Pros and Cons
 
