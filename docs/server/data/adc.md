@@ -31,8 +31,23 @@ When all steps are completed, you are ready to deploy your Ruleflow or test it i
 
 You can use multiple instances of ADC in a Ruleflow. A typical use case would be to have an instance at the start of a Ruleflow to retrieve data and one later in the Ruleflow to save data.
 
-## Preparing a vocabulary for database integration with ADC
+## Configuring ADC in the Vocabulary Editor
 
-To use ADC, we will need to mirror our database content in our vocabulary including the table primary keys and foreign keys. For rule modelling purposes these keys are usually not used, so with EDC we generally don’t expose the primary keys in the vocabulary and foreign keys are reflected by the associations in the vocabulary. ADC is very different: we need those keys in order top read and persist our data!
 
-!> Warning: be very meticulous naming your attributes respecting lower/upper case!!
+1. **Define Keys**
+
+    To use ADC, we will need to mirror our database content in our vocabulary including the table primary keys and foreign keys. For rule modelling purposes these keys are usually not used, so with EDC we generally don’t expose the primary keys in the vocabulary and foreign keys are reflected by the associations in the vocabulary. ADC is very different: we need those keys in order top read and persist our data!
+
+    !> Warning: be very meticulous naming your attributes respecting lower/upper case!!
+
+2. **Create your query database**
+
+    ![Alt text](../../assets/adc%20ERD%20format.png)
+
+
+3. **Connect to your query database in Corticon**
+
+
+4. **Define the queries in the query database**
+
+

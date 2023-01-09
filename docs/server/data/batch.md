@@ -12,4 +12,39 @@ The built in support is not the only way to do batch processing with Corticon. W
 
 Fetching the transaction identifying data from the underlying relational data source that will be injected into the rules engine takes place outside the Decision Service. As such, Decision Service requests that are usually individual transactions are instead fetched in chunks for the rules engine, and then dispersed across multiple processing threads to concurrently process the incoming requests. Batch processing produces no return payload per request -- the result of each rule processing is persisted in the database. In this format, one of our biggest public sector clients scales their Corticon horizontally with s3, bringing up hundreds of servers for specific windows of time in bursts each month.
 
-To learn more, see [Getting Started with Batch](https://docs.progress.com/bundle/corticon-data-integration/page/Getting-Started-with-Batch.html) on Corticon Information Hub.
+## Starting your batch job using the Corticon REST API
+
+Did you know all Corticon REST APIs are accessible through Swagger? 
+
+1. Open browser and navigate to Swagger at http://localhost:8850/axis/swagger/. 
+2. For the Batch Execution Service, Corticon has several APIs available. 
+3. Open Postman and create a new request.
+4. In the request URL, enter http://localhost:8850/axis/corticon/batchexecution/start
+5. Change with dropdown on the left of the URL to  POST
+6. Below, click on “Body”  Raw and in the last field use the dropdown to select JSON (application/json). Example request: 
+```python
+
+    {
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "datasourceName": "ADC OpenEdge12 database",
+  "variables": {Parameter.endDate:2018-12-31, Parameter.startDate:2018-09-01},
+  "idsPerFetch": 1000,
+  "entitiesPerPayload": 50,
+  "processingThreadCount": 4,
+  "enableLogging": "true",
+  "logPath": "C:\\temp\\CorticonBatches",
+  "decisionServiceName": "Calculate vendor volume discount",
+  "batchReadName": "Calculate vendor discounts by sales order (batch)"
+}
+```
+
+7. SEND your REST payload to Corticon. This is an asynchronous request. The batch processor will just response with a batch ID.
+8.	Check your log file if the batch executed successfully. You should also see a batch id in the response body in POSTMAN.
+
+
+
+
+---
+
+> To learn more, see [Getting Started with Batch](https://docs.progress.com/bundle/corticon-data-integration/page/Getting-Started-with-Batch.html) on Corticon Information Hub.
