@@ -13,3 +13,4 @@ As EDC is using the Java data Hibernate framework, there is a drawback in terms 
 |    Database independence – Rules don’t change if data does    |                Require good DB schema (PKs, FKs, etc)                |
 | Minimize client application re-factoring when data needs change |                Require JDBC connectivity to database                |
 |    Leverages industry leading Progress DataDirect technology    | Poor performance for large datasets due to ‘chatty’ DB interaction |
+
