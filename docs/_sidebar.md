@@ -4,11 +4,6 @@
 
   - [Introduction](studio/README.md)
     - [Defining the Rule Vocabulary](studio/vocabulary/README.md)
-      - [By hand](studio/vocabulary/create-by-hand.md)
-      - [Using JSON Schema](studio/vocabulary/create-from-json-schema.md)
-      - [Using JSON Payload](studio/vocabulary/create-from-json-payload.md)
-      - [From a Data Source](studio/vocabulary/create-from-datasource.md)
-      - [Custom Data Types](studio/vocabulary/cdt.md)
     - [Modeling Rules in Rule Sheets](studio/rulesheets/)
       - [Defining Rules in a Rule Sheet](studio/rulesheets/Defining-rules-in-a-Rulesheet.md)
       - [Validate Rule Logic](studio/rulesheets/logical-integrity.md)
