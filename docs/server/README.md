@@ -4,15 +4,15 @@ Corticon Server processes the rules modeled, verified and tested in Corticon Stu
 
 ![Alt text](../assets/webservice.png)
 
-## Minimize Integration Effort, Maximize Integration Flexibility
+## Types of Corticon Servers
 
 Corticon Server takes advantage of industry standards to provide flexible options for integration with applications running on Java or .NET platforms. You can embed Corticon Server in any layer of an application’s architecture, from the presentation layer on the desktop to the shared-service layer distributed across back-end servers. By design, Corticon Server integrates easily with composite or packaged applications through service-oriented architecture (SOA) or business process management (BPM) systems.
 
-The Corticon Server for Java provides the necessary components to deploy Corticon as a REST or SOAP service on a Java application server or to deploy Corticon in-process in your custom Java application. Corticon Server provides installers for both Windows and Linux. The actual deployment artifacts - the JAR and WAR files - are platform independent. See the Web Services and In-Process guides for more information. 
+The Corticon Server for Java provides the necessary components to deploy Corticon as a REST or SOAP service on a Java application server or to deploy Corticon in-process in your custom Java application. Corticon Server provides installers for both Windows and Linux. The actual deployment artifacts - the JAR and WAR files - are platform independent. 
 
 Corticon Server and Web Console install a standard Tomcat distribution to help you quickly get started. This is a standard Tomcat distribution at the time of Corticon release. It may not have the latest security patches or other security configuration changes recommended for production use.When moving to production, it is recommended to deploy Corticon Server and Web Console to a supported application server that you have supplied and secured. If you choose to use the bundled Tomcat in production, you assume responsibility for applying Tomcat security patches and performing security configuration
 
-The Corticon Server for .NET provides the necessary components to deploy Corticon as a REST or SOAP service to Microsoft Internet Information Services (IIS) or to deploy Corticon in-process in your custom .NET application. Corticon Server .NET install is only available on Windows. Corticon uses a high performance bridging technology to call from .NET languages such as C# to Corticon Server. See the Web Services and In-Process guides for more information. See the Corticon 6.2 - Supported Platforms Matrix for a list of supported platforms.
+The Corticon Server for .NET provides the necessary components to deploy Corticon as a REST or SOAP service to Microsoft Internet Information Services (IIS) or to deploy Corticon in-process in your custom .NET application. Corticon Server .NET install is only available on Windows. Corticon uses a high performance bridging technology to call from .NET languages such as C# to Corticon Server. 
 
 ## The basic path
 
