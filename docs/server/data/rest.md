@@ -1,8 +1,9 @@
 # REST Data Connectivity
 
-The Corticon REST Datasource provides support for accessing REST services. It allows you to retrieve REST data to enrich the payloads being processed by your rules.
-
+Finally, there is REST/JSON connector based on the Autonomous REST Connector (ARC) to pull data from external or internal APIs. The ARC driver built into Corticon 6.0, transforms a REST/JSON structure into an in-memory database representation. This database is then query-able using the same techniques already present in Corticon. So, SQL goes in at one end and the other end attaches to REST endpoints. A
 The Corticon REST Datasource uses the DataDirect [Autonomous REST Connector ](https://www.progress.com/connectors/autonomous-rest-connector)which provides the ability to access REST services as if they were databases. This is beneficial to a Corticon user because the process of mapping a vocabulary to a REST service is the same as for EDC and ADC data sources.
+
+![Autonomous REST Connector ](../../assets/autorest.png)
 
 ## Mapping vocabulary to a REST datasource
 
