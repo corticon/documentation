@@ -24,6 +24,3 @@
 **Corticon.js**
 
   - [Introduction](js/README.md)
-    - [Platforms](js/platforms.md)
-    - [JSON Payloads/Results](js/json-payloads.md)
-
