@@ -8,6 +8,18 @@ A Vocabulary is similar to a data model such as a UML model or an ER model. The 
  
 When you build a Vocabulary, you also define relationships between business terms. For example, a single vehicle can carry many cargo containers, implying a one-to-many relationship. You would define this as an association in your Vocabulary.
 
+The proper expression and execution of rules in Corticon rules is dependent on the type of data involved. Each attribute in the Corticon Vocabulary has a data type, meaning that it has restrictions on the type of data it can contain. Corticon standard data types are as follows:
+
+| Data Type | Description |
+| --- | --- |
+| String | Any combination of alphanumeric characters, of any length, |
+| Integer | A whole number, including zero and negative numbers, to the maximum values for a 64-bit long signed integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) |
+| Decimal | A number containing a decimal point, including zero and negative numbers to the limits of double precision (see [IEEE\_754](https://en.wikipedia.org/wiki/IEEE_754) for details.) |
+| Boolean | Values are `true` and `false`. `T` and `F` can also be used. |
+| DateTime | Values must be entered for both date and time. |
+| Date | A value with only date information. No Time information is allowed. |
+| Time | Value with only time information. No Date information is allowed. |
+
 ## Creating a Vocabulary
 
 Corticon makes it easy to start your rule projects by letting you generate the Vocabulary directly from the JSON that your rules will process. This technique accelerates development, so that you can quickly get started writing rules, and ensures your vocabulary matches the JSON payloads that will be passed as input to your rules when deployed.
